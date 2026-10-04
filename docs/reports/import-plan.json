@@ -1,0 +1,93 @@
+{
+  "mode": "empty-database-plan-only",
+  "databaseWritten": false,
+  "fingerprint": "efee8674f0eae2ea77729b8e3a8142b0cb1a37cf6f801d8ad77b71fd1a55f2bb",
+  "tables": {
+    "dataset_metadata": {
+      "inserted": 30,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "sources": {
+      "inserted": 40,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "life_events": {
+      "inserted": 3,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "policies": {
+      "inserted": 12,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "policy_rules": {
+      "inserted": 54,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "services": {
+      "inserted": 22,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "service_rules": {
+      "inserted": 23,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "opportunities": {
+      "inserted": 7,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "policy_service_maps": {
+      "inserted": 23,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "dataset_test_cases": {
+      "inserted": 20,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "verification_logs": {
+      "inserted": 51,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "service_checklists": {
+      "inserted": 27,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "profile_fields": {
+      "inserted": 41,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    },
+    "enum_definitions": {
+      "inserted": 29,
+      "updated": 0,
+      "unchanged": 0,
+      "retained": 0
+    }
+  },
+  "errorCount": 0,
+  "warningCount": 84
+}

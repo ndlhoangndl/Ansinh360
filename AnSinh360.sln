@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C7FB7DC7-07E8-443D-9938-5D26043D0FB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnSinh360.Domain", "src\AnSinh360.Domain\AnSinh360.Domain.csproj", "{AA692E65-2CE7-4555-8F9B-E7C8F1E4A5FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnSinh360.Application", "src\AnSinh360.Application\AnSinh360.Application.csproj", "{810C1527-B4AA-4681-BE1F-C8C6C2D62074}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnSinh360.Infrastructure", "src\AnSinh360.Infrastructure\AnSinh360.Infrastructure.csproj", "{9EFFE27F-25BB-4147-8F0C-35702E1F122D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnSinh360.Cli", "src\AnSinh360.Cli\AnSinh360.Cli.csproj", "{708A8D80-435F-4A68-86D2-D9C8EA499ED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnSinh360.Api", "src\AnSinh360.Api\AnSinh360.Api.csproj", "{9C91746A-9914-4CF3-90E0-5A67C7B4023D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C32AF93D-8761-442D-8FC4-0815AA37B4B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnSinh360.Tests", "tests\AnSinh360.Tests\AnSinh360.Tests.csproj", "{21A5223D-593B-40D1-AE01-43ED36243692}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA692E65-2CE7-4555-8F9B-E7C8F1E4A5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA692E65-2CE7-4555-8F9B-E7C8F1E4A5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA692E65-2CE7-4555-8F9B-E7C8F1E4A5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA692E65-2CE7-4555-8F9B-E7C8F1E4A5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{810C1527-B4AA-4681-BE1F-C8C6C2D62074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{810C1527-B4AA-4681-BE1F-C8C6C2D62074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{810C1527-B4AA-4681-BE1F-C8C6C2D62074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{810C1527-B4AA-4681-BE1F-C8C6C2D62074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFFE27F-25BB-4147-8F0C-35702E1F122D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFFE27F-25BB-4147-8F0C-35702E1F122D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFFE27F-25BB-4147-8F0C-35702E1F122D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFFE27F-25BB-4147-8F0C-35702E1F122D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{708A8D80-435F-4A68-86D2-D9C8EA499ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708A8D80-435F-4A68-86D2-D9C8EA499ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{708A8D80-435F-4A68-86D2-D9C8EA499ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{708A8D80-435F-4A68-86D2-D9C8EA499ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C91746A-9914-4CF3-90E0-5A67C7B4023D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C91746A-9914-4CF3-90E0-5A67C7B4023D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C91746A-9914-4CF3-90E0-5A67C7B4023D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C91746A-9914-4CF3-90E0-5A67C7B4023D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A5223D-593B-40D1-AE01-43ED36243692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A5223D-593B-40D1-AE01-43ED36243692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A5223D-593B-40D1-AE01-43ED36243692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A5223D-593B-40D1-AE01-43ED36243692}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AA692E65-2CE7-4555-8F9B-E7C8F1E4A5FE} = {C7FB7DC7-07E8-443D-9938-5D26043D0FB7}
+		{810C1527-B4AA-4681-BE1F-C8C6C2D62074} = {C7FB7DC7-07E8-443D-9938-5D26043D0FB7}
+		{9EFFE27F-25BB-4147-8F0C-35702E1F122D} = {C7FB7DC7-07E8-443D-9938-5D26043D0FB7}
+		{708A8D80-435F-4A68-86D2-D9C8EA499ED4} = {C7FB7DC7-07E8-443D-9938-5D26043D0FB7}
+		{9C91746A-9914-4CF3-90E0-5A67C7B4023D} = {C7FB7DC7-07E8-443D-9938-5D26043D0FB7}
+		{21A5223D-593B-40D1-AE01-43ED36243692} = {C32AF93D-8761-442D-8FC4-0815AA37B4B7}
+	EndGlobalSection
+EndGlobal

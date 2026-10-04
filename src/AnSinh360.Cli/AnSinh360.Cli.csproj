@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../AnSinh360.Infrastructure/AnSinh360.Infrastructure.csproj" /></ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+name: ansinh360
+services:
+  postgres:
+    image: postgres:16.13-alpine
+    environment:
+      POSTGRES_DB: ansinh360
+      POSTGRES_USER: ansinh360
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ansinh360 -d ansinh360"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+volumes:
+  postgres_data:

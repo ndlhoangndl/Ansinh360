@@ -1,0 +1,698 @@
+{
+  "datasetVersion": "v1.0-RC1",
+  "fingerprint": "efee8674f0eae2ea77729b8e3a8142b0cb1a37cf6f801d8ad77b71fd1a55f2bb",
+  "asOf": "2026-10-04",
+  "counts": {
+    "dataset_metadata": 30,
+    "sources": 40,
+    "life_events": 3,
+    "policies": 12,
+    "policy_rules": 54,
+    "services": 22,
+    "service_rules": 23,
+    "opportunities": 7,
+    "policy_service_maps": 23,
+    "dataset_test_cases": 20,
+    "verification_logs": 51,
+    "service_checklists": 27,
+    "profile_fields": 41,
+    "enum_definitions": 29
+  },
+  "issues": [
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_001",
+      "field": "published_at",
+      "message": "Partial date \u00272026\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_002",
+      "field": "published_at",
+      "message": "Partial date \u00272026\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_003",
+      "field": "published_at",
+      "message": "Partial date \u00272026\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_004",
+      "field": "published_at",
+      "message": "Partial date \u00272026\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_005",
+      "field": "published_at",
+      "message": "Partial date \u00272026\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_HOUSE_OPP_001",
+      "field": "published_at",
+      "message": "Partial date \u00272026\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_CHILD_LAW_001",
+      "field": "published_at",
+      "message": "Partial date \u00272024\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_CHILD_DEC_001",
+      "field": "published_at",
+      "message": "Partial date \u00272020\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_CHILD_DEC_002",
+      "field": "published_at",
+      "message": "Partial date \u00272020\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_GEN_005",
+      "field": "published_at",
+      "message": "Partial date \u00272026-06\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_HOUSE_OPP_004",
+      "field": "published_at",
+      "message": "Partial date \u00272026-03\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PARTIAL_DATE",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_HOUSE_OPP_005",
+      "field": "published_at",
+      "message": "Partial date \u00272026-09\u0027 preserved without inventing a day."
+    },
+    {
+      "severity": "WARNING",
+      "code": "OFFICIAL_PORTAL_SLUG_ANOMALY",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_DN_001",
+      "field": "canonical_url",
+      "message": "Official portal slug is semantically inconsistent with current rendered page title/content. User verified this official source; preserve canonical_url and VERIFIED_OFFICIAL."
+    },
+    {
+      "severity": "WARNING",
+      "code": "OPPORTUNITY_SCHEDULE_UNSPECIFIED",
+      "file": "07_OPPORTUNITIES.csv",
+      "recordId": "OPP_JOB_001",
+      "field": "open_from|open_until",
+      "message": "Opening/closing schedule is incomplete; retained verbatim. Refresh before Phase 2 use."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_JOB_002",
+      "field": "value",
+      "message": "PF_JOB_003: rule literal \u0027true\u0027 is outside the exact ENUM domain \u0027LEGAL|UNLAWFUL|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_JOB_003",
+      "field": "value",
+      "message": "PF_JOB_008: rule literal \u0027false\u0027 is outside the exact ENUM domain \u0027YES|NO|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_DERIVED_FIELD_UNRESOLVED",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_JOB_008",
+      "field": "field",
+      "message": "\u0027months_since_termination\u0027 has no ProfileField definition or approved derivation contract."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_JOB_009",
+      "field": "value",
+      "message": "PF_JOB_009: rule literal \u0027false\u0027 is outside the exact ENUM domain \u0027YES|NO|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_JOB_012",
+      "field": "value",
+      "message": "PF_JOB_003: rule literal \u0027true\u0027 is outside the exact ENUM domain \u0027LEGAL|UNLAWFUL|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_DERIVED_FIELD_UNRESOLVED",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_JOB_013",
+      "field": "field",
+      "message": "\u0027months_since_termination\u0027 has no ProfileField definition or approved derivation contract."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_JOB_014",
+      "field": "value",
+      "message": "PF_JOB_009: rule literal \u0027false\u0027 is outside the exact ENUM domain \u0027YES|NO|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_HOUSE_002",
+      "field": "value",
+      "message": "PF_HOUSE_003: rule literal \u0027false\u0027 is outside the exact ENUM domain \u0027YES|NO|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_TYPE_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_HOUSE_005",
+      "field": "field|operator|value",
+      "message": "PF_HOUSE_006: avg_monthly_actual_income_12m_vnd is MONEY_RANGE (\u003C=25M|25-35M|\u003E35M); rule requires numeric LTE 25000000. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_TYPE_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_HOUSE_007",
+      "field": "field|operator|value",
+      "message": "PF_HOUSE_006: avg_monthly_actual_income_12m_vnd is MONEY_RANGE (\u003C=25M|25-35M|\u003E35M); rule requires numeric LTE 35000000. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_TYPE_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_HOUSE_009",
+      "field": "field|operator|value",
+      "message": "PF_HOUSE_007: couple_total_avg_monthly_actual_income_12m_vnd is MONEY_RANGE (\u003C=50M|\u003E50M); rule requires numeric LTE 50000000. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_TYPE_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_CHILD_004",
+      "field": "field|operator|value",
+      "message": "PF_CHILD_006: total_compulsory_bhxh_months_before_birth is BOOLEAN (true|false); rule requires numeric GTE 12. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_CHILD_011",
+      "field": "value",
+      "message": "PF_CHILD_004: rule literal \u0027true\u0027 is outside the exact ENUM domain \u0027YES|NO|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_CHILD_013",
+      "field": "value",
+      "message": "PF_CHILD_011: rule literal \u0027true\u0027 is outside the exact ENUM domain \u0027YES|NO|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_CHILD_014",
+      "field": "value",
+      "message": "PF_CHILD_012: rule literal \u0027true\u0027 is outside the exact ENUM domain \u0027YES|NO|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_CHILD_016",
+      "field": "value",
+      "message": "PF_CHILD_014: rule literal \u0027true\u0027 is outside the exact ENUM domain \u0027YES|NO|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_JOB_009A",
+      "field": "value",
+      "message": "PF_JOB_005: rule literal \u0027true\u0027 is outside the exact ENUM domain \u0027YES|NO|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "PROFILE_RULE_VALUE_DOMAIN_MISMATCH",
+      "file": "04_POLICY_RULES.csv",
+      "recordId": "PR_JOB_010A",
+      "field": "value",
+      "message": "PF_JOB_005: rule literal \u0027true\u0027 is outside the exact ENUM domain \u0027YES|NO|UNKNOWN\u0027. No conversion approved."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR001",
+      "field": "condition",
+      "message": "Condition field \u0027policy_match\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR002",
+      "field": "condition",
+      "message": "Condition field \u0027is_receiving_unemployment\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR003",
+      "field": "condition",
+      "message": "Condition field \u0027needs_pause\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR004",
+      "field": "condition",
+      "message": "Condition field \u0027needs_resume\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR005",
+      "field": "condition",
+      "message": "Condition field \u0027is_receiving_unemployment\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR007",
+      "field": "condition",
+      "message": "Condition field \u0027location\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR009",
+      "field": "condition",
+      "message": "Condition field \u0027prefers_offline\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR010",
+      "field": "condition",
+      "message": "Condition field \u0027policy_match\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR011",
+      "field": "condition",
+      "message": "Condition field \u0027location\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR013",
+      "field": "condition",
+      "message": "Condition field \u0027policy_match\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR014",
+      "field": "condition",
+      "message": "Condition field \u0027policy_match\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR016",
+      "field": "condition",
+      "message": "Condition field \u0027policy_match\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR017",
+      "field": "condition",
+      "message": "Condition field \u0027location\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR018",
+      "field": "condition",
+      "message": "Condition field \u0027location\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR019",
+      "field": "condition",
+      "message": "Condition field \u0027location\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR020",
+      "field": "condition",
+      "message": "Condition field \u0027matching_opportunity_status\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "SERVICE_RULE_PROFILE_FIELD_UNRESOLVED",
+      "file": "06_SERVICE_RULES.csv",
+      "recordId": "SR021",
+      "field": "condition",
+      "message": "Condition field \u0027no_matching_open_opportunity\u0027 has no exact ProfileField definition or approved derived-field/alias contract. Expression preserved and not evaluated."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_001",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_002",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_003",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_004",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_005",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_DN_001",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_DN_002",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_PROGRAM\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_NAT_001",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_HOUSE_DN_001",
+      "field": "legal_status",
+      "message": "\u0027CLOSED_PROGRAM\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_HOUSE_OPP_001",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SCHEDULED\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_CHILD_PROC_001",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_CHILD_PROC_002",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_CHILD_PROC_003",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_CHILD_DN_002",
+      "field": "source_level",
+      "message": "\u0027A0/A1\u0027 is not declared in enum group SOURCE_LEVEL; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_GEN_001",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_GEN_002",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_GEN_003",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_GEN_004",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_GEN_005",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_006",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_JOB_PROC_007",
+      "field": "legal_status",
+      "message": "\u0027CURRENT_SERVICE\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_HOUSE_OPP_002",
+      "field": "legal_status",
+      "message": "\u0027CLOSED_OPPORTUNITY\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_HOUSE_OPP_003",
+      "field": "legal_status",
+      "message": "\u0027CLOSED_OPPORTUNITY\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_HOUSE_OPP_004",
+      "field": "legal_status",
+      "message": "\u0027CLOSED_OPPORTUNITY\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "01_SOURCES.csv",
+      "recordId": "SRC_HOUSE_OPP_005",
+      "field": "legal_status",
+      "message": "\u0027CLOSED_OPPORTUNITY\u0027 is not declared in enum group LEGAL_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "05_SERVICES.csv",
+      "recordId": "JOB_SV_006",
+      "field": "service_type",
+      "message": "\u0027PHYSICAL_DIGITAL_SUPPORT\u0027 is not declared in enum group SERVICE_TYPE; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "05_SERVICES.csv",
+      "recordId": "JOB_SV_008",
+      "field": "service_type",
+      "message": "\u0027EMPLOYMENT_SERVICE\u0027 is not declared in enum group SERVICE_TYPE; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "05_SERVICES.csv",
+      "recordId": "JOB_SV_009",
+      "field": "service_type",
+      "message": "\u0027PROCEDURE_SERVICE\u0027 is not declared in enum group SERVICE_TYPE; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "05_SERVICES.csv",
+      "recordId": "HOUSE_SV_002",
+      "field": "service_type",
+      "message": "\u0027PROCEDURE_OPPORTUNITY\u0027 is not declared in enum group SERVICE_TYPE; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "05_SERVICES.csv",
+      "recordId": "CHILD_SV_003",
+      "field": "service_type",
+      "message": "\u0027LINKED_PROCEDURE\u0027 is not declared in enum group SERVICE_TYPE; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "05_SERVICES.csv",
+      "recordId": "CHILD_SV_004",
+      "field": "service_type",
+      "message": "\u0027SUPPORT_PROGRAM\u0027 is not declared in enum group SERVICE_TYPE; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "05_SERVICES.csv",
+      "recordId": "GEN_SV_003",
+      "field": "service_type",
+      "message": "\u0027HUMAN_DIGITAL_SUPPORT\u0027 is not declared in enum group SERVICE_TYPE; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "05_SERVICES.csv",
+      "recordId": "HOUSE_SV_003",
+      "field": "service_type",
+      "message": "\u0027PROCEDURE_OPPORTUNITY\u0027 is not declared in enum group SERVICE_TYPE; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "10_VERIFICATION_LOG.csv",
+      "recordId": "VL041",
+      "field": "verification_status",
+      "message": "\u0027SUPERSEDED\u0027 is not declared in enum group VERIFY_STATUS; preserved verbatim."
+    },
+    {
+      "severity": "WARNING",
+      "code": "ENUM_VALUE_UNDECLARED",
+      "file": "10_VERIFICATION_LOG.csv",
+      "recordId": "VL051",
+      "field": "verification_status",
+      "message": "\u0027COMPLETE_FOR_MVP\u0027 is not declared in enum group VERIFY_STATUS; preserved verbatim."
+    }
+  ],
+  "errorCount": 0,
+  "warningCount": 84,
+  "isValid": true
+}

@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../AnSinh360.Domain/AnSinh360.Domain.csproj" />
+    <PackageReference Include="CsvHelper" Version="33.0.1" />
+  </ItemGroup>
+</Project>

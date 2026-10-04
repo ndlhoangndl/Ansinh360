@@ -1,0 +1,12 @@
+  AnSinh360.Domain -> D:\Ý tưởng dự án Liên Chiểu\src\AnSinh360.Domain\bin\Release\net8.0\AnSinh360.Domain.dll
+  AnSinh360.Application -> D:\Ý tưởng dự án Liên Chiểu\src\AnSinh360.Application\bin\Release\net8.0\AnSinh360.Application.dll
+  AnSinh360.Infrastructure -> D:\Ý tưởng dự án Liên Chiểu\src\AnSinh360.Infrastructure\bin\Release\net8.0\AnSinh360.Infrastructure.dll
+  AnSinh360.Cli -> D:\Ý tưởng dự án Liên Chiểu\src\AnSinh360.Cli\bin\Release\net8.0\AnSinh360.Cli.dll
+  AnSinh360.Api -> D:\Ý tưởng dự án Liên Chiểu\src\AnSinh360.Api\bin\Release\net8.0\AnSinh360.Api.dll
+  AnSinh360.Tests -> D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.16

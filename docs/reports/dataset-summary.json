@@ -1,0 +1,40 @@
+{
+  "source": "csv",
+  "datasetVersion": "v1.0-RC1",
+  "fingerprint": "efee8674f0eae2ea77729b8e3a8142b0cb1a37cf6f801d8ad77b71fd1a55f2bb",
+  "counts": {
+    "dataset_metadata": 30,
+    "sources": 40,
+    "life_events": 3,
+    "policies": 12,
+    "policy_rules": 54,
+    "services": 22,
+    "service_rules": 23,
+    "opportunities": 7,
+    "policy_service_maps": 23,
+    "dataset_test_cases": 20,
+    "verification_logs": 51,
+    "service_checklists": 27,
+    "profile_fields": 41,
+    "enum_definitions": 29
+  },
+  "total": 382,
+  "errorCount": 0,
+  "warningCount": 84,
+  "fileHashes": {
+    "00_README.csv": "c102527f754b9fd0a85f2208679ad02617e71ac498ce82a0c61649cd61677619",
+    "01_SOURCES.csv": "b5d58f7f1f24a4baec0e62bc28eb6fec6179c0e71b512aec2723567816eddfb8",
+    "02_LIFE_EVENTS.csv": "2b60b9921e9f3c8b3aecd046026cbd6313350ee0469e76378f085680d5db1529",
+    "03_POLICIES.csv": "cfef965a9954cd7a887f60a0e0a7c15e976da61a180411e0b1bb7007dd68e7c7",
+    "04_POLICY_RULES.csv": "f2f4c00b5d55a61317b4c103ae5a2db6b495628fcb4a3c288d811740696ff7ba",
+    "05_SERVICES.csv": "606cc34ee65b4f8a20567c0f2a5a55305e5103cd64f2fa6878bcc854b67baad7",
+    "06_SERVICE_RULES.csv": "6f017a0dd1de8aef7525d33f47b9b3e68caafc08af85f9f6386ae49a37371238",
+    "07_OPPORTUNITIES.csv": "3621d37e0d082ab3ec5c1eb5fe9759cf2676aefe62cf74c676f26afbdbf1fff3",
+    "08_POLICY_SERVICE_MAP.csv": "6ea260bbdd153f8ec59a28654edea1c82721df52f82319e63b635cda824178a0",
+    "09_TEST_CASES.csv": "51494be23f4031df15a46f43dc5bad8aafbf7b67194822d1f9639545833231b9",
+    "10_VERIFICATION_LOG.csv": "68be81201b348ecc70a11df663266a8e6bae1cae708ddaf09167f3e46f89e5c1",
+    "11_SERVICE_CHECKLISTS.csv": "cb877a775bea4b8eb6d0815aa22f2fe4de596405e724c36b257ab349b0fdf11a",
+    "12_PROFILE_FIELDS.csv": "527125e044d63e952ef9d64eaba4f7f9aa583b3253741d43cb4d2e1644da976d",
+    "13_ENUMS.csv": "f4e7e9af094366b3d60cddeb23a576a8ccc070ff7f7a93cf70acea6ff367a363"
+  }
+}

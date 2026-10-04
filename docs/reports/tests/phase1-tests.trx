@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="c74fd548-2130-4e88-9fab-df594824bebd" name="Admin@DESKTOP-O7I4359 2026-10-04 14:37:50" runUser="DESKTOP-O7I4359\Admin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-04T14:37:50.6386717+07:00" queuing="2026-10-04T14:37:50.6386723+07:00" start="2026-10-04T14:37:49.3364447+07:00" finish="2026-10-04T14:37:51.5793170+07:00" />
+  <TestSettings name="default" id="4ae5501c-8b73-4a4b-ae21-33460c5594bc">
+    <Deployment runDeploymentRoot="Admin_DESKTOP-O7I4359_2026-10-04_14_37_50" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="93b26766-ec16-402d-8f6c-3784f81ae02f" testId="dbf71821-b6ae-11a3-2b51-f7c61147ee01" testName="AnSinh360.Tests.ImportPlannerTests.Missing_incoming_rows_are_retained_and_never_deleted" computerName="DESKTOP-O7I4359" duration="00:00:00.0012561" startTime="2026-10-04T14:37:50.5756482+07:00" endTime="2026-10-04T14:37:50.5756483+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="93b26766-ec16-402d-8f6c-3784f81ae02f" />
+    <UnitTestResult executionId="dd0d0dd2-5f14-4b04-bdf7-822e9142ab9e" testId="91e84bdf-462b-fc6a-6bfd-8b9af1db1ca8" testName="AnSinh360.Tests.ValidatorTests.Each_money_range_numeric_rule_has_a_warning" computerName="DESKTOP-O7I4359" duration="00:00:00.0112704" startTime="2026-10-04T14:37:50.6687974+07:00" endTime="2026-10-04T14:37:50.6687978+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd0d0dd2-5f14-4b04-bdf7-822e9142ab9e" />
+    <UnitTestResult executionId="7acf6fc3-4042-4d45-a3c4-94930c93b8e7" testId="93a66439-71f9-487f-124c-8d856835e6de" testName="AnSinh360.Tests.CsvReaderTests.Malformed_csv_is_rejected(csv: &quot;key,value,notes\nx,\&quot;unclosed,n\n&quot;)" computerName="DESKTOP-O7I4359" duration="00:00:00.0000887" startTime="2026-10-04T14:37:50.5964786+07:00" endTime="2026-10-04T14:37:50.5964788+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7acf6fc3-4042-4d45-a3c4-94930c93b8e7" />
+    <UnitTestResult executionId="5964cabf-0115-4863-a8b5-f6748d1a4307" testId="3463f75d-33f6-e40b-a8f4-2c261400f4d1" testName="AnSinh360.Tests.ValidatorTests.Invalid_full_dates_are_errors(value: &quot;2026-02-30&quot;, code: &quot;INVALID_DATE&quot;)" computerName="DESKTOP-O7I4359" duration="00:00:00.0193780" startTime="2026-10-04T14:37:50.5940292+07:00" endTime="2026-10-04T14:37:50.5940298+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5964cabf-0115-4863-a8b5-f6748d1a4307" />
+    <UnitTestResult executionId="76e284bb-9542-47ac-8a4c-6f0d4cbb0ad5" testId="8f3e6931-304d-e20a-349f-54f4f1afb365" testName="AnSinh360.Tests.ImportPlannerTests.Duplicate_import_keys_are_rejected" computerName="DESKTOP-O7I4359" duration="00:00:00.0009106" startTime="2026-10-04T14:37:50.5755702+07:00" endTime="2026-10-04T14:37:50.5755704+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="76e284bb-9542-47ac-8a4c-6f0d4cbb0ad5" />
+    <UnitTestResult executionId="5c05e2c0-ba03-48ff-8ea3-1385c6a33160" testId="7afb2488-98a9-650a-c77b-a1da3c2b38fe" testName="AnSinh360.Tests.HealthTests.Health_returns_process_liveness_without_a_database" computerName="DESKTOP-O7I4359" duration="00:00:00.4709032" startTime="2026-10-04T14:37:50.7722542+07:00" endTime="2026-10-04T14:37:50.7722547+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c05e2c0-ba03-48ff-8ea3-1385c6a33160" />
+    <UnitTestResult executionId="4af05f93-7d85-410b-826e-71a4c6ebebdb" testId="3c31eb3d-1dcf-5e4a-0201-6808a7252549" testName="AnSinh360.Tests.ValidatorTests.Real_dataset_is_valid_with_nonblocking_contract_and_portal_warnings" computerName="DESKTOP-O7I4359" duration="00:00:00.0156402" startTime="2026-10-04T14:37:50.7110258+07:00" endTime="2026-10-04T14:37:50.7110262+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4af05f93-7d85-410b-826e-71a4c6ebebdb" />
+    <UnitTestResult executionId="d23fc7bc-6378-4cad-9288-904a1326de30" testId="cae9336b-6834-fc6c-5f9b-015897dec95b" testName="AnSinh360.Tests.CsvReaderTests.Malformed_csv_is_rejected(csv: &quot;key,value,notes\nx,v,n,extra\n&quot;)" computerName="DESKTOP-O7I4359" duration="00:00:00.0115164" startTime="2026-10-04T14:37:50.5955498+07:00" endTime="2026-10-04T14:37:50.5955500+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d23fc7bc-6378-4cad-9288-904a1326de30" />
+    <UnitTestResult executionId="998f6c32-5b6d-4141-a52c-6d159b4a0425" testId="1ff09983-c78a-8735-d4ea-529731225cbe" testName="AnSinh360.Tests.SchemaTests.Invalid_dataset_is_rejected_before_any_database_access" computerName="DESKTOP-O7I4359" duration="00:00:00.3442060" startTime="2026-10-04T14:37:50.6424236+07:00" endTime="2026-10-04T14:37:50.6424241+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="998f6c32-5b6d-4141-a52c-6d159b4a0425" />
+    <UnitTestResult executionId="9ec7faac-fd9a-4c41-a57f-7076854f7db6" testId="48f332e3-a024-55fb-4175-df2bee66054c" testName="AnSinh360.Tests.CsvReaderTests.Real_dataset_has_all_fourteen_tables_and_expected_counts" computerName="DESKTOP-O7I4359" duration="00:00:00.0134765" startTime="2026-10-04T14:37:50.5838945+07:00" endTime="2026-10-04T14:37:50.5838950+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9ec7faac-fd9a-4c41-a57f-7076854f7db6" />
+    <UnitTestResult executionId="81b0e2db-f40b-4cd0-81f4-f793d04f5795" testId="85790bd2-2d51-7dcd-5603-13a5d2c82a55" testName="AnSinh360.Tests.ImportPlannerTests.Changed_cell_produces_one_update_and_ordinal_case_is_significant" computerName="DESKTOP-O7I4359" duration="00:00:00.2125626" startTime="2026-10-04T14:37:50.5752904+07:00" endTime="2026-10-04T14:37:50.5752905+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81b0e2db-f40b-4cd0-81f4-f793d04f5795" />
+    <UnitTestResult executionId="25e26320-00a6-4413-b4b0-f7b76dc97145" testId="77fce4fd-9bc7-0cfc-11e3-6b8988f5dd6a" testName="AnSinh360.Tests.ValidatorTests.Invalid_full_dates_are_errors(value: &quot;not-a-date&quot;, code: &quot;INVALID_DATE&quot;)" computerName="DESKTOP-O7I4359" duration="00:00:00.0632523" startTime="2026-10-04T14:37:50.6573665+07:00" endTime="2026-10-04T14:37:50.6573672+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="25e26320-00a6-4413-b4b0-f7b76dc97145" />
+    <UnitTestResult executionId="a299872b-fad7-4ad7-bd9e-8e9af0aefb15" testId="f7001098-0fb7-d24d-fa06-1fed0760b234" testName="AnSinh360.Tests.CsvReaderTests.Missing_files_are_reported_as_errors" computerName="DESKTOP-O7I4359" duration="00:00:00.2019073" startTime="2026-10-04T14:37:50.5039402+07:00" endTime="2026-10-04T14:37:50.5039406+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a299872b-fad7-4ad7-bd9e-8e9af0aefb15" />
+    <UnitTestResult executionId="c3956bed-a805-4831-978f-4787ca56ac8d" testId="83304901-9223-c4ed-b273-3f1ea64d242b" testName="AnSinh360.Tests.ValidatorTests.Validation_does_not_change_any_source_cell" computerName="DESKTOP-O7I4359" duration="00:00:00.0260999" startTime="2026-10-04T14:37:50.7566478+07:00" endTime="2026-10-04T14:37:50.7566481+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3956bed-a805-4831-978f-4787ca56ac8d" />
+    <UnitTestResult executionId="5b1f1bd4-3822-4424-b168-dcb61528d547" testId="351f8b08-94c2-4ee3-67d0-728b2c4478b2" testName="AnSinh360.Tests.SchemaTests.PostgreSQL_model_has_text_columns_exact_keys_and_restrict_foreign_keys" computerName="DESKTOP-O7I4359" duration="00:00:00.0202281" startTime="2026-10-04T14:37:51.4970857+07:00" endTime="2026-10-04T14:37:51.4970859+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5b1f1bd4-3822-4424-b168-dcb61528d547" />
+    <UnitTestResult executionId="748ba474-4b58-4dc3-b301-6d226f9ff117" testId="627d391f-5c06-e7da-79af-7f22053ac080" testName="AnSinh360.Tests.SchemaTests.Migration_sql_is_generated_without_connecting_to_PostgreSQL" computerName="DESKTOP-O7I4359" duration="00:00:00.8341585" startTime="2026-10-04T14:37:51.4767457+07:00" endTime="2026-10-04T14:37:51.4767462+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="748ba474-4b58-4dc3-b301-6d226f9ff117" />
+    <UnitTestResult executionId="92dfa0dd-012c-4be0-9130-40c5d0987655" testId="3fcc2639-8e04-3996-360e-a70d471ca653" testName="AnSinh360.Tests.ValidatorTests.Output_rules_do_not_require_profile_input_fields" computerName="DESKTOP-O7I4359" duration="00:00:00.0101207" startTime="2026-10-04T14:37:50.7212338+07:00" endTime="2026-10-04T14:37:50.7212341+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="92dfa0dd-012c-4be0-9130-40c5d0987655" />
+    <UnitTestResult executionId="06a82385-09d3-4eec-831c-73fdde35b61e" testId="5a90000b-7f41-3fc3-8ec9-0df71782b4de" testName="AnSinh360.Tests.ValidatorTests.Empty_and_duplicate_natural_keys_block_import" computerName="DESKTOP-O7I4359" duration="00:00:00.2763112" startTime="2026-10-04T14:37:50.5758618+07:00" endTime="2026-10-04T14:37:50.5758619+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06a82385-09d3-4eec-831c-73fdde35b61e" />
+    <UnitTestResult executionId="f1979d08-7de2-483c-b15d-0d089f54541b" testId="f60b149d-228d-910b-eacc-258ba89d5a62" testName="AnSinh360.Tests.PostgresIntegrationTests.Mid_import_failure_rolls_back_every_table_and_audit_row" computerName="DESKTOP-O7I4359" duration="00:00:00.0010000" startTime="2026-10-04T14:37:50.2949928+07:00" endTime="2026-10-04T14:37:50.2949930+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1979d08-7de2-483c-b15d-0d089f54541b">
+      <Output>
+        <ErrorInfo>
+          <Message>blocked by local environment: PostgreSQL/Docker unavailable; AS360_TEST_CONNECTION_STRING is not set.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="df79bb40-e7c7-42de-84a9-bc683b005bda" testId="23210c7c-2ad8-e9ef-e102-beccf421dbe3" testName="AnSinh360.Tests.CsvReaderTests.Repeated_reads_have_identical_fingerprints_and_cells" computerName="DESKTOP-O7I4359" duration="00:00:00.0640436" startTime="2026-10-04T14:37:50.5758080+07:00" endTime="2026-10-04T14:37:50.5758081+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df79bb40-e7c7-42de-84a9-bc683b005bda" />
+    <UnitTestResult executionId="18386045-4662-4754-8e6e-065def80265b" testId="bf7e242c-78f5-7fc7-e7a2-cb220c66bd1f" testName="AnSinh360.Tests.ImportPlannerTests.Real_dataset_first_import_plan_has_382_inserts_and_second_has_no_changes" computerName="DESKTOP-O7I4359" duration="00:00:00.0510053" startTime="2026-10-04T14:37:50.5756982+07:00" endTime="2026-10-04T14:37:50.5756983+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18386045-4662-4754-8e6e-065def80265b" />
+    <UnitTestResult executionId="0e805cab-d91b-489f-9c5b-1adddaa6a336" testId="34b8096d-1f12-8da4-f370-77d01a5bf154" testName="AnSinh360.Tests.ValidatorTests.Undated_recurring_opportunity_and_dataset_log_sentinel_are_retained" computerName="DESKTOP-O7I4359" duration="00:00:00.0089634" startTime="2026-10-04T14:37:50.7303248+07:00" endTime="2026-10-04T14:37:50.7303253+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e805cab-d91b-489f-9c5b-1adddaa6a336" />
+    <UnitTestResult executionId="77be3c6b-7421-4a6b-9b36-78053036c6c2" testId="1a8bee1d-7fd9-2965-bca0-e3163934b9fe" testName="AnSinh360.Tests.CsvReaderTests.Real_contract_definitions_and_portal_source_remain_verbatim" computerName="DESKTOP-O7I4359" duration="00:00:00.0070328" startTime="2026-10-04T14:37:50.6059285+07:00" endTime="2026-10-04T14:37:50.6059290+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77be3c6b-7421-4a6b-9b36-78053036c6c2" />
+    <UnitTestResult executionId="c3bc00c0-3fb3-4b73-b9ba-8f93755e215b" testId="a16ea4ab-c5e6-af8f-df85-ea5f1112d63c" testName="AnSinh360.Tests.ValidatorTests.Inverted_opportunity_date_interval_is_an_error" computerName="DESKTOP-O7I4359" duration="00:00:00.0088802" startTime="2026-10-04T14:37:50.7656025+07:00" endTime="2026-10-04T14:37:50.7656030+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3bc00c0-3fb3-4b73-b9ba-8f93755e215b" />
+    <UnitTestResult executionId="6c1d5641-63cf-4ca0-8f4e-d4c50af3de45" testId="3fde0f34-994a-e1f0-a2c2-57a293b9ec77" testName="AnSinh360.Tests.PostgresIntegrationTests.Real_dataset_migrates_imports_verbatim_and_second_import_is_idempotent" computerName="DESKTOP-O7I4359" duration="00:00:00.0010000" startTime="2026-10-04T14:37:50.2882133+07:00" endTime="2026-10-04T14:37:50.2882636+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c1d5641-63cf-4ca0-8f4e-d4c50af3de45">
+      <Output>
+        <ErrorInfo>
+          <Message>blocked by local environment: PostgreSQL/Docker unavailable; AS360_TEST_CONNECTION_STRING is not set.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ca2bca15-121b-4020-9fa4-372580b1bd2c" testId="0b450fc7-33c1-3b6f-7e1f-b6e2853aa0a7" testName="AnSinh360.Tests.PostgresIntegrationTests.Changed_cell_updates_one_record_then_becomes_idempotent" computerName="DESKTOP-O7I4359" duration="00:00:00.0010000" startTime="2026-10-04T14:37:50.2941230+07:00" endTime="2026-10-04T14:37:50.2941233+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ca2bca15-121b-4020-9fa4-372580b1bd2c">
+      <Output>
+        <ErrorInfo>
+          <Message>blocked by local environment: PostgreSQL/Docker unavailable; AS360_TEST_CONNECTION_STRING is not set.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e9dd3545-d5e2-4f5c-88a7-2c3f68942621" testId="af52af4e-f6bd-7782-7f8f-364c4e8f8ffd" testName="AnSinh360.Tests.ValidatorTests.Service_rule_aliases_and_derived_fields_are_nonblocking_and_not_evaluated" computerName="DESKTOP-O7I4359" duration="00:00:00.0157958" startTime="2026-10-04T14:37:50.6847888+07:00" endTime="2026-10-04T14:37:50.6847894+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9dd3545-d5e2-4f5c-88a7-2c3f68942621" />
+    <UnitTestResult executionId="f4619e5a-31c7-4757-9cdc-6bee9c6e76d5" testId="cb1b8a79-d96a-c3bb-0274-e30893a8b871" testName="AnSinh360.Tests.ImportPlannerTests.Composite_enum_keys_allow_same_value_in_different_groups" computerName="DESKTOP-O7I4359" duration="00:00:00.0003456" startTime="2026-10-04T14:37:50.5757669+07:00" endTime="2026-10-04T14:37:50.5757670+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f4619e5a-31c7-4757-9cdc-6bee9c6e76d5" />
+    <UnitTestResult executionId="3dca9f83-7226-4d94-bc48-6d14e44a5367" testId="b2b84955-03d9-dd6b-ad3b-1d0822379675" testName="AnSinh360.Tests.CsvReaderTests.Malformed_csv_is_rejected(csv: &quot;key,value,notes\nx,v\n&quot;)" computerName="DESKTOP-O7I4359" duration="00:00:00.0001659" startTime="2026-10-04T14:37:50.5963155+07:00" endTime="2026-10-04T14:37:50.5963172+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3dca9f83-7226-4d94-bc48-6d14e44a5367" />
+    <UnitTestResult executionId="651bff22-93d3-49aa-a9a5-3669b519c3f8" testId="03a93c1e-8e1e-7d63-7ff4-628dc1674acd" testName="AnSinh360.Tests.ValidatorTests.Broken_source_policy_service_and_pipe_list_references_are_errors" computerName="DESKTOP-O7I4359" duration="00:00:00.0102916" startTime="2026-10-04T14:37:50.6951993+07:00" endTime="2026-10-04T14:37:50.6951997+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="651bff22-93d3-49aa-a9a5-3669b519c3f8" />
+    <UnitTestResult executionId="607cd8df-2bf9-49b2-8192-85e39e8ef7e7" testId="89a50b2f-8e34-d6ea-84db-a9eb08c91493" testName="AnSinh360.Tests.ValidatorTests.Empty_tables_and_missing_dataset_metadata_cannot_be_silently_imported" computerName="DESKTOP-O7I4359" duration="00:00:00.0006962" startTime="2026-10-04T14:37:50.7663925+07:00" endTime="2026-10-04T14:37:50.7663928+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="607cd8df-2bf9-49b2-8192-85e39e8ef7e7" />
+    <UnitTestResult executionId="f305949b-4fab-4bc9-b93b-196aa59738ac" testId="27fb607c-2f57-e1b6-ca12-ef92c25e7ade" testName="AnSinh360.Tests.CsvReaderTests.Invalid_utf8_is_rejected" computerName="DESKTOP-O7I4359" duration="00:00:00.0029608" startTime="2026-10-04T14:37:50.5061674+07:00" endTime="2026-10-04T14:37:50.5061676+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f305949b-4fab-4bc9-b93b-196aa59738ac" />
+    <UnitTestResult executionId="6eddfd13-e68c-4461-a1bb-a2be6730fec7" testId="49969d6e-ac06-4091-05f7-cc94cf9e6208" testName="AnSinh360.Tests.CsvReaderTests.Malformed_csv_is_rejected(csv: &quot;key,value,notes\nx,v\0,n\n&quot;)" computerName="DESKTOP-O7I4359" duration="00:00:00.0002865" startTime="2026-10-04T14:37:50.5959077+07:00" endTime="2026-10-04T14:37:50.5959079+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6eddfd13-e68c-4461-a1bb-a2be6730fec7" />
+    <UnitTestResult executionId="70534ef0-45cd-4a40-b19b-4c8eb482ab0b" testId="1ffeb770-281c-8555-3289-c78465a9f296" testName="AnSinh360.Tests.CsvReaderTests.Malformed_csv_is_rejected(csv: &quot;key,notes,value\nx,v,n\n&quot;)" computerName="DESKTOP-O7I4359" duration="00:00:00.0001285" startTime="2026-10-04T14:37:50.5960939+07:00" endTime="2026-10-04T14:37:50.5960941+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="70534ef0-45cd-4a40-b19b-4c8eb482ab0b" />
+    <UnitTestResult executionId="a716eaad-5ee0-49d8-ac0c-34d572efed7e" testId="d00e6f9f-dc14-3ca8-10a2-7ff0d31bd024" testName="AnSinh360.Tests.CsvReaderTests.Rfc4180_quoted_fields_unicode_whitespace_empty_cells_and_bom_are_preserved" computerName="DESKTOP-O7I4359" duration="00:00:00.0022201" startTime="2026-10-04T14:37:50.5988217+07:00" endTime="2026-10-04T14:37:50.5988220+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a716eaad-5ee0-49d8-ac0c-34d572efed7e" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Repeated_reads_have_identical_fingerprints_and_cells" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="23210c7c-2ad8-e9ef-e102-beccf421dbe3">
+      <Execution id="df79bb40-e7c7-42de-84a9-bc683b005bda" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Repeated_reads_have_identical_fingerprints_and_cells" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.PostgresIntegrationTests.Mid_import_failure_rolls_back_every_table_and_audit_row" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="f60b149d-228d-910b-eacc-258ba89d5a62">
+      <Execution id="f1979d08-7de2-483c-b15d-0d089f54541b" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.PostgresIntegrationTests" name="Mid_import_failure_rolls_back_every_table_and_audit_row" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.PostgresIntegrationTests.Real_dataset_migrates_imports_verbatim_and_second_import_is_idempotent" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="3fde0f34-994a-e1f0-a2c2-57a293b9ec77">
+      <Execution id="6c1d5641-63cf-4ca0-8f4e-d4c50af3de45" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.PostgresIntegrationTests" name="Real_dataset_migrates_imports_verbatim_and_second_import_is_idempotent" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ImportPlannerTests.Duplicate_import_keys_are_rejected" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="8f3e6931-304d-e20a-349f-54f4f1afb365">
+      <Execution id="76e284bb-9542-47ac-8a4c-6f0d4cbb0ad5" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ImportPlannerTests" name="Duplicate_import_keys_are_rejected" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Each_money_range_numeric_rule_has_a_warning" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="91e84bdf-462b-fc6a-6bfd-8b9af1db1ca8">
+      <Execution id="dd0d0dd2-5f14-4b04-bdf7-822e9142ab9e" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Each_money_range_numeric_rule_has_a_warning" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Real_contract_definitions_and_portal_source_remain_verbatim" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="1a8bee1d-7fd9-2965-bca0-e3163934b9fe">
+      <Execution id="77be3c6b-7421-4a6b-9b36-78053036c6c2" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Real_contract_definitions_and_portal_source_remain_verbatim" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Real_dataset_is_valid_with_nonblocking_contract_and_portal_warnings" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="3c31eb3d-1dcf-5e4a-0201-6808a7252549">
+      <Execution id="4af05f93-7d85-410b-826e-71a4c6ebebdb" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Real_dataset_is_valid_with_nonblocking_contract_and_portal_warnings" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Invalid_full_dates_are_errors(value: &quot;2026-02-30&quot;, code: &quot;INVALID_DATE&quot;)" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="3463f75d-33f6-e40b-a8f4-2c261400f4d1">
+      <Execution id="5964cabf-0115-4863-a8b5-f6748d1a4307" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Invalid_full_dates_are_errors" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Rfc4180_quoted_fields_unicode_whitespace_empty_cells_and_bom_are_preserved" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="d00e6f9f-dc14-3ca8-10a2-7ff0d31bd024">
+      <Execution id="a716eaad-5ee0-49d8-ac0c-34d572efed7e" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Rfc4180_quoted_fields_unicode_whitespace_empty_cells_and_bom_are_preserved" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Invalid_full_dates_are_errors(value: &quot;not-a-date&quot;, code: &quot;INVALID_DATE&quot;)" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="77fce4fd-9bc7-0cfc-11e3-6b8988f5dd6a">
+      <Execution id="25e26320-00a6-4413-b4b0-f7b76dc97145" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Invalid_full_dates_are_errors" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.SchemaTests.Migration_sql_is_generated_without_connecting_to_PostgreSQL" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="627d391f-5c06-e7da-79af-7f22053ac080">
+      <Execution id="748ba474-4b58-4dc3-b301-6d226f9ff117" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.SchemaTests" name="Migration_sql_is_generated_without_connecting_to_PostgreSQL" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Validation_does_not_change_any_source_cell" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="83304901-9223-c4ed-b273-3f1ea64d242b">
+      <Execution id="c3956bed-a805-4831-978f-4787ca56ac8d" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Validation_does_not_change_any_source_cell" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.SchemaTests.PostgreSQL_model_has_text_columns_exact_keys_and_restrict_foreign_keys" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="351f8b08-94c2-4ee3-67d0-728b2c4478b2">
+      <Execution id="5b1f1bd4-3822-4424-b168-dcb61528d547" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.SchemaTests" name="PostgreSQL_model_has_text_columns_exact_keys_and_restrict_foreign_keys" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ImportPlannerTests.Real_dataset_first_import_plan_has_382_inserts_and_second_has_no_changes" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="bf7e242c-78f5-7fc7-e7a2-cb220c66bd1f">
+      <Execution id="18386045-4662-4754-8e6e-065def80265b" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ImportPlannerTests" name="Real_dataset_first_import_plan_has_382_inserts_and_second_has_no_changes" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Broken_source_policy_service_and_pipe_list_references_are_errors" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="03a93c1e-8e1e-7d63-7ff4-628dc1674acd">
+      <Execution id="651bff22-93d3-49aa-a9a5-3669b519c3f8" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Broken_source_policy_service_and_pipe_list_references_are_errors" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.PostgresIntegrationTests.Changed_cell_updates_one_record_then_becomes_idempotent" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="0b450fc7-33c1-3b6f-7e1f-b6e2853aa0a7">
+      <Execution id="ca2bca15-121b-4020-9fa4-372580b1bd2c" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.PostgresIntegrationTests" name="Changed_cell_updates_one_record_then_becomes_idempotent" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Invalid_utf8_is_rejected" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="27fb607c-2f57-e1b6-ca12-ef92c25e7ade">
+      <Execution id="f305949b-4fab-4bc9-b93b-196aa59738ac" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Invalid_utf8_is_rejected" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.SchemaTests.Invalid_dataset_is_rejected_before_any_database_access" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="1ff09983-c78a-8735-d4ea-529731225cbe">
+      <Execution id="998f6c32-5b6d-4141-a52c-6d159b4a0425" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.SchemaTests" name="Invalid_dataset_is_rejected_before_any_database_access" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Inverted_opportunity_date_interval_is_an_error" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="a16ea4ab-c5e6-af8f-df85-ea5f1112d63c">
+      <Execution id="c3bc00c0-3fb3-4b73-b9ba-8f93755e215b" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Inverted_opportunity_date_interval_is_an_error" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Malformed_csv_is_rejected(csv: &quot;key,value,notes\nx,v\n&quot;)" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="b2b84955-03d9-dd6b-ad3b-1d0822379675">
+      <Execution id="3dca9f83-7226-4d94-bc48-6d14e44a5367" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Malformed_csv_is_rejected" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ImportPlannerTests.Missing_incoming_rows_are_retained_and_never_deleted" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="dbf71821-b6ae-11a3-2b51-f7c61147ee01">
+      <Execution id="93b26766-ec16-402d-8f6c-3784f81ae02f" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ImportPlannerTests" name="Missing_incoming_rows_are_retained_and_never_deleted" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Malformed_csv_is_rejected(csv: &quot;key,value,notes\nx,v,n,extra\n&quot;)" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="cae9336b-6834-fc6c-5f9b-015897dec95b">
+      <Execution id="d23fc7bc-6378-4cad-9288-904a1326de30" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Malformed_csv_is_rejected" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Missing_files_are_reported_as_errors" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="f7001098-0fb7-d24d-fa06-1fed0760b234">
+      <Execution id="a299872b-fad7-4ad7-bd9e-8e9af0aefb15" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Missing_files_are_reported_as_errors" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Undated_recurring_opportunity_and_dataset_log_sentinel_are_retained" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="34b8096d-1f12-8da4-f370-77d01a5bf154">
+      <Execution id="0e805cab-d91b-489f-9c5b-1adddaa6a336" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Undated_recurring_opportunity_and_dataset_log_sentinel_are_retained" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ImportPlannerTests.Changed_cell_produces_one_update_and_ordinal_case_is_significant" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="85790bd2-2d51-7dcd-5603-13a5d2c82a55">
+      <Execution id="81b0e2db-f40b-4cd0-81f4-f793d04f5795" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ImportPlannerTests" name="Changed_cell_produces_one_update_and_ordinal_case_is_significant" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Malformed_csv_is_rejected(csv: &quot;key,value,notes\nx,\&quot;unclosed,n\n&quot;)" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="93a66439-71f9-487f-124c-8d856835e6de">
+      <Execution id="7acf6fc3-4042-4d45-a3c4-94930c93b8e7" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Malformed_csv_is_rejected" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Malformed_csv_is_rejected(csv: &quot;key,value,notes\nx,v\0,n\n&quot;)" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="49969d6e-ac06-4091-05f7-cc94cf9e6208">
+      <Execution id="6eddfd13-e68c-4461-a1bb-a2be6730fec7" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Malformed_csv_is_rejected" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Malformed_csv_is_rejected(csv: &quot;key,notes,value\nx,v,n\n&quot;)" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="1ffeb770-281c-8555-3289-c78465a9f296">
+      <Execution id="70534ef0-45cd-4a40-b19b-4c8eb482ab0b" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Malformed_csv_is_rejected" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.CsvReaderTests.Real_dataset_has_all_fourteen_tables_and_expected_counts" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="48f332e3-a024-55fb-4175-df2bee66054c">
+      <Execution id="9ec7faac-fd9a-4c41-a57f-7076854f7db6" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.CsvReaderTests" name="Real_dataset_has_all_fourteen_tables_and_expected_counts" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ImportPlannerTests.Composite_enum_keys_allow_same_value_in_different_groups" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="cb1b8a79-d96a-c3bb-0274-e30893a8b871">
+      <Execution id="f4619e5a-31c7-4757-9cdc-6bee9c6e76d5" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ImportPlannerTests" name="Composite_enum_keys_allow_same_value_in_different_groups" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.HealthTests.Health_returns_process_liveness_without_a_database" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="7afb2488-98a9-650a-c77b-a1da3c2b38fe">
+      <Execution id="5c05e2c0-ba03-48ff-8ea3-1385c6a33160" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.HealthTests" name="Health_returns_process_liveness_without_a_database" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Empty_tables_and_missing_dataset_metadata_cannot_be_silently_imported" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="89a50b2f-8e34-d6ea-84db-a9eb08c91493">
+      <Execution id="607cd8df-2bf9-49b2-8192-85e39e8ef7e7" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Empty_tables_and_missing_dataset_metadata_cannot_be_silently_imported" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Empty_and_duplicate_natural_keys_block_import" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="5a90000b-7f41-3fc3-8ec9-0df71782b4de">
+      <Execution id="06a82385-09d3-4eec-831c-73fdde35b61e" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Empty_and_duplicate_natural_keys_block_import" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Service_rule_aliases_and_derived_fields_are_nonblocking_and_not_evaluated" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="af52af4e-f6bd-7782-7f8f-364c4e8f8ffd">
+      <Execution id="e9dd3545-d5e2-4f5c-88a7-2c3f68942621" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Service_rule_aliases_and_derived_fields_are_nonblocking_and_not_evaluated" />
+    </UnitTest>
+    <UnitTest name="AnSinh360.Tests.ValidatorTests.Output_rules_do_not_require_profile_input_fields" storage="d:\ý tưởng dự án liên chiểu\tests\ansinh360.tests\bin\release\net8.0\ansinh360.tests.dll" id="3fcc2639-8e04-3996-360e-a70d471ca653">
+      <Execution id="92dfa0dd-012c-4be0-9130-40c5d0987655" />
+      <TestMethod codeBase="D:\Ý tưởng dự án Liên Chiểu\tests\AnSinh360.Tests\bin\Release\net8.0\AnSinh360.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AnSinh360.Tests.ValidatorTests" name="Output_rules_do_not_require_profile_input_fields" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="dbf71821-b6ae-11a3-2b51-f7c61147ee01" executionId="93b26766-ec16-402d-8f6c-3784f81ae02f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="91e84bdf-462b-fc6a-6bfd-8b9af1db1ca8" executionId="dd0d0dd2-5f14-4b04-bdf7-822e9142ab9e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="93a66439-71f9-487f-124c-8d856835e6de" executionId="7acf6fc3-4042-4d45-a3c4-94930c93b8e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3463f75d-33f6-e40b-a8f4-2c261400f4d1" executionId="5964cabf-0115-4863-a8b5-f6748d1a4307" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8f3e6931-304d-e20a-349f-54f4f1afb365" executionId="76e284bb-9542-47ac-8a4c-6f0d4cbb0ad5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7afb2488-98a9-650a-c77b-a1da3c2b38fe" executionId="5c05e2c0-ba03-48ff-8ea3-1385c6a33160" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c31eb3d-1dcf-5e4a-0201-6808a7252549" executionId="4af05f93-7d85-410b-826e-71a4c6ebebdb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cae9336b-6834-fc6c-5f9b-015897dec95b" executionId="d23fc7bc-6378-4cad-9288-904a1326de30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ff09983-c78a-8735-d4ea-529731225cbe" executionId="998f6c32-5b6d-4141-a52c-6d159b4a0425" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="48f332e3-a024-55fb-4175-df2bee66054c" executionId="9ec7faac-fd9a-4c41-a57f-7076854f7db6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="85790bd2-2d51-7dcd-5603-13a5d2c82a55" executionId="81b0e2db-f40b-4cd0-81f4-f793d04f5795" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="77fce4fd-9bc7-0cfc-11e3-6b8988f5dd6a" executionId="25e26320-00a6-4413-b4b0-f7b76dc97145" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7001098-0fb7-d24d-fa06-1fed0760b234" executionId="a299872b-fad7-4ad7-bd9e-8e9af0aefb15" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83304901-9223-c4ed-b273-3f1ea64d242b" executionId="c3956bed-a805-4831-978f-4787ca56ac8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="351f8b08-94c2-4ee3-67d0-728b2c4478b2" executionId="5b1f1bd4-3822-4424-b168-dcb61528d547" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="627d391f-5c06-e7da-79af-7f22053ac080" executionId="748ba474-4b58-4dc3-b301-6d226f9ff117" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3fcc2639-8e04-3996-360e-a70d471ca653" executionId="92dfa0dd-012c-4be0-9130-40c5d0987655" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5a90000b-7f41-3fc3-8ec9-0df71782b4de" executionId="06a82385-09d3-4eec-831c-73fdde35b61e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f60b149d-228d-910b-eacc-258ba89d5a62" executionId="f1979d08-7de2-483c-b15d-0d089f54541b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23210c7c-2ad8-e9ef-e102-beccf421dbe3" executionId="df79bb40-e7c7-42de-84a9-bc683b005bda" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf7e242c-78f5-7fc7-e7a2-cb220c66bd1f" executionId="18386045-4662-4754-8e6e-065def80265b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="34b8096d-1f12-8da4-f370-77d01a5bf154" executionId="0e805cab-d91b-489f-9c5b-1adddaa6a336" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1a8bee1d-7fd9-2965-bca0-e3163934b9fe" executionId="77be3c6b-7421-4a6b-9b36-78053036c6c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a16ea4ab-c5e6-af8f-df85-ea5f1112d63c" executionId="c3bc00c0-3fb3-4b73-b9ba-8f93755e215b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3fde0f34-994a-e1f0-a2c2-57a293b9ec77" executionId="6c1d5641-63cf-4ca0-8f4e-d4c50af3de45" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0b450fc7-33c1-3b6f-7e1f-b6e2853aa0a7" executionId="ca2bca15-121b-4020-9fa4-372580b1bd2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="af52af4e-f6bd-7782-7f8f-364c4e8f8ffd" executionId="e9dd3545-d5e2-4f5c-88a7-2c3f68942621" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb1b8a79-d96a-c3bb-0274-e30893a8b871" executionId="f4619e5a-31c7-4757-9cdc-6bee9c6e76d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b2b84955-03d9-dd6b-ad3b-1d0822379675" executionId="3dca9f83-7226-4d94-bc48-6d14e44a5367" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03a93c1e-8e1e-7d63-7ff4-628dc1674acd" executionId="651bff22-93d3-49aa-a9a5-3669b519c3f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89a50b2f-8e34-d6ea-84db-a9eb08c91493" executionId="607cd8df-2bf9-49b2-8192-85e39e8ef7e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27fb607c-2f57-e1b6-ca12-ef92c25e7ade" executionId="f305949b-4fab-4bc9-b93b-196aa59738ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="49969d6e-ac06-4091-05f7-cc94cf9e6208" executionId="6eddfd13-e68c-4461-a1bb-a2be6730fec7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ffeb770-281c-8555-3289-c78465a9f296" executionId="70534ef0-45cd-4a40-b19b-4c8eb482ab0b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d00e6f9f-dc14-3ca8-10a2-7ff0d31bd024" executionId="a716eaad-5ee0-49d8-ac0c-34d572efed7e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="35" executed="32" passed="32" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.25)&#xD;
+[xUnit.net 00:00:00.26]   Discovering: AnSinh360.Tests&#xD;
+[xUnit.net 00:00:00.33]   Discovered:  AnSinh360.Tests&#xD;
+[xUnit.net 00:00:00.33]   Starting:    AnSinh360.Tests&#xD;
+[xUnit.net 00:00:00.38]       blocked by local environment: PostgreSQL/Docker unavailable; AS360_TEST_CONNECTION_STRING is not set.&#xD;
+[xUnit.net 00:00:00.39]       blocked by local environment: PostgreSQL/Docker unavailable; AS360_TEST_CONNECTION_STRING is not set.&#xD;
+[xUnit.net 00:00:00.39]       blocked by local environment: PostgreSQL/Docker unavailable; AS360_TEST_CONNECTION_STRING is not set.&#xD;
+Test 'AnSinh360.Tests.PostgresIntegrationTests.Real_dataset_migrates_imports_verbatim_and_second_import_is_idempotent' was skipped in the test run.&#xD;
+Test 'AnSinh360.Tests.PostgresIntegrationTests.Changed_cell_updates_one_record_then_becomes_idempotent' was skipped in the test run.&#xD;
+Test 'AnSinh360.Tests.PostgresIntegrationTests.Mid_import_failure_rolls_back_every_table_and_audit_row' was skipped in the test run.&#xD;
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]&#xD;
+      Request starting HTTP/1.1 GET http://localhost/health - - -&#xD;
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]&#xD;
+      Executing endpoint 'HTTP: GET /health'&#xD;
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[1]&#xD;
+      Setting HTTP status code 200.&#xD;
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[3]&#xD;
+      Writing value of type '&lt;&gt;f__AnonymousType0`4' as Json.&#xD;
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]&#xD;
+      Executed endpoint 'HTTP: GET /health'&#xD;
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]&#xD;
+      Request finished HTTP/1.1 GET http://localhost/health - 200 - application/json;+charset=utf-8 71.0936ms&#xD;
+[xUnit.net 00:00:01.60]   Finished:    AnSinh360.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-O7I4359" outcome="Warning" timestamp="2026-10-04T14:37:50.2871674+07:00">
+        <Text>[xUnit.net 00:00:00.38]     AnSinh360.Tests.PostgresIntegrationTests.Real_dataset_migrates_imports_verbatim_and_second_import_is_idempotent [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-O7I4359" outcome="Warning" timestamp="2026-10-04T14:37:50.2941292+07:00">
+        <Text>[xUnit.net 00:00:00.39]     AnSinh360.Tests.PostgresIntegrationTests.Changed_cell_updates_one_record_then_becomes_idempotent [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-O7I4359" outcome="Warning" timestamp="2026-10-04T14:37:50.2950808+07:00">
+        <Text>[xUnit.net 00:00:00.39]     AnSinh360.Tests.PostgresIntegrationTests.Mid_import_failure_rolls_back_every_table_and_audit_row [SKIP]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

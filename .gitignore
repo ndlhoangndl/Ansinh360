@@ -13,6 +13,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 .turbo/
+.pnpm-store/
+*.tsbuildinfo
 
 # .NET / C#
 bin/
@@ -47,3 +49,9 @@ pgdata/
 # Temporary / Scratch
 scratch/
 *.tmp
+
+# Test-run attachments are local; keep the compact TRX report.
+docs/reports/tests/*/
+TestResults/
+
+.frontend-npm-check/
