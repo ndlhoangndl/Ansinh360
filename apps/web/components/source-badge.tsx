@@ -14,7 +14,8 @@ export function SourceBadge({ id, detail, linked = true }: { id: string; detail?
 }
 
 export function SourceDisclosure({ entries }: { entries: { id: string; detail?: string }[] }) {
+  const unique = [...new Set(entries.map((entry) => entry.id))].map((id) => ({ id, detail: [...new Set(entries.filter((entry) => entry.id === id).map((entry) => entry.detail).filter(Boolean))].join("; ") || undefined }));
   return <details className="source-disclosure"><summary>Căn cứ để AN SINH 360 đưa hướng dẫn này</summary>
-    {entries.map((entry) => <div key={`${entry.id}-${entry.detail}`}><SourceBadge {...entry} linked={false} /><a className="text-action" href={source(entry.id).canonical_url} target="_blank" rel="noopener noreferrer">Xem nguồn chính thức<ExternalLink size={14} /></a></div>)}
+    {unique.map((entry) => <div key={entry.id}><SourceBadge {...entry} linked={false} /><a className="text-action" href={source(entry.id).canonical_url} target="_blank" rel="noopener noreferrer">Xem nguồn chính thức<ExternalLink size={14} /></a></div>)}
   </details>;
 }

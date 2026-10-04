@@ -9,6 +9,7 @@ export function situationFacts(journey: Journey, answers: Answers): string[] {
   if (journey === "JOB_LOSS") {
     add(answers.employmentEnded, { true: "Vừa chấm dứt việc làm", false: "Vẫn đang làm việc", UNKNOWN: "Chưa rõ tình trạng chấm dứt việc làm" });
     add(answers.insurance, { YES: "Có tham gia BHTN", NO: "Không tham gia BHTN", UNKNOWN: "Chưa rõ thông tin BHTN" });
+    add(answers.terminationLegal, { LEGAL: "Bạn tự khai nghỉ theo quyết định / thỏa thuận hợp pháp", UNLAWFUL: "Bạn tự khai tự ý nghỉ trái quy định", UNKNOWN: "Bạn chưa rõ hình thức chấm dứt việc làm" });
     if (answers.terminationDate && answers.terminationDate !== "UNKNOWN") facts.push(`Ngày chấm dứt: ${formatDate(answers.terminationDate)}`);
     add(answers.goal, { JOB: "Muốn tìm việc mới", TRAINING: "Muốn học nghề / nâng kỹ năng", BOTH: "Muốn tìm việc mới và học nghề", UNKNOWN: "Muốn được tư vấn hướng đi" });
   } else if (journey === "HOUSING_DIFFICULTY") {

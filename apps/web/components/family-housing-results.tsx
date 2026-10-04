@@ -3,24 +3,25 @@
 import { useState } from "react";
 import { ArrowRight, CalendarDays } from "lucide-react";
 import { Answers, dataset, formatDate, housingOpportunity, opportunityStatus, policy, service } from "@/lib/demo";
-import { NextActions, PracticalChecklist, RecommendationGuidance, SituationSummary } from "./result-guidance";
+import { NextActions, PracticalChecklist, RecommendationGuidance } from "./result-guidance";
+import { InformationOrigins } from "./action-details";
 import { SourceDisclosure } from "./source-badge";
 
 type CardProps = { title: string; reasons: string[]; missing: string[]; explanation: string; sourceId: string; detail?: string; preparation?: string[]; actions?: string[]; positive?: boolean; primary?: boolean; onPlan: () => void };
 function GuidedCard({ title, reasons, missing, explanation, preparation, actions, positive, primary, onPlan }: CardProps) {
   return <article className="recommendation guided-card"><span className={`badge ${positive ? "badge-good" : "badge-review"}`}>{positive ? "Có dấu hiệu phù hợp" : "Chưa xác nhận quyền hưởng"}</span><h2>{primary ? "1. Hỏi nơi tiếp nhận về hỗ trợ cho gia đình" : `Tìm hiểu: ${title}`}</h2>{primary && <p>{title}</p>}
     <p>Hãy hỏi nơi tiếp nhận về trường hợp của gia đình bạn. Sau đó, xem giấy tờ của đúng thủ tục.</p>
-    <button className={primary ? "primary-button" : "outline-button"} onClick={onPlan}>Xem việc cần làm<ArrowRight size={17} /></button>
+    <button className={primary ? "primary-button" : "outline-button"} onClick={onPlan}>{primary ? "Xem tôi cần làm gì" : "Xem việc cần làm"}<ArrowRight size={17} /></button>
     <RecommendationGuidance reasons={reasons} missing={missing} explanation={explanation} />
     {preparation && <PracticalChecklist items={preparation} />}{actions && <NextActions items={actions} />}
   </article>;
 }
 
-export const housingPreparation = (_answers: Answers) => ["Xác định đúng nhóm đối tượng", "Chọn đúng dự án / đợt đang mở", "Đọc yêu cầu hồ sơ của đợt đó"];
+export const housingPreparation = (_answers: Answers) => ["Xác định đúng nhóm đối tượng", "Chọn đúng loại nhu cầu: mua / thuê / lưu trú", "Xem đợt đang hoặc sắp nhận hồ sơ"];
 export const housingActions = housingPreparation({});
 export function EarlyHousingChecklist({ answers }: { answers: Answers }) {
   return <section className="early-housing recommendation" id="housing-preparation" tabIndex={-1}>
-    <h2>Chưa cần chuẩn bị hồ sơ ngay</h2><p>Trước khi tải hoặc xin giấy tờ, hãy hoàn thành các bước sau:</p>
+    <h2>Bạn chưa cần chuẩn bị hồ sơ ngay</h2><p>Trước khi tải hoặc xin giấy tờ, hãy hoàn thành các bước sau:</p>
     <PracticalChecklist heading="Các bước trước khi làm hồ sơ" items={housingPreparation(answers)} />
     <p>Sau khi xác định được đợt phù hợp, bạn mới nên lập checklist hồ sơ theo thông báo của đợt đó.</p>
   </section>;
@@ -39,7 +40,7 @@ export function HousingResults({ answers, onPlan, onAnswer, onSupport }: { answe
         <span className="action-label">LÀM NGAY · KHOẢNG 1 PHÚT</span><h2>1. Xác định bạn thuộc nhóm nào</h2>
         <p>{buy ? "Bạn muốn mua nhà ở xã hội." : "Bạn đã cho biết nhu cầu nhà ở của mình."} {answers.ownsHouse === "NO" && "Bạn / vợ hoặc chồng chưa có nhà tại Đà Nẵng."} {answers.incomeRange && answers.incomeRange !== "UNKNOWN" && "Khoảng thu nhập bạn chọn đã được ghi nhận."}</p>
         <p>{groupKnown ? "Bạn đã tự chọn nhóm của mình. Đây chưa phải xác nhận thuộc nhóm được hưởng; hãy đọc yêu cầu của đúng đợt tiếp nhận." : "Chúng tôi chưa biết bạn thuộc nhóm nào. Trả lời một câu để làm rõ hướng cần hỏi tiếp theo."}</p>
-        <button className="primary-button" onClick={() => groupKnown ? focus("housing-rounds") : (setAnswering(true), focus("housing-group"))}>{groupKnown ? "Xem đợt tiếp nhận" : "Kiểm tra nhóm của tôi"}<ArrowRight size={17} /></button>
+        <button className="primary-button" onClick={onPlan}>Xem tôi cần làm gì<ArrowRight size={17} /></button>
       </article>
       <article className="recommendation"><span className="action-label">SAU ĐÓ</span><h2>2. Xem đợt nào đang nhận hồ sơ</h2>
         <p>Mỗi đợt có thời gian tiếp nhận riêng. Xem trạng thái và ngày nhận hồ sơ trước khi chuẩn bị giấy tờ.</p>
@@ -47,11 +48,10 @@ export function HousingResults({ answers, onPlan, onAnswer, onSupport }: { answe
         <button className="outline-button" onClick={() => focus("housing-rounds")}>Xem các đợt phù hợp<ArrowRight size={17} /></button>
       </article>
     </div>
-    <SituationSummary journey="HOUSING_DIFFICULTY" answers={answers} />
     <section className="verification-box group-question" id="housing-group" tabIndex={-1}>
-      <h2>{groupKnown ? "Đã ghi nhận câu trả lời của bạn" : "Câu hỏi cần trả lời trước"}</h2><h3>Bạn thuộc nhóm đối tượng nào?</h3>
+      <h2>{groupKnown ? "Đã ghi nhận câu trả lời của bạn" : "Chúng tôi còn thiếu 1 thông tin để hỏi tiếp"}</h2><h3>Bạn thuộc nhóm đối tượng nào?</h3>
       <p>Ví dụ: công nhân / người lao động tại doanh nghiệp, hoặc nhóm khác theo quy định. Nếu chưa rõ, hãy chọn “Tôi chưa rõ” để được hướng dẫn.</p>
-      {!answering ? <><p>{answers.applicantGroup ? labels[answers.applicantGroup] : "Thông tin nhóm đối tượng chưa được cung cấp."}</p><button className="outline-button" onClick={() => setAnswering(true)}>{groupKnown ? "Đổi câu trả lời" : "Trả lời câu này"}</button></> : <fieldset><legend>Chọn nhóm bạn muốn tìm hiểu</legend>{groupField.allowed_values.split("|").map((value) => <label className="group-option" key={value}><input type="radio" name="applicant-group" value={value} checked={answers.applicantGroup === value} onChange={() => onAnswer(value)} />{labels[value]}</label>)}<p>Chỉ ghi nhận lựa chọn của bạn; bản demo chưa kết luận điều kiện hưởng.</p><button className="outline-button" onClick={() => { setAnswering(false); focus("housing-rounds"); }}>Xem bước sau</button></fieldset>}
+      {!answering ? <><p>{answers.applicantGroup ? labels[answers.applicantGroup] : "Thông tin nhóm đối tượng chưa được cung cấp."}</p><button className="outline-button" onClick={() => setAnswering(true)}>{groupKnown ? "Đổi câu trả lời" : "Xác định nhóm của tôi"}</button></> : <fieldset><legend>Chọn nhóm bạn muốn tìm hiểu</legend>{groupField.allowed_values.split("|").map((value) => <label className="group-option" key={value}><input type="radio" name="applicant-group" value={value} checked={answers.applicantGroup === value} onChange={() => onAnswer(value)} />{labels[value]}</label>)}<p>Chỉ ghi nhận lựa chọn của bạn; bản demo chưa kết luận điều kiện hưởng.</p><button className="outline-button" onClick={() => { setAnswering(false); focus("housing-rounds"); }}>Xem bước sau</button></fieldset>}
       {answers.applicantGroup === "UNKNOWN" && <button className="outline-button" onClick={onSupport}>Tôi cần người hỗ trợ</button>}
     </section>
     <section className="recommendation"><h2>Vì sao chúng tôi chưa thể nói bạn đủ điều kiện?</h2>
@@ -63,6 +63,7 @@ export function HousingResults({ answers, onPlan, onAnswer, onSupport }: { answe
       <button className="outline-button" onClick={onPlan}>Xem việc của tôi lúc này<ArrowRight size={17} /></button>
     </section>
     <EarlyHousingChecklist answers={answers} />
+    <InformationOrigins housing />
     <SourceDisclosure entries={[{ id: "SRC_HOUSE_LAW_001", detail: "Điều 78; nhóm người lao động: Điều 76 khoản 6" }, ...(buy ? [{ id: policy("POL_HOUSE_001").legal_source_id, detail: "Điều 29, Điều 30" }] : [{ id: policy(answers.housingIntent === "RENT" ? "POL_HOUSE_002" : "POL_HOUSE_003").legal_source_id }]), ...(round ? [{ id: round.source_id }] : [{ id: service("HOUSE_SV_001").source_id }])]} />
   </>;
 }

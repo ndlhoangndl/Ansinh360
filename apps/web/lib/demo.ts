@@ -6,7 +6,7 @@ export type Screen = "home" | "questions" | "analysis" | "results" | "plan";
 export type Status = "POSSIBLE_MATCH" | "NEED_MORE_INFO";
 export type Opportunity = (typeof data.opportunities)[number];
 export type Answers = {
-  employmentEnded?: string; terminationDate?: string; insurance?: string; contributionMonths?: string; goal?: string;
+  employmentEnded?: string; terminationDate?: string; insurance?: string; contributionMonths?: string; goal?: string; terminationLegal?: string;
   housingIntent?: string; ownsHouse?: string; incomeRange?: string; applicantGroup?: string;
   childContext?: string; childAge?: string;
 };

@@ -10,10 +10,10 @@ export function AnalysisScreen({ journey, answers, onComplete }: { journey: Jour
   const [completed, setCompleted] = useState(0);
   const facts = analysisSummary(journey, answers);
   const steps = [
-    { title: "Hoàn cảnh đã nhận diện", text: journey === "JOB_LOSS" && answers.employmentEnded === "true" ? "Vừa mất việc" : facts.situation, status: "Đã nhận diện", icon: Users },
-    { title: "Thông tin đã ghi nhận", text: "", status: facts.conditions.every((c) => c.met) ? "Đã đối chiếu thông tin" : "Cần xác minh", icon: ClipboardCheck },
-    { title: "Đối chiếu chính sách", text: "", status: "Đã đối chiếu", icon: FileCheck2 },
-    { title: "Tìm dịch vụ phù hợp", text: "", status: "Đã tìm được dịch vụ", icon: MapPin },
+    { title: "Đã nhận diện hoàn cảnh", text: journey === "JOB_LOSS" && answers.employmentEnded === "true" ? "Vừa mất việc" : facts.situation, status: "Đã nhận diện", icon: Users },
+    { title: "Đã ghi nhận thông tin chính", text: "", status: facts.conditions.every((c) => c.met) ? "Đã đối chiếu thông tin" : "Cần xác minh", icon: ClipboardCheck },
+    { title: "Đối chiếu hướng chính sách", text: "", status: "Đã đối chiếu", icon: FileCheck2 },
+    { title: "Tìm nơi thực hiện phù hợp", text: "", status: "Đã tìm được dịch vụ", icon: MapPin },
     { title: "Xác định bước tiếp theo", text: "", status: "Có bước tiếp theo", icon: ScanLine },
   ];
   useEffect(() => {
@@ -26,7 +26,7 @@ export function AnalysisScreen({ journey, answers, onComplete }: { journey: Jour
     <div className="analysis-orbit" aria-hidden><ScanLine size={31} /><span /></div>
     <span className="eyebrow">TỪ THÔNG TIN ĐẾN HƯỚNG ĐI</span>
     <h1 id="analysis-title">Đang nối các dữ kiện…</h1>
-    <p className="analysis-subtitle">AN SINH 360 đang đối chiếu hoàn cảnh của bạn với chính sách, dịch vụ và bước tiếp theo phù hợp.</p>
+    <p className="analysis-subtitle">AN SINH 360 đang đối chiếu thông tin của bạn để tìm hướng phù hợp.</p>
     <div className="analysis-progress"><span style={{ width: `${completed * 20}%` }} /></div>
     <ol className="analysis-list">{steps.map((step, index) => {
       const done = index < completed; const current = index === completed;

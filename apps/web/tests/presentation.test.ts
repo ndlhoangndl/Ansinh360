@@ -22,3 +22,14 @@ test("rental and negative answers do not imply purchase, income or insurance par
   assert.deepEqual(situationFacts("HOUSING_DIFFICULTY", { housingIntent: "RENT" }), ["Đang tìm thuê nhà ở xã hội"]);
   assert.deepEqual(situationFacts("JOB_LOSS", { insurance: "NO" }), ["Không tham gia BHTN"]);
 });
+
+
+test("termination follow-up keeps the approved enum and does not claim eligibility", () => {
+  const field = dataset.profileFields.find((item) => item.field_name === "termination_legal")!;
+  assert.equal(field.allowed_values, "LEGAL|UNLAWFUL|UNKNOWN");
+  for (const value of field.allowed_values.split("|")) {
+    const facts = situationFacts("JOB_LOSS", { terminationLegal: value });
+    assert.equal(facts.length, 1);
+    assert.doesNotMatch(facts[0], /đủ điều kiện|được hưởng/);
+  }
+});

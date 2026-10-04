@@ -1,13 +1,14 @@
 import { ArrowRight, BriefcaseBusiness, Check, CircleHelp, ExternalLink, FileCheck2, GraduationCap, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { Answers, jobDemoResult, policy, service, source } from "@/lib/demo";
-import { MechanismExplainer } from "./mechanism-explainer";
+import { JobTerminationQuestion } from "./job-termination-question";
 import { SourceDisclosure } from "./source-badge";
 import { NextActions, PlainExplanation, PracticalChecklist, RecommendationGuidance } from "./result-guidance";
 import { jobPreparation } from "@/lib/presentation";
 
-export function JobResults({ answers, onPlan, checked, onToggle, onSupport }: { answers: Answers; onPlan: () => void; checked: string[]; onToggle: (id: string) => void; onSupport: () => void }) {
+export function JobResults({ answers, onPlan, checked, onToggle, onSupport, onAnswer }: { answers: Answers; onPlan: () => void; checked: string[]; onToggle: (id: string) => void; onSupport: () => void; onAnswer: (value: string) => void }) {
   const result = jobDemoResult(answers);
-  const positive = result.status === "POSSIBLE_MATCH";
+  // Follow-up declarations are not evaluated by the demo; require confirmation for all values.
+  const positive = result.status === "POSSIBLE_MATCH" && !answers.terminationLegal;
   const provider = service("JOB_SV_006");
   const reasons = [
     { met: answers.employmentEnded === "true", text: answers.employmentEnded === "true" ? "Bạn đã chấm dứt việc làm" : answers.employmentEnded === "false" ? "Bạn vẫn đang làm việc" : "Tình trạng việc làm cần xác minh" },
@@ -18,14 +19,12 @@ export function JobResults({ answers, onPlan, checked, onToggle, onSupport }: { 
     <article className="match-card">
       <div className="match-top"><span className="match-icon"><FileCheck2 size={25} /></span><span className={`badge ${positive ? "badge-good" : "badge-review"}`}><span className="badge-dot" />{positive ? "Có dấu hiệu phù hợp" : "Cần kiểm tra thêm"}</span></div>
       <span className="card-kicker"><Check size={13} />Đã đối chiếu · thông tin bạn cung cấp</span>
-      <h2>1. Hỏi Trung tâm DVVL về trường hợp nghỉ việc của bạn</h2><p>Ghi lại lý do nghỉ việc và thông tin đóng BHTN. Hỏi Trung tâm xem còn điều kiện nào cần xác nhận; sau đó mới chuẩn bị hồ sơ đúng trường hợp.</p><button className="primary-button" onClick={onPlan}>Xem việc cần làm ngay<ArrowRight size={18} /></button>
-      <p className="match-support">Dựa trên thông tin bạn cung cấp, đây là chính sách nên kiểm tra trước.</p><div className="match-reasons"><h3>Vì sao có gợi ý này?</h3>{reasons.map((reason) => <p key={reason.text} className={reason.met ? "met" : "unresolved"}>{reason.met ? <Check size={17} /> : <CircleHelp size={17} />}{reason.text}</p>)}</div>
-      <section className="verification-box"><h3>Câu hỏi cần làm rõ trước</h3><p>Bạn chấm dứt việc làm trong trường hợp nào?</p><p>Ghi lại lý do hoặc giấy tờ chấm dứt việc làm để hỏi Trung tâm. Câu trả lời giúp xác định bước kiểm tra tiếp theo; bản demo chưa kết luận quyền hưởng.</p><button className="outline-button" onClick={onPlan}>Xem cách chuẩn bị câu hỏi</button></section>
+      <h2>Trợ cấp thất nghiệp</h2><p>Ghi lại lý do nghỉ việc và thông tin đóng BHTN. Hỏi Trung tâm xem còn điều kiện nào cần xác nhận; sau đó mới chuẩn bị hồ sơ đúng trường hợp.</p><button className="primary-button" onClick={onPlan}>Xem tôi cần làm gì<ArrowRight size={18} /></button>
+      <p className="match-support">Dựa trên thông tin bạn cung cấp, đây là hướng nên kiểm tra trước.</p><div className="match-reasons"><h3>Vì sao có gợi ý này?</h3>{reasons.map((reason) => <p key={reason.text} className={reason.met ? "met" : "unresolved"}>{reason.met ? <Check size={17} /> : <CircleHelp size={17} />}{reason.text}</p>)}</div>
+      <JobTerminationQuestion answers={answers} onAnswer={onAnswer} />
       <PlainExplanation>Trợ cấp thất nghiệp không chỉ phụ thuộc vào việc bạn đã nghỉ việc hay chưa. Cách chấm dứt việc làm, thời gian đóng BHTN và thời hạn nộp hồ sơ vẫn cần được kiểm tra.</PlainExplanation>
-      <PracticalChecklist items={jobPreparation} checked={checked} onToggle={onToggle} />
-      <NextActions items={["Ghi lại lý do nghỉ việc để hỏi Trung tâm DVVL", "Xem giấy tờ của thủ tục trợ cấp thất nghiệp", "Xác nhận cách nộp với nơi tiếp nhận", "Sau đó, xem kênh tìm việc hoặc học nghề"]} />
+
     </article>
-    <MechanismExplainer />
     <article className="service-card">
       <div className="section-label"><MapPin size={18} />Nơi bạn có thể liên hệ<span className="badge badge-review">Cần kiểm tra thêm</span></div>
       <h2>{provider.service_name}</h2>
@@ -40,7 +39,6 @@ export function JobResults({ answers, onPlan, checked, onToggle, onSupport }: { 
       <button className="outline-button" onClick={onSupport}>Liên hệ người hỗ trợ nếu chưa rõ<CircleHelp size={17} /></button>
     </section>
 
-    <div className="next-action-cue"><ShieldCheck size={18} /><span><strong>Có bước tiếp theo</strong>Kiểm tra điều kiện → chuẩn bị → thực hiện → đi tiếp.</span><button onClick={onPlan} aria-label="Mở kế hoạch hành động"><ArrowRight size={20} /></button></div>
     <SourceDisclosure entries={[{ id: policy("POL_JOB_001").legal_source_id, detail: "Điều 38" }, { id: provider.source_id }, { id: service("JOB_SV_007").source_id }, { id: policy("POL_JOB_004").legal_source_id, detail: "Điều 37" }]} />
   </>;
 }

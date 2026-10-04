@@ -13,13 +13,14 @@ import { AnalysisScreen } from "./analysis-screen";
 import { JobResults } from "./job-results";
 import { JobActionPlan } from "./job-action-plan";
 import { UserJourneyProgress } from "./user-journey-progress";
+import { MechanismExplainer } from "./mechanism-explainer";
 import { SituationSummary } from "./result-guidance";
 import { HousingResults, ChildResults } from "./family-housing-results";
 import { LocalActionPlan } from "./local-action-plan";
 
 const journeyInfo = {
   JOB_LOSS: { icon: BriefcaseBusiness, short: "Mất việc", subtitle: "Kiểm tra hỗ trợ thất nghiệp, tìm việc và học nghề.", tone: "blue" },
-  HOUSING_DIFFICULTY: { icon: House, short: "Nhà ở", subtitle: "Tìm hướng kiểm tra nhà ở xã hội và chương trình phù hợp.", tone: "amber" },
+  HOUSING_DIFFICULTY: { icon: House, short: "Nhà ở", subtitle: "Tìm hướng kiểm tra nhà ở xã hội và đợt tiếp nhận phù hợp.", tone: "amber" },
   HAS_CHILD: { icon: Baby, short: "Có con nhỏ", subtitle: "Kiểm tra thai sản, thủ tục cho trẻ và hỗ trợ mầm non.", tone: "mint" },
 };
 type Question = { key: keyof Answers; title: string; hint: string; options?: { value: string; label: string; note?: string }[]; date?: boolean };
@@ -79,6 +80,7 @@ export function DemoApp() {
   const reducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const [answers, setAnswers] = useState<Answers>(() => demoMode ? { ...sampleAnswers } : {}); const [questionIndex, setQuestionIndex] = useState(0);
   const [supportOpen, setSupportOpen] = useState(false); const [reminder, setReminder] = useState(false);
+  const [selectedJourney, setSelectedJourney] = useState<Journey | undefined>();
   const [planServiceId, setPlanServiceId] = useState<string | undefined>();
   const [resultFocus, setResultFocus] = useState<string | undefined>();
   const [checked, setChecked] = useState<string[]>([]); const [descriptionOpen, setDescriptionOpen] = useState(false);
@@ -147,22 +149,21 @@ export function DemoApp() {
   return <div className={`app-shell ${recording ? "recording-mode" : ""}`}>
     <header className="site-header"><button className="brand" aria-label="AN SINH 360 — về trang chủ" onClick={() => navigate("home")}>
       <span className="brand-symbol"><Compass size={25} strokeWidth={1.7} /></span><span><strong>AN SINH <b>360</b></strong><small>Từ hoàn cảnh đến hành động.</small></span>
-    </button>{demoMode && <span className="demo-mode-label"><Play size={12} />Bản demo ý tưởng</span>}<button className="help-button" onClick={() => setSupportOpen(true)}><CircleHelp size={18} /><span>Cần hỗ trợ?</span></button></header>
+    </button><span className="demo-mode-label"><Play size={12} />Bản demo ý tưởng</span><button className="help-button" onClick={() => setSupportOpen(true)}><CircleHelp size={18} /><span>Cần hỗ trợ?</span></button></header>
     <main ref={contentRef} tabIndex={-1} className={`main-layout screen-${screen}`}>
       <div className="main-column"><UserJourneyProgress screen={screen} />
         {screen === "home" ? <>
           <section className="home-intro"><span className="local-label"><MapPin size={13} /> ĐỒNG HÀNH CÙNG NGƯỜI LAO ĐỘNG LIÊN CHIỂU</span>
             <h1>AN SINH <span>360</span></h1><p className="hero-subtitle">Bộ điều hướng chính sách, dịch vụ và cơ hội cho người lao động Liên Chiểu</p><strong className="hero-tagline">Từ hoàn cảnh đến hành động.</strong><p className="hero-support">Bạn không cần biết tên chính sách. Hãy bắt đầu từ tình huống mình đang gặp.</p>
           </section>
-          <section className="journey-selection"><div className="section-kicker"><h2>Bạn đang gặp tình huống nào?</h2><span>Chọn để bắt đầu</span></div>
+          <section className="journey-selection" role="radiogroup" aria-label="Bạn đang gặp tình huống nào?"><div className="section-kicker"><h2>Bạn đang gặp tình huống nào?</h2><span>Chọn để bắt đầu</span></div>
             {dataset.lifeEvents.map((event) => { const id = event.life_event_id as Journey; const item = journeyInfo[id]; const Icon = item.icon;
-              return <button key={id} className={`journey-card journey-${item.tone}`} onClick={() => start(id)}>
-                <IconBox tone={item.tone}><Icon size={24} strokeWidth={1.7} /></IconBox><span className="journey-copy"><strong>{event.name}</strong><small>{item.subtitle}</small>{id !== "JOB_LOSS" && <span className="experimental-badge">Demo thử nghiệm</span>}</span><ChevronRight className="journey-chevron" size={20} />
+              return <button key={id} className={`journey-card journey-${item.tone} ${selectedJourney === id ? "journey-selected" : ""}`} role="radio" aria-checked={selectedJourney === id} onClick={() => setSelectedJourney(id)}>
+                <IconBox tone={item.tone}><Icon size={24} strokeWidth={1.7} /></IconBox><span className="journey-copy"><strong>{event.name}</strong><small>{item.subtitle}</small></span><ChevronRight className="journey-chevron" size={20} />
               </button>; })}
           </section>
-          <div className="demo-entry"><button className="quick-demo" onClick={() => start("JOB_LOSS", true)}><Play size={15} />Chạy thử demo: Tôi vừa mất việc<ArrowRight size={15} /></button><p>Xem cách AN SINH 360 biến một hoàn cảnh thực tế thành các bước hành động.</p></div>
-          <section className="optional-description"><button onClick={() => setDescriptionOpen((value) => !value)} aria-expanded={descriptionOpen}><FileText size={15} /> Hoặc mô tả tình huống của bạn…<ChevronDown size={15} /></button>
-            {descriptionOpen && <div className="description-body"><textarea aria-label="Mô tả tình huống của bạn" rows={3} placeholder="Ví dụ: Tôi vừa nghỉ việc và muốn tìm công việc mới…" /><p>Chọn một tình huống ở trên để tiếp tục. Bạn không cần nhập thông tin định danh.</p></div>}</section>
+          <button className="primary-button home-start" disabled={!selectedJourney} onClick={() => selectedJourney && start(selectedJourney)}>Bắt đầu<ArrowRight size={18} /></button>
+          <div className="demo-entry"><button className="quick-demo" onClick={() => start("JOB_LOSS", true)}><Play size={15} />Chạy thử demo<ArrowRight size={15} /></button><p>Xem cách AN SINH 360 biến một hoàn cảnh thực tế thành các bước hành động.</p></div>
           <div className="trust-line"><ShieldCheck size={14} /><span>Nguồn chính thức</span><i /><span>Không cần đăng nhập</span></div>
 
         </> : <>
@@ -181,15 +182,15 @@ export function DemoApp() {
             <div className="question-footer"><button className="primary-button" disabled={!answers[currentQuestion.key]} onClick={nextQuestion}>{questionIndex >= questions.length - 1 ? "Phân tích hoàn cảnh của tôi" : "Tiếp tục"}<ArrowRight size={18} /></button></div>
           </section>}
 
-          {screen === "results" && <section className="results-screen"><div className="page-heading result-heading"><h1>{journey === "HOUSING_DIFFICULTY" && answers.housingIntent === "BUY" ? "Bạn có thể kiểm tra nhà ở xã hội" : journey === "JOB_LOSS" ? "Bắt đầu với việc hỏi về BHTN" : journey === "HAS_CHILD" ? "Bắt đầu với hỗ trợ cho gia đình bạn" : "Bắt đầu với nhu cầu nhà ở của bạn"}</h1><p>{journey === "HOUSING_DIFFICULTY" ? "Trước mắt, hãy làm 2 việc dưới đây." : "Làm việc đầu tiên dưới đây, rồi xem bước tiếp theo."}</p></div>{journey !== "HOUSING_DIFFICULTY" && <SituationSummary journey={journey} answers={answers} />}
-            {journey === "JOB_LOSS" && <JobResults answers={answers} checked={checked} onToggle={(id) => setChecked((previous) => previous.includes(id) ? previous.filter((value) => value !== id) : [...previous, id])} onSupport={() => setSupportOpen(true)} onPlan={() => openPlan()} />}
+          {screen === "results" && <section className="results-screen"><div className="page-heading result-heading"><h1>Bạn có thể bắt đầu từ đây</h1><p>{journey === "HOUSING_DIFFICULTY" ? "Trước mắt, hãy làm 2 việc dưới đây." : "Làm việc đầu tiên dưới đây, rồi xem bước tiếp theo."}</p></div><SituationSummary journey={journey} answers={answers} />
+            {journey === "JOB_LOSS" && <JobResults onAnswer={(value) => setAnswer("terminationLegal", value)} answers={answers} checked={checked} onToggle={(id) => setChecked((previous) => previous.includes(id) ? previous.filter((value) => value !== id) : [...previous, id])} onSupport={() => setSupportOpen(true)} onPlan={() => openPlan()} />}
             {journey === "HOUSING_DIFFICULTY" && <HousingResults answers={answers} onPlan={() => openPlan()} onAnswer={(value) => setAnswer("applicantGroup", value)} onSupport={() => setSupportOpen(true)} />}
             {journey === "HAS_CHILD" && <ChildResults answers={answers} onPlan={openPlan} />}
-            <p className="disclaimer"><ShieldCheck size={17} /><span>{disclaimer}</span></p><button className="outline-button all-actions" onClick={() => openPlan()}>Xem hành trình của bạn<Route size={18} /></button>
+            <MechanismExplainer /><p className="disclaimer"><ShieldCheck size={17} /><span>{disclaimer}</span></p>
           </section>}
 
           {screen === "plan" && <section className="plan-screen"><div className="page-heading"><h1>Việc của bạn lúc này</h1><p>Làm việc đầu tiên, rồi tiếp tục từng bước.</p></div>
-            {journey === "JOB_LOSS" ? <JobActionPlan onNextPaths={() => { navigate("results"); window.setTimeout(() => document.getElementById("next-paths")?.scrollIntoView({ behavior: reducedMotion() ? "instant" : "smooth", block: "start" }), 250); }} checked={checked} onToggle={(id) => setChecked((previous) => previous.includes(id) ? previous.filter((value) => value !== id) : [...previous, id])} /> : <LocalActionPlan serviceId={planServiceId} housing={journey === "HOUSING_DIFFICULTY"} answers={answers} onSupport={() => setSupportOpen(true)} onResultSection={(id) => { setResultFocus(id); navigate("results"); }} />}
+            {journey === "JOB_LOSS" ? <JobActionPlan answers={answers} onAnswer={(value) => setAnswer("terminationLegal", value)} onNextPaths={() => { navigate("results"); window.setTimeout(() => document.getElementById("next-paths")?.scrollIntoView({ behavior: reducedMotion() ? "instant" : "smooth", block: "start" }), 250); }} checked={checked} onToggle={(id) => setChecked((previous) => previous.includes(id) ? previous.filter((value) => value !== id) : [...previous, id])} /> : <LocalActionPlan serviceId={planServiceId} housing={journey === "HOUSING_DIFFICULTY"} answers={answers} onSupport={() => setSupportOpen(true)} onResultSection={(id) => { setResultFocus(id); navigate("results"); }} />}
             <p className="disclaimer"><ShieldCheck size={17} /><span>{disclaimer}</span></p><button className="restart-button" onClick={() => navigate("home")}><Route size={16} />Khám phá tình huống khác</button>
           </section>}
         </>}

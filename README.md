@@ -202,3 +202,11 @@ Thanh tiến trình có đúng bốn bước: **Tình huống → Một vài câ
 ## Giải thích gợi ý và hướng dẫn hành động
 
 Các màn kết quả đã có tóm tắt từ câu trả lời thực tế, lý do gợi ý, điều còn thiếu, giải thích ngắn, checklist và việc nên làm trước nguồn chính thức. Màn hành động chia thành **Hôm nay / Tiếp theo / Sau đó / Song song**. Không thu thập số định danh hay thay đổi dữ liệu nguồn. Xem [báo cáo cập nhật](docs/frontend/EXPLAINABILITY_REPORT.md); build npm và 12 test frontend đã đạt.
+
+## Kết quả tập trung vào việc cần làm
+
+Màn kết quả ưu tiên **làm gì → vì sao → bước sau → nguồn chính thức**. Nhà ở có câu hỏi nhóm đối tượng từ dữ liệu hiện có, trạng thái đợt tiếp nhận và checklist trước khi làm hồ sơ. Màn cuối là “Việc của bạn lúc này”; mỗi màn có một nút chính, nguồn được thu gọn cuối nội dung. Xem [báo cáo action-first](docs/frontend/ACTION_FIRST_REPORT.md). Build npm và 13 test frontend đã đạt.
+
+## Tinh chỉnh cuối cho demo dự thi
+
+Trang chủ chọn tình huống rồi **Bắt đầu**; luồng vẫn có đúng bốn bước. Kế hoạch hành động giải thích **chuẩn bị gì / lấy thông tin ở đâu / làm ở đâu / làm bằng cách nào / tiếp theo làm gì**. Nguồn chính thức và cơ chế dành cho giám khảo được thu gọn. Câu trả lời bổ sung chỉ tự khai, không tự kết luận điều kiện hưởng. Xem [báo cáo cuối](docs/frontend/FINAL_UX_REFINEMENT_REPORT.md): npm build và 14 test đạt; cấu hình standalone Vercel giữ nguyên, chưa triển khai.
