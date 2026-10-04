@@ -210,3 +210,7 @@ Màn kết quả ưu tiên **làm gì → vì sao → bước sau → nguồn ch
 ## Tinh chỉnh cuối cho demo dự thi
 
 Trang chủ chọn tình huống rồi **Bắt đầu**; luồng vẫn có đúng bốn bước. Kế hoạch hành động giải thích **chuẩn bị gì / lấy thông tin ở đâu / làm ở đâu / làm bằng cách nào / tiếp theo làm gì**. Nguồn chính thức và cơ chế dành cho giám khảo được thu gọn. Câu trả lời bổ sung chỉ tự khai, không tự kết luận điều kiện hưởng. Xem [báo cáo cuối](docs/frontend/FINAL_UX_REFINEMENT_REPORT.md): npm build và 14 test đạt; cấu hình standalone Vercel giữ nguyên, chưa triển khai.
+
+## Điểm vào demo và kế hoạch theo câu trả lời
+
+Link công khai dùng đường dẫn `/`, luôn bắt đầu ở **Tình huống**. **Bắt đầu lại** xóa câu trả lời và tiến độ, trả về URL sạch. Kế hoạch mất việc ưu tiên thông tin còn thiếu (nghỉ việc → BHTN → thời gian đóng), rồi mới đưa chuẩn bị giấy tờ lên đầu; phần sau được ghi là xem trước khi còn thiếu thông tin. Xem [báo cáo hành vi demo](docs/frontend/DEMO_STATE_REPORT.md). TypeScript, 18 test và npm build đạt.

@@ -242,3 +242,5 @@ body { font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); }
 .action-card ul { padding-left:20px; font-size:14px; line-height:1.8; }
 @media(max-width:700px) { .demo-mode-label { font-size:10px; padding:5px 7px; }.site-header { flex-wrap:wrap; gap:10px; }.situation-summary .plain-reasons li { font-size:13px; }.information-origins,.service-execution { text-align:left; }.group-option { font-size:14px; line-height:1.6; }.action-cards { grid-template-columns:1fr; } }
 .service-execution ol { list-style:decimal; }.channel-list li { background:#edf3f9; }
+
+.reset-link { color:#526b89; font-size:13px; padding:8px; margin-left:auto; border:0; background:transparent; cursor:pointer; }.screen-topline { flex-wrap:wrap; gap:10px; }.followup-options select,.followup-options input[type=date] { display:block; width:100%; border:1px solid #cddbea; border-radius:10px; padding:14px; margin:12px 0; background:#fff; color:#263f60; }.preparation-details summary.primary-button { background:#245ed0; color:#fff; }

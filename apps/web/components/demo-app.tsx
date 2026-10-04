@@ -102,6 +102,12 @@ export function DemoApp() {
     document.addEventListener("keydown", handleKey);
     return () => { document.removeEventListener("keydown", handleKey); previous?.focus(); };
   }, [supportOpen]);
+  useEffect(() => {
+    if (screen !== "home") return;
+    setAnswers({}); setQuestionIndex(0); setChecked([]); setSelectedJourney(undefined);
+    setPlanServiceId(undefined); setResultFocus(undefined); setSupportOpen(false);
+    initializedDemo.current = false;
+  }, [screen]);
   useEffect(() => { if (demoMode && !initializedDemo.current) { setAnswers(sampleAnswers); initializedDemo.current = true; } }, [demoMode]);
   useEffect(() => { window.scrollTo({ top: 0, behavior: recording && !reducedMotion() ? "smooth" : "instant" }); contentRef.current?.focus({ preventScroll: true }); }, [screen, journey, recording]);
   useEffect(() => {
@@ -125,9 +131,10 @@ export function DemoApp() {
   const journeyName = dataset.lifeEvents.find((e) => e.life_event_id === journey)!.name;
   const setAnswer = (key: keyof Answers, value: string) => setAnswers((previous) => ({ ...previous, [key]: value }));
   function navigate(next: Screen, nextJourney = journey, demo = demoMode) {
+    if (next === "home") { router.push("/", { scroll: true }); return; }
     const query = new URLSearchParams();
-    if (next !== "home") { query.set("journey", journeySlugs[nextJourney]); query.set("screen", next); }
-    if (demo && next !== "home") query.set("demo", "jobloss");
+    query.set("journey", journeySlugs[nextJourney]); query.set("screen", next);
+    if (demo) query.set("demo", "jobloss");
     if (recording) query.set("recording", "1");
     router.push(query.size ? `/?${query}` : "/", { scroll: true });
   }
@@ -167,7 +174,7 @@ export function DemoApp() {
           <div className="trust-line"><ShieldCheck size={14} /><span>Nguồn chính thức</span><i /><span>Không cần đăng nhập</span></div>
 
         </> : <>
-          <div className="screen-topline"><button className="back-link" onClick={() => { if (screen === "questions" && questionIndex > 0) setQuestionIndex((i) => i - 1); else navigate(screen === "plan" ? "results" : screen === "results" || screen === "analysis" ? "questions" : "home"); }}><ArrowLeft size={16} /> Quay lại</button><span className={`journey-mini ${journeyInfo[journey].tone}`}>{journeyInfo[journey].short}</span></div>
+          <div className="screen-topline"><button className="back-link" onClick={() => { if (screen === "questions" && questionIndex > 0) setQuestionIndex((i) => i - 1); else navigate(screen === "plan" ? "results" : screen === "results" || screen === "analysis" ? "questions" : "home"); }}><ArrowLeft size={16} /> Quay lại</button><button className="reset-link" onClick={() => navigate("home")}>Bắt đầu lại</button><span className={`journey-mini ${journeyInfo[journey].tone}`}>{journeyInfo[journey].short}</span></div>
           {screen === "analysis" && <AnalysisScreen journey={journey} answers={answers} onComplete={completeAnalysis} />}
           {screen === "questions" && <section className={`question-screen question-${currentQuestion.key}`} aria-label="Thông tin hoàn cảnh">
             <div className="question-intro"><h1>Cho chúng tôi biết thêm một chút</h1><p>Chỉ hỏi những thông tin cần thiết để tìm hướng phù hợp.</p></div><div className="question-meta"><span>CÂU HỎI</span><b>Câu {Math.min(questionIndex + 1, questions.length)}/{questions.length}</b></div>
@@ -190,7 +197,7 @@ export function DemoApp() {
           </section>}
 
           {screen === "plan" && <section className="plan-screen"><div className="page-heading"><h1>Việc của bạn lúc này</h1><p>Làm việc đầu tiên, rồi tiếp tục từng bước.</p></div>
-            {journey === "JOB_LOSS" ? <JobActionPlan answers={answers} onAnswer={(value) => setAnswer("terminationLegal", value)} onNextPaths={() => { navigate("results"); window.setTimeout(() => document.getElementById("next-paths")?.scrollIntoView({ behavior: reducedMotion() ? "instant" : "smooth", block: "start" }), 250); }} checked={checked} onToggle={(id) => setChecked((previous) => previous.includes(id) ? previous.filter((value) => value !== id) : [...previous, id])} /> : <LocalActionPlan serviceId={planServiceId} housing={journey === "HOUSING_DIFFICULTY"} answers={answers} onSupport={() => setSupportOpen(true)} onResultSection={(id) => { setResultFocus(id); navigate("results"); }} />}
+            {journey === "JOB_LOSS" ? <JobActionPlan answers={answers} onAnswer={setAnswer} onNextPaths={() => { navigate("results"); window.setTimeout(() => document.getElementById("next-paths")?.scrollIntoView({ behavior: reducedMotion() ? "instant" : "smooth", block: "start" }), 250); }} checked={checked} onToggle={(id) => setChecked((previous) => previous.includes(id) ? previous.filter((value) => value !== id) : [...previous, id])} /> : <LocalActionPlan serviceId={planServiceId} housing={journey === "HOUSING_DIFFICULTY"} answers={answers} onSupport={() => setSupportOpen(true)} onResultSection={(id) => { setResultFocus(id); navigate("results"); }} />}
             <p className="disclaimer"><ShieldCheck size={17} /><span>{disclaimer}</span></p><button className="restart-button" onClick={() => navigate("home")}><Route size={16} />Khám phá tình huống khác</button>
           </section>}
         </>}
