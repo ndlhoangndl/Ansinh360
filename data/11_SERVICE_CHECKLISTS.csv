@@ -1,0 +1,28 @@
+checklist_id,service_id,item_order,requirement_type,document_or_step,required,condition,source_id,source_detail,verification_status,notes
+CL_JOB_001_01,JOB_SV_001,1,FORM,Đề nghị hưởng trợ cấp thất nghiệp - Mẫu số 10 NĐ 374/2025/NĐ-CP,True,Luôn áp dụng khi đề nghị hưởng,SRC_JOB_PROC_001,TTHC 1.014748,VERIFIED_OFFICIAL,01 bản chính
+CL_JOB_001_02,JOB_SV_001,2,PROOF,Một trong các giấy tờ xác nhận chấm dứt HĐLĐ/HĐLV/chấm dứt làm việc theo danh mục TTHC,True,Luôn áp dụng,SRC_JOB_PROC_001,TTHC 1.014748,VERIFIED_OFFICIAL,"Ví dụ: HĐ hết hạn, quyết định thôi việc/sa thải, thỏa thuận chấm dứt, xác nhận NSDLĐ..."
+CL_JOB_001_03,JOB_SV_001,3,TIMING,Nộp hồ sơ trong 03 tháng kể từ ngày chấm dứt việc làm,True,Luôn áp dụng,SRC_JOB_LAW_001,Điều 38 khoản 1 điểm c,VERIFIED_RULE,Engine tự tính từ termination_date
+CL_JOB_002_01,JOB_SV_002,1,FORM,Thông báo về việc tìm kiếm việc làm - Mẫu số 24 NĐ 374/2025/NĐ-CP,True,Đang hưởng TCTN,SRC_JOB_PROC_002,TTHC 1.014749,VERIFIED_OFFICIAL,01 bản chính
+CL_JOB_004_01,JOB_SV_004,1,PROOF,Giấy tờ chứng minh đã thực hiện thông báo tìm kiếm việc làm hằng tháng theo quy định,True,Đang bị tạm dừng và còn thời gian hưởng,SRC_JOB_PROC_004,TTHC 1.014751,VERIFIED_OFFICIAL,Mẫu 24 theo NĐ374
+CL_JOB_005_01,JOB_SV_005,1,FORM,Đề nghị chuyển nơi hưởng trợ cấp thất nghiệp - Mẫu số 19 NĐ374,True,Có nhu cầu chuyển nơi hưởng,SRC_JOB_PROC_005,TTHC 1.014753,VERIFIED_OFFICIAL,01 bản chính
+CL_JOB_005_02,JOB_SV_005,2,FORM,Đề nghị rút hồ sơ chuyển nơi hưởng - Mẫu số 23 NĐ374,False,Chỉ khi không còn nhu cầu chuyển,SRC_JOB_PROC_005,TTHC 1.014753,VERIFIED_OFFICIAL,
+CL_JOB_010_01,JOB_SV_010,1,FORM,"Đề nghị hỗ trợ đào tạo, nâng cao trình độ kỹ năng nghề - Mẫu số 02 NĐ374",True,Đề nghị hỗ trợ đào tạo,SRC_JOB_DEC_001,Phụ lục NĐ374; Điều 12,VERIFIED_RULE,
+CL_JOB_010_02,JOB_SV_010,2,ELIGIBILITY,Kiểm tra nhánh Điều 37 Luật Việc làm trước khi nộp,True,Luôn áp dụng,SRC_JOB_LAW_001,Điều 37,VERIFIED_RULE,Engine trả POSSIBLE_MATCH/NEED_MORE_INFO
+CL_HOUSE_002_01,HOUSE_SV_002,1,FORM,Đơn đăng ký mua/thuê mua/thuê NOXH - Mẫu số 01 theo NĐ136/2026,True,Theo đợt dự án,SRC_HOUSE_OPP_001,Thông báo Sở Xây dựng dẫn chiếu NĐ136/2026,VERIFIED_OFFICIAL,"Dùng mẫu hiện hành của đợt, không dùng mẫu cũ"
+CL_HOUSE_002_02,HOUSE_SV_002,2,PROOF,Giấy tờ chứng minh thuộc đối tượng được hưởng chính sách NOXH,True,Mua NOXH,SRC_HOUSE_VBHN_001,VBHN 24/VBHN-BXD,VERIFIED_RULE,Chi tiết biểu mẫu theo thông báo dự án
+CL_HOUSE_002_03,HOUSE_SV_002,3,PROOF,Giấy tờ/xác nhận điều kiện về nhà ở,True,Mua NOXH,SRC_HOUSE_VBHN_001,Điều 29,VERIFIED_RULE,Không có nhà tại địa bàn dự án hoặc diện tích bình quân dưới ngưỡng
+CL_HOUSE_002_04,HOUSE_SV_002,4,PROOF,Giấy tờ/xác nhận điều kiện về thu nhập,True,Mua NOXH thuộc nhóm phải đáp ứng điều kiện thu nhập,SRC_HOUSE_VBHN_001,Điều 30,VERIFIED_RULE,Mức thu nhập hiện hành theo VBHN
+CL_HOUSE_002_05,HOUSE_SV_002,5,OPPORTUNITY,Kiểm tra trạng thái OPEN/SCHEDULED/CLOSED của đúng đợt tiếp nhận,True,Luôn áp dụng,SRC_HOUSE_OPP_001,Thông báo tiếp nhận Hòa Hiệp 4,VERIFIED_OFFICIAL,Không cho 'Nộp ngay' khi SCHEDULED/CLOSED
+CL_CHILD_001_01,CHILD_SV_001,1,PROOF,Bản sao giấy khai sinh/trích lục khai sinh/giấy chứng sinh của con,True,Lao động nữ sinh con,SRC_CHILD_PROC_001,TTHC 1.014166,VERIFIED_OFFICIAL,
+CL_CHILD_001_02,CHILD_SV_001,2,PROOF,Giấy tờ chứng minh điều trị vô sinh,False,Chỉ nhánh điều trị vô sinh,SRC_CHILD_PROC_001,TTHC 1.014166,VERIFIED_OFFICIAL,
+CL_CHILD_001_03,CHILD_SV_001,3,PROOF,Giấy xác nhận phải nghỉ việc để dưỡng thai của cơ sở khám chữa bệnh,False,Chỉ nhánh dưỡng thai,SRC_CHILD_PROC_001,TTHC 1.014166,VERIFIED_OFFICIAL,
+CL_CHILD_001_04,CHILD_SV_001,4,FORM,Danh sách NLĐ nghỉ việc hưởng thai sản do NSDLĐ lập,False,Trường hợp hồ sơ đi qua NSDLĐ,SRC_CHILD_PROC_001,TTHC 1.014166,VERIFIED_OFFICIAL,Ngoại lệ theo TTHC khi NLĐ đã thôi việc/không còn NSDLĐ
+CL_CHILD_002_01,CHILD_SV_002,1,PROOF,Bản sao giấy khai sinh/trích lục khai sinh/giấy chứng sinh của con,True,Lao động nam khi vợ sinh con,SRC_CHILD_PROC_002,TTHC 1.014168,VERIFIED_OFFICIAL,
+CL_CHILD_002_02,CHILD_SV_002,2,PROOF,Văn bản y tế về sinh phẫu thuật hoặc con dưới 32 tuần,False,Chỉ khi cần xác định trường hợp nghỉ tương ứng,SRC_CHILD_PROC_002,TTHC 1.014168,VERIFIED_OFFICIAL,
+CL_CHILD_002_03,CHILD_SV_002,3,FORM,Danh sách NLĐ nghỉ việc hưởng chế độ thai sản do NSDLĐ lập,True,Hồ sơ qua NSDLĐ,SRC_CHILD_PROC_002,TTHC 1.014168,VERIFIED_OFFICIAL,
+CL_CHILD_003_01,CHILD_SV_003,1,FORM,Tờ khai điện tử Mẫu số 01 cho thủ tục liên thông,True,Đăng ký liên thông,SRC_CHILD_PROC_003,TTHC 2.002621,VERIFIED_OFFICIAL,
+CL_CHILD_003_02,CHILD_SV_003,2,DATA,Dữ liệu điện tử có ký số của Giấy chứng sinh,False,Nếu cơ sở y tế đã liên thông dữ liệu,SRC_CHILD_PROC_003,TTHC 2.002621,VERIFIED_OFFICIAL,Nếu không có thì nộp giấy tờ thay thế theo pháp luật hộ tịch
+CL_CHILD_003_03,CHILD_SV_003,3,PROOF,Hồ sơ cư trú bổ sung,False,Nếu đăng ký thường trú khác nơi thường trú của cha/mẹ hoặc trường hợp đặc biệt,SRC_CHILD_PROC_003,TTHC 2.002621,VERIFIED_OFFICIAL,
+CL_CHILD_004_01,CHILD_SV_004,1,FORM,Đơn đề nghị trợ cấp đối với trẻ em mầm non là con công nhân/người lao động - Mẫu số 03 NĐ105,True,Đề nghị hỗ trợ,SRC_CHILD_DEC_001,Điều 8 khoản 3; Phụ lục Mẫu 03,VERIFIED_RULE,Có xác nhận của đơn vị sử dụng lao động
+CL_CHILD_004_02,CHILD_SV_004,2,PROOF,Bản sao Giấy khai sinh của trẻ,True,Đề nghị hỗ trợ,SRC_CHILD_DEC_003,Điều 4 khoản 2 NĐ104/2022 sửa điểm b khoản 3 Điều 8 NĐ105/2020,VERIFIED_RULE,Bản sao Giấy khai sinh; không yêu cầu sổ hộ khẩu giấy.
+CL_CHILD_004_03,CHILD_SV_004,3,ROUTING,"Nộp theo hướng dẫn của cơ sở mầm non/UBND xã, phường; địa phương tiếp nhận, rà soát, xác minh",True,Đà Nẵng,SRC_CHILD_DN_002,QĐ2850/QĐ-UBND,VERIFIED_OFFICIAL,

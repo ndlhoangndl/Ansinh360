@@ -1,0 +1,31 @@
+key,value,notes
+dataset_name,AN SINH 360 Welfare Navigation Dataset,Bộ dữ liệu phục vụ prototype 3 journey
+dataset_version,v1.0-RC1,Khóa scope; chỉ sửa lỗi/nguồn/cập nhật opportunity
+updated_at,2026-10-04,Múi giờ Việt Nam
+scope,JOB_LOSS | HOUSING_DIFFICULTY | HAS_CHILD,Không mở thêm journey ở vòng thi
+core_flow,Life Event → Policy → Service → Opportunity → Next Action,Cơ chế cốt lõi
+source_gate,NO SOURCE_ID → REJECT,Không dùng dữ liệu không truy nguồn
+verification_gate,Chỉ VERIFIED_RULE / VERIFIED_PRIMARY / VERIFIED_OFFICIAL mới được demo,"VERIFIED_STRUCTURE chỉ dùng cho cấu trúc, không kết luận pháp lý"
+ai_rule,AI không quyết định eligibility,"AI chỉ hiểu ngôn ngữ, hỏi thiếu, giải thích"
+output_states,POSSIBLE_MATCH | NEED_MORE_INFO | NO_MATCH,Không dùng 'chắc chắn được hưởng'
+source_priority,A0 legal > A1 direct service > A2 official operation > B official mirror,Khi xung đột ưu tiên nguồn có thẩm quyền cao hơn và mới hơn
+dynamic_data_rule,Opportunity phải có open_from/open_until/status/last_verified,Hết hạn → CLOSED; chưa mở → SCHEDULED
+privacy_rule,Không thu CCCD/BHXH number/bank/health detail trong demo,Chỉ hỏi dữ liệu tối thiểu để matching
+team_signoff,Các VERIFIED_RULE do nghiên cứu hỗ trợ vẫn cần team ký xác nhận trước production,Prototype có thể dùng với cảnh báo quyết định cuối thuộc cơ quan có thẩm quyền
+sheet_01,01_SOURCES,Provenance/source registry
+sheet_02,02_LIFE_EVENTS,3 sự kiện cuộc sống
+sheet_03,03_POLICIES,Danh mục policy/quyền lợi
+sheet_04,04_POLICY_RULES,Rule pháp lý + Điều/Khoản
+sheet_05,05_SERVICES,Dịch vụ/kênh chính thức
+sheet_06,06_SERVICE_RULES,Rule chọn dịch vụ
+sheet_07,07_OPPORTUNITIES,Đợt/chương trình động
+sheet_08,08_POLICY_SERVICE_MAP,Policy ↔ Service
+sheet_09,09_TEST_CASES,Case kiểm thử
+sheet_10,10_VERIFICATION_LOG,Lịch sử xác minh
+sheet_11,11_SERVICE_CHECKLISTS,Hồ sơ/bước chuẩn bị theo service
+sheet_12,12_PROFILE_FIELDS,Data contract câu hỏi người dùng
+sheet_13,13_ENUMS,Enum/status dùng thống nhất
+completion_state,COMPLETE_FOR_MVP,Đủ cho Rule Engine + prototype 3 journey; chưa phải production pháp lý
+record_summary,3 life events | 12 policies | 22 services | 50+ policy rules | 23 service rules | 7 opportunities | 20 test cases | 27 checklist items | 41 profile fields,Tính đến 04/10/2026
+remaining_before_production,Team legal sign-off + archive PDF gốc + refresh opportunity định kỳ,Không chặn prototype
+next_refresh_due,Trước ngày demo và trước 25/10/2026,Đặc biệt kiểm NOXH Hòa Hiệp 4 và phiên việc làm

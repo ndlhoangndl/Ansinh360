@@ -1,0 +1,30 @@
+enum_group,value,label_vi,meaning,active
+MATCH_STATUS,POSSIBLE_MATCH,Có dấu hiệu phù hợp,Dữ liệu hiện có khớp rule sơ bộ; không phải quyết định pháp lý,True
+MATCH_STATUS,NEED_MORE_INFO,Cần thêm thông tin,Thiếu field bắt buộc hoặc cần xác minh,True
+MATCH_STATUS,NO_MATCH,Chưa thấy phù hợp,Dữ liệu hiện có không đáp ứng rule đang áp dụng,True
+SOURCE_LEVEL,A0,Nguồn pháp lý gốc,Luật/Nghị định/Nghị quyết/QĐ có thẩm quyền,True
+SOURCE_LEVEL,A1,Nguồn dịch vụ trực tiếp,DVCQG/BHXH/Sở/cơ quan trực tiếp xử lý,True
+SOURCE_LEVEL,A2,Nguồn vận hành chính thức,MyPortal/1022/Công đoàn/official operation page,True
+SOURCE_LEVEL,B,Official mirror,Trang chính thức đăng lại tài liệu của issuer,True
+VERIFY_STATUS,VERIFIED_PRIMARY,Đã xác minh nguồn gốc,Có văn bản/file ký hoặc nguồn gốc có thẩm quyền,True
+VERIFY_STATUS,VERIFIED_RULE,Đã đối chiếu rule,Đã map Điều/Khoản vào rule,True
+VERIFY_STATUS,VERIFIED_OFFICIAL,Đã xác minh trang chính thức,"Trang/cổng chính thức, có thể chưa archive file gốc",True
+VERIFY_STATUS,VERIFIED_STRUCTURE,Đã xác minh cấu trúc,"Chỉ dùng logic UX, không phải điều kiện pháp lý",True
+VERIFY_STATUS,NEED_REVIEW,Cần rà soát,Không dùng để kết luận,True
+LEGAL_STATUS,ACTIVE,Còn hiệu lực/đang áp dụng,Nguồn pháp lý hiện hành,True
+LEGAL_STATUS,PARTIALLY_ACTIVE,Hết hiệu lực một phần,Chỉ dùng Điều/Khoản còn hiệu lực sau rà soát,True
+LEGAL_STATUS,SUPERSEDED,Đã được thay thế,"Giữ lịch sử, không dùng rule hiện hành",True
+LEGAL_STATUS,DRAFT_ONLY,Dự thảo,Không dùng cho production rule,True
+OPPORTUNITY_STATUS,OPEN,Đang nhận hồ sơ,Có thể hiển thị hành động nộp,True
+OPPORTUNITY_STATUS,SCHEDULED,Sắp mở,Hiển thị ngày mở; không cho nộp ngay,True
+OPPORTUNITY_STATUS,CLOSED,Đã đóng,Không cho nộp; giữ lịch sử,True
+OPPORTUNITY_STATUS,ACTIVE_RECURRING,Hoạt động định kỳ,Phải refresh lịch cụ thể,True
+OPPORTUNITY_STATUS,NEED_REVIEW,Cần kiểm tra lại,Không đưa hành động chính,True
+SERVICE_STATUS,ACTIVE,Đang hoạt động,Có thể recommend,True
+SERVICE_STATUS,ACTIVE_DYNAMIC,Đang hoạt động nhưng lịch động,Cần refresh trước hiển thị,True
+SERVICE_STATUS,DYNAMIC,Phụ thuộc từng đợt,Chỉ recommend khi opportunity phù hợp,True
+SERVICE_TYPE,PROCEDURE,Thủ tục,TTHC chính thức,True
+SERVICE_TYPE,DIGITAL_SERVICE,Dịch vụ số,Nền tảng/kênh trực tuyến,True
+SERVICE_TYPE,PHYSICAL_SUPPORT,Hỗ trợ trực tiếp,Điểm/người hỗ trợ offline,True
+SERVICE_TYPE,COMMUNITY_SUPPORT,Hỗ trợ cộng đồng,Tổ tự quản/Công đoàn,True
+SERVICE_TYPE,INFORMATION,Nguồn thông tin,Tra cứu chính sách/chương trình,True

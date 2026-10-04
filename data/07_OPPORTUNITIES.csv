@@ -1,0 +1,8 @@
+opportunity_id,policy_id,service_id,name,location,open_from,open_until,capacity,status,source_id,last_verified,notes
+OPP_HOUSE_001,POL_HOUSE_001,HOUSE_SV_002,"Đợt mua NOXH B4-1, B4-2 Hòa Hiệp 4","Hải Vân + Liên Chiểu, Đà Nẵng",2026-10-25,2026-11-30,277,SCHEDULED,SRC_HOUSE_OPP_001,2026-10-04,Không hiển thị nút nộp ngay trước ngày mở
+OPP_HOUSE_002,POL_HOUSE_001,HOUSE_SV_001,Khảo sát nhu cầu thuê/mua NOXH và nhà lưu trú công nhân 2026,Đà Nẵng,2026-06-01,2026-06-30,,CLOSED,SRC_HOUSE_DN_001,2026-10-04,Giữ làm dữ liệu lịch sử
+OPP_JOB_001,POL_JOB_003,JOB_SV_008,Phiên giao dịch việc làm định kỳ Đà Nẵng,Đà Nẵng,,,,ACTIVE_RECURRING,SRC_JOB_DN_002,2026-10-04,Cần refresh lịch cụ thể trước khi hiển thị
+OPP_HOUSE_003,POL_HOUSE_001,HOUSE_SV_002,Hòa Hiệp 4 - đợt 787 căn (lịch sử),"Hải Vân + Liên Chiểu, Đà Nẵng",2026-05-21,2026-06-21,787,CLOSED,SRC_HOUSE_OPP_002,2026-10-04,Giữ lịch sử để test versioning/opportunity refresh
+OPP_HOUSE_004,POL_HOUSE_001,HOUSE_SV_002,Đại Địa Bảo - 237 căn (lịch sử),"Sơn Trà, Đà Nẵng",2026-05-05,2026-06-05,237,CLOSED,SRC_HOUSE_OPP_003,2026-10-04,Có điều chỉnh thông báo theo NĐ136/2026
+OPP_HOUSE_005,POL_HOUSE_001,HOUSE_SV_002,Khu B Nam cầu Cẩm Lệ - 849 căn (lịch sử),"Hòa Xuân, Đà Nẵng",2026-04-16,2026-05-16,849,CLOSED,SRC_HOUSE_OPP_004,2026-10-04,
+OPP_HOUSE_006,POL_HOUSE_002,HOUSE_SV_001,Thuê NOXH Vũ Mộng Nguyên - người có công,"Hải Châu, Đà Nẵng",2026-09-03,2026-09-30,,CLOSED,SRC_HOUSE_OPP_005,2026-10-04,Không phù hợp worker thông thường; giữ để chứng minh target filtering

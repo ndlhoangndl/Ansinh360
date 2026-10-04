@@ -1,0 +1,52 @@
+log_id,source_id,checked_at,verification_status,note,checked_by
+VL001,SRC_JOB_LAW_001,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL002,SRC_JOB_DEC_001,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL003,SRC_JOB_PROC_001,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL004,SRC_JOB_PROC_002,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL005,SRC_JOB_PROC_003,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL006,SRC_JOB_PROC_004,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL007,SRC_JOB_PROC_005,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL008,SRC_JOB_DN_001,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL009,SRC_JOB_DN_002,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL010,SRC_JOB_NAT_001,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL011,SRC_HOUSE_LAW_001,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL012,SRC_HOUSE_DEC_001,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL013,SRC_HOUSE_DEC_002,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL014,SRC_HOUSE_DEC_003,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL015,SRC_HOUSE_DEC_004,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL016,SRC_HOUSE_DN_001,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL017,SRC_HOUSE_OPP_001,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL018,SRC_CHILD_LAW_001,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL019,SRC_CHILD_DEC_001,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL020,SRC_CHILD_DEC_002,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL021,SRC_CHILD_PROC_001,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL022,SRC_CHILD_PROC_002,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL023,SRC_CHILD_PROC_003,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL024,SRC_CHILD_DN_001,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL025,SRC_CHILD_DN_002,2026-10-04,VERIFIED_PRIMARY,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL026,SRC_GEN_001,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL027,SRC_GEN_002,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL028,SRC_GEN_003,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL029,SRC_GEN_004,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL030,SRC_GEN_005,2026-10-04,VERIFIED_OFFICIAL,Seed dataset được tổng hợp từ nguồn chính thức; các rule pháp lý chi tiết vẫn cần đối chiếu Điều/Khoản trước khi chuyển ACTIVE,ChatGPT + team review
+VL031,SRC_JOB_LAW_001,2026-10-04,VERIFIED_RULE,"Đã đối chiếu Điều 36, 37, 38 Luật Việc làm; encode điều kiện TCTN, tư vấn việc làm, đào tạo.",ChatGPT research; cần team sign-off trước production
+VL032,SRC_JOB_DEC_001,2026-10-04,VERIFIED_RULE,"Đã đối chiếu Điều 11 NĐ374: 4,5 triệu/khóa <3 tháng; 1,5 triệu/tháng >=3 tháng; 50.000đ/ngày; tối đa 6 tháng.",ChatGPT research; cần team sign-off trước production
+VL033,SRC_JOB_PROC_006,2026-10-04,VERIFIED_OFFICIAL,"Bổ sung TTHC 1.014746 tư vấn, giới thiệu việc làm theo QĐ107/QĐ-BNV.",ChatGPT research
+VL034,SRC_JOB_PROC_007,2026-10-04,VERIFIED_OFFICIAL,Bổ sung TTHC 1.014747 hỗ trợ đào tạo/nâng cao kỹ năng nghề theo QĐ107/QĐ-BNV.,ChatGPT research
+VL035,SRC_HOUSE_VBHN_001,2026-10-04,VERIFIED_RULE,Dùng VBHN 24/VBHN-BXD làm nguồn đọc hiện hành; encode Điều 29 và Điều 30 sau sửa đổi.,ChatGPT research; cần team sign-off trước production
+VL036,SRC_HOUSE_DN_RULE_001,2026-10-04,VERIFIED_PRIMARY,CSDL VBPL ghi QĐ47/2024/QĐ-UBND còn hiệu lực; bổ sung nguồn địa phương Đà Nẵng.,ChatGPT research
+VL037,SRC_CHILD_LAW_001,2026-10-04,VERIFIED_RULE,"Đã đối chiếu Điều 50: nữ 6/12 tháng, nhánh dưỡng thai 3/12 với tiền đề >=12 tháng, điều trị vô sinh 6/24; nam đang BHXH bắt buộc khi vợ sinh.",ChatGPT research; cần team sign-off trước production
+VL038,SRC_CHILD_DEC_001,2026-10-04,VERIFIED_RULE,Đã đối chiếu Điều 8 NĐ105 về trẻ học mầm non dân lập/tư thục được cấp phép và cha/mẹ/người chăm sóc là công nhân/người lao động có HĐLĐ tại KCN.,ChatGPT research
+VL039,SRC_CHILD_DEC_002,2026-10-04,VERIFIED_RULE,Đã đối chiếu Điều 81 khoản 3 NĐ145 về mở rộng chính sách Điều 8 NĐ105 tại nơi có nhiều lao động.,ChatGPT research
+VL040,SRC_CHILD_DN_001,2026-10-04,VERIFIED_OFFICIAL,"Mức Đà Nẵng 200.000đ/trẻ/tháng, tối đa 9 tháng/năm học; vẫn cần archive PDF NQ43 để nâng VERIFIED_PRIMARY.",ChatGPT research
+VL041,SRC_HOUSE_DN_RULE_001,2026-10-04,SUPERSEDED,Phát hiện QĐ47/2024/QĐ-UBND đã được QĐ111/2026/QĐ-UBND thay thế từ 21/7/2026; loại khỏi rule hiện hành.,ChatGPT web verification
+VL042,SRC_HOUSE_DN_RULE_002,2026-10-04,VERIFIED_PRIMARY,"QĐ111/2026/QĐ-UBND ngày 11/7/2026, hiệu lực 21/7/2026; có file ký trên Cổng văn bản Đà Nẵng.",ChatGPT web verification
+VL043,SRC_CHILD_DEC_003,2026-10-04,VERIFIED_PRIMARY,"NĐ104/2022 sửa hồ sơ Điều 8 NĐ105, loại yêu cầu sổ hộ khẩu giấy; checklist mầm non đã cập nhật.",ChatGPT web verification
+VL044,SRC_JOB_PROC_001,2026-10-04,VERIFIED_OFFICIAL,TTHC 1.014748: 15 ngày làm việc; Mẫu 10 + giấy tờ chấm dứt việc làm; trực tiếp/trực tuyến/bưu chính; phí 0.,ChatGPT web verification
+VL045,SRC_JOB_PROC_002,2026-10-04,VERIFIED_OFFICIAL,TTHC 1.014749: Mẫu 24 thông báo tìm kiếm việc làm; phí 0; không quy định thời hạn giải quyết.,ChatGPT web verification
+VL046,SRC_JOB_PROC_004,2026-10-04,VERIFIED_OFFICIAL,TTHC 1.014751: 02 ngày làm việc; giấy tờ chứng minh thông báo tìm kiếm việc làm; phí 0.,ChatGPT web verification
+VL047,SRC_JOB_PROC_005,2026-10-04,VERIFIED_OFFICIAL,"TTHC 1.014753: 03 ngày; Mẫu 19, Mẫu 23 khi rút; trực tiếp/trực tuyến/bưu chính; phí 0.",ChatGPT web verification
+VL048,SRC_CHILD_PROC_001,2026-10-04,VERIFIED_OFFICIAL,TTHC 1.014166: hồ sơ và thời hạn thai sản nữ đã đưa vào checklist/service metadata.,ChatGPT web verification
+VL049,SRC_CHILD_PROC_002,2026-10-04,VERIFIED_OFFICIAL,TTHC 1.014168: 07 ngày làm việc từ NSDLĐ; hồ sơ nam khi vợ sinh con đã đưa vào checklist.,ChatGPT web verification
+VL050,SRC_CHILD_PROC_003,2026-10-04,VERIFIED_OFFICIAL,"TTHC 2.002621: trực tuyến, thông thường 03 ngày; tối đa 05 ngày khi xác minh; hồ sơ liên thông đã đưa vào checklist.",ChatGPT web verification
+VL051,DATASET,2026-10-04,COMPLETE_FOR_MVP,"Đã hoàn thiện provenance, rule, service metadata, opportunity, checklist, profile contract, enum và test case cho 3 journey.",ChatGPT + team sign-off pending

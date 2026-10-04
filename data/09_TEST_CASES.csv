@@ -1,0 +1,21 @@
+test_id,journey,input_summary,expected_policies,expected_services,expected_missing_fields,expected_result,status
+TC001,JOB_LOSS,Mất việc; HĐLĐ >=12 tháng; 12 tháng BHTN/24 tháng; nộp trong 3 tháng; không có trạng thái loại trừ,POL_JOB_001,JOB_SV_001,,Có dấu hiệu phù hợp TCTN; vẫn cảnh báo cơ quan có thẩm quyền xác nhận,READY
+TC002,JOB_LOSS,Mất việc; HĐLĐ 6 tháng; mới có 10 tháng BHTN/36 tháng,POL_JOB_001,,bhtn_months_last_36,Chưa thấy đạt ngưỡng 12 tháng/36 tháng cho nhánh hợp đồng ngắn,READY
+TC003,JOB_LOSS,Mất việc 4 tháng trước; muốn nộp TCTN,POL_JOB_001,,,Chưa thấy phù hợp do vượt thời hạn nộp 3 tháng; route tư vấn người thật nếu cần,READY
+TC004,JOB_LOSS,Mất việc; muốn tìm việc; Liên Chiểu,POL_JOB_003,JOB_SV_009|JOB_SV_006,,Route tư vấn/giới thiệu việc làm và TTDVVL Đà Nẵng,READY
+TC005,JOB_LOSS,Đang hưởng TCTN; muốn học nghề,POL_JOB_004,JOB_SV_010,,Nhánh Điều 37 khoản 1; hiển thị mức hỗ trợ đào tạo theo NĐ374,READY
+TC006,JOB_LOSS,Không hưởng TCTN; mất việc 8 tháng; đóng BHTN 10/36 tháng; không trạng thái loại trừ; muốn học nghề,POL_JOB_004,JOB_SV_010,,Có dấu hiệu phù hợp nhánh Điều 37 khoản 2,READY
+TC007,JOB_LOSS,Đang hưởng TCTN; cần thông báo tìm việc hằng tháng,POL_JOB_002,JOB_SV_002,,Route thủ tục 1.014749,READY
+TC008,JOB_LOSS,Đang hưởng TCTN 2 tháng; muốn chuyển nơi hưởng,POL_JOB_002,JOB_SV_005,,Route 1.014753,READY
+TC009,HOUSING_DIFFICULTY,Công nhân; muốn mua NOXH; chưa có nhà tại Đà Nẵng; độc thân; thu nhập 22 triệu/tháng,POL_HOUSE_001,HOUSE_SV_001|HOUSE_SV_002,,Có dấu hiệu phù hợp sơ bộ; kiểm opportunity đang/sắp mở,READY
+TC010,HOUSING_DIFFICULTY,Công nhân; có nhà; diện tích bình quân 12m²/người; đã kết hôn; tổng thu nhập 46 triệu/tháng,POL_HOUSE_001,HOUSE_SV_001|HOUSE_SV_002,,Qua nhánh nhà ở <15m²/người và thu nhập vợ chồng <=50 triệu,READY
+TC011,HOUSING_DIFFICULTY,Công nhân độc thân thu nhập 28 triệu/tháng; muốn mua NOXH,POL_HOUSE_001,,,Chưa thấy đạt điều kiện thu nhập <=25 triệu cho nhánh độc thân,READY
+TC012,HOUSING_DIFFICULTY,Công nhân chỉ muốn thuê NOXH,POL_HOUSE_002,HOUSE_SV_001,,Không áp dụng điều kiện nhà ở/thu nhập như mua; vẫn kiểm tra đúng đối tượng và đợt thuê,READY
+TC013,HOUSING_DIFFICULTY,Muốn nộp Hòa Hiệp 4 trước 25/10/2026,POL_HOUSE_001,HOUSE_SV_002,,Opportunity SCHEDULED; không hiển thị Nộp ngay,READY
+TC014,HAS_CHILD,Lao động nữ sinh con; đóng BHXH bắt buộc 7/12 tháng trước sinh,POL_CHILD_001,CHILD_SV_001,,Có dấu hiệu phù hợp nhánh thông thường Điều 50 khoản 2,READY
+TC015,HAS_CHILD,Lao động nữ sinh con; đóng 4/12 tháng; trước đó tổng BHXH >=12 tháng; có chỉ định nghỉ dưỡng thai,POL_CHILD_001,CHILD_SV_001,,Có dấu hiệu phù hợp nhánh Điều 50 khoản 3,READY
+TC016,HAS_CHILD,Lao động nam đang tham gia BHXH bắt buộc; vợ sinh con,POL_CHILD_002,CHILD_SV_002,,Có dấu hiệu phù hợp; không hỏi ngưỡng 6 tháng/12 tháng của lao động nữ,READY
+TC017,HAS_CHILD,Trẻ sơ sinh; cần khai sinh/cư trú/BHYT,POL_CHILD_003,CHILD_SV_003,,Route thủ tục liên thông 2.002621,READY
+TC018,HAS_CHILD,Con học mầm non tư thục được cấp phép; cha là công nhân có HĐLĐ tại KCN Đà Nẵng,POL_CHILD_004,CHILD_SV_004,,"Có dấu hiệu phù hợp hỗ trợ mầm non; hiển thị 200.000đ/tháng, tối đa 9 tháng/năm học",READY
+TC019,HAS_CHILD,Con học trường công lập; cha/mẹ là công nhân,POL_CHILD_004,,child_attends_nonpublic_preschool,Chưa thấy phù hợp Điều 8 NĐ105 do không học cơ sở dân lập/tư thục thuộc phạm vi chính sách,READY
+TC020,ALL,Không rõ quyền lợi/dịch vụ và muốn người hướng dẫn tại Liên Chiểu,POL_GEN_001,GEN_SV_004|GEN_SV_005,,Fallback hỗ trợ trực tiếp,READY

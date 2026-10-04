@@ -1,0 +1,4 @@
+life_event_id,name,description,primary_demo,status
+JOB_LOSS,Tôi vừa mất việc,"Điều hướng BHTN, việc làm, học nghề và hỗ trợ liên quan",True,ACTIVE
+HOUSING_DIFFICULTY,Tôi đang khó khăn về nhà ở,"Điều hướng NOXH, thuê/mua/lưu trú công nhân và đợt tiếp nhận",False,ACTIVE
+HAS_CHILD,Tôi có con nhỏ,"Điều hướng thai sản, thủ tục cho trẻ và hỗ trợ mầm non",False,ACTIVE

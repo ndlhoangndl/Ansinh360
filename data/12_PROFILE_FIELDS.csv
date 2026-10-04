@@ -1,0 +1,42 @@
+field_id,journey,field_name,question_vi,data_type,allowed_values,required_when,source_rule_ids,sensitivity,persist_default,notes
+PF_COMMON_001,ALL,life_event,Bạn đang gặp tình huống nào?,ENUM,JOB_LOSS|HOUSING_DIFFICULTY|HAS_CHILD,ENTRY,,LOW,False,Entry point
+PF_COMMON_002,ALL,location_city,Bạn đang sinh sống/làm việc tại đâu?,ENUM,DA_NANG|OTHER,Khi cần route dịch vụ địa phương,SR011|SR017|SR018|SR019,LOW,False,Không cần địa chỉ chi tiết
+PF_COMMON_003,ALL,location_ward,Bạn đang ở khu vực/phường nào?,TEXT,,Khi cần ưu tiên dịch vụ gần,SR006|SR018|SR019,LOW,False,Có thể chọn Liên Chiểu/Hải Vân/...
+PF_COMMON_004,ALL,need_human_help,Bạn có muốn được người thật hỗ trợ không?,BOOLEAN,true|false,OPTIONAL,PR_GEN_001,LOW,False,
+PF_COMMON_005,ALL,digital_literacy_low,Bạn có cần người hỗ trợ thao tác trên điện thoại không?,BOOLEAN,true|false,OPTIONAL,PR_GEN_002,LOW,False,
+PF_JOB_001,JOB_LOSS,employment_ended,Bạn đã chấm dứt việc làm chưa?,BOOLEAN,true|false,JOB_LOSS,PR_JOB_010B,LOW,False,
+PF_JOB_002,JOB_LOSS,termination_date,Ngày chấm dứt việc làm là ngày nào?,DATE,,TCTN/TRAINING,PR_JOB_008|PR_JOB_013,MEDIUM,False,"Dùng tính thời hạn, không cần lưu lâu dài"
+PF_JOB_003,JOB_LOSS,termination_legal,Bạn chấm dứt việc làm theo quyết định/thỏa thuận hợp pháp hay tự ý nghỉ trái quy định?,ENUM,LEGAL|UNLAWFUL|UNKNOWN,TCTN/TRAINING,PR_JOB_002|PR_JOB_012,MEDIUM,False,Nếu UNKNOWN → NEED_MORE_INFO
+PF_JOB_004,JOB_LOSS,short_contract_1_to_lt12,Hợp đồng vừa chấm dứt có thời hạn từ đủ 1 đến dưới 12 tháng không?,BOOLEAN,true|false,TCTN,PR_JOB_004|PR_JOB_006,LOW,False,
+PF_JOB_005,JOB_LOSS,currently_contributing_bhtn_at_termination,"Tại thời điểm chấm dứt việc làm, bạn có thuộc nhóm đang đóng BHTN không?",ENUM,YES|NO|UNKNOWN,TCTN/JOB_COUNSEL,PR_JOB_009A|PR_JOB_010A,MEDIUM,False,
+PF_JOB_006,JOB_LOSS,bhtn_months_last_24,"Trong 24 tháng trước khi nghỉ việc, bạn đã đóng BHTN bao nhiêu tháng?",INTEGER,0..24,TCTN hợp đồng thông thường,PR_JOB_005,MEDIUM,False,
+PF_JOB_007,JOB_LOSS,bhtn_months_last_36,"Trong 36 tháng trước khi nghỉ việc, bạn đã đóng BHTN bao nhiêu tháng?",INTEGER,0..36,TCTN hợp đồng ngắn / đào tạo,PR_JOB_007|PR_JOB_015,MEDIUM,False,
+PF_JOB_008,JOB_LOSS,eligible_for_pension_at_termination,"Tại thời điểm nghỉ việc, bạn có thuộc trường hợp hưởng lương hưu không?",ENUM,YES|NO|UNKNOWN,TCTN,PR_JOB_003,MEDIUM,False,
+PF_JOB_009,JOB_LOSS,disqualifying_status_within_10_working_days,"Sau khi nộp hồ sơ, bạn có việc làm/BHXH bắt buộc, đi nghĩa vụ, học dài hạn, bị tạm giam... thuộc nhóm loại trừ không?",ENUM,YES|NO|UNKNOWN,TCTN/TRAINING,PR_JOB_009|PR_JOB_014,MEDIUM,False,UI nên hỏi từng lựa chọn dễ hiểu
+PF_JOB_010,JOB_LOSS,wants_job,Bạn có muốn tìm việc mới không?,BOOLEAN,true|false,OPTIONAL,PR_JOB_010,LOW,False,
+PF_JOB_011,JOB_LOSS,wants_training,Bạn có muốn học nghề/nâng kỹ năng không?,BOOLEAN,true|false,OPTIONAL,PR_JOB_011|PR_JOB_012|PR_JOB_013|PR_JOB_014|PR_JOB_015,LOW,False,Intent field; chỉ hỏi khi người dùng quan tâm học nghề
+PF_JOB_012,JOB_LOSS,is_receiving_unemployment_benefit,Bạn đang hưởng trợ cấp thất nghiệp không?,BOOLEAN,true|false,TRAINING/STATUS,PR_JOB_011,MEDIUM,False,
+PF_JOB_013,JOB_LOSS,received_months,Bạn đã hưởng TCTN được bao nhiêu tháng?,INTEGER,0..N,MOVE_BENEFIT,SR005,MEDIUM,False,
+PF_JOB_014,JOB_LOSS,prefers_online,Bạn ưu tiên làm online không?,BOOLEAN,true|false,FIND_JOB,SR008,LOW,False,
+PF_HOUSE_001,HOUSING_DIFFICULTY,housing_intent,"Bạn muốn mua, thuê hay tìm nhà lưu trú công nhân?",ENUM,BUY|RENT|WORKER_LODGING|UNKNOWN,ENTRY_HOUSING,PR_HOUSE_010,LOW,False,
+PF_HOUSE_002,HOUSING_DIFFICULTY,applicant_group,Bạn thuộc nhóm đối tượng nào theo chính sách NOXH?,ENUM,ARTICLE76_6_WORKER|OTHER|UNKNOWN,BUY,PR_HOUSE_001,MEDIUM,False,MVP ưu tiên công nhân/người lao động
+PF_HOUSE_003,HOUSING_DIFFICULTY,owns_house_in_project_province,Bạn/vợ/chồng có nhà thuộc sở hữu tại tỉnh/thành nơi có dự án không?,ENUM,YES|NO|UNKNOWN,BUY,PR_HOUSE_002,MEDIUM,False,
+PF_HOUSE_004,HOUSING_DIFFICULTY,avg_owned_floor_area_m2_per_person,"Nếu có nhà, diện tích sàn bình quân trên mỗi người là bao nhiêu m²?",DECIMAL,0..N,BUY when owns_house=YES,PR_HOUSE_003,MEDIUM,False,
+PF_HOUSE_005,HOUSING_DIFFICULTY,marital_income_case,Tình trạng gia đình dùng để kiểm tra thu nhập?,ENUM,SINGLE|SINGLE_PARENT_MINOR|MARRIED,BUY,PR_HOUSE_004|PR_HOUSE_006|PR_HOUSE_008,MEDIUM,False,
+PF_HOUSE_006,HOUSING_DIFFICULTY,avg_monthly_actual_income_12m_vnd,Thu nhập thực nhận bình quân 12 tháng gần nhất của bạn khoảng bao nhiêu?,MONEY_RANGE,<=25M|25-35M|>35M,BUY single/single parent,PR_HOUSE_005|PR_HOUSE_007,HIGH,False,Nên hỏi khoảng thay vì số chính xác
+PF_HOUSE_007,HOUSING_DIFFICULTY,couple_total_avg_monthly_actual_income_12m_vnd,Tổng thu nhập thực nhận bình quân 12 tháng của hai vợ chồng thuộc khoảng nào?,MONEY_RANGE,<=50M|>50M,BUY married,PR_HOUSE_009,HIGH,False,Không cần thu nhập chính xác
+PF_CHILD_001,HAS_CHILD,user_gender,Bạn đang kiểm tra quyền lợi thai sản cho lao động nữ hay lao động nam?,ENUM,FEMALE|MALE|NOT_APPLICABLE,MATERNITY,PR_CHILD_001|PR_CHILD_009,LOW,False,
+PF_CHILD_002,HAS_CHILD,gave_birth,Bạn vừa sinh con?,BOOLEAN,true|false,FEMALE_MATERNITY,PR_CHILD_002,MEDIUM,False,
+PF_CHILD_003,HAS_CHILD,wife_gave_birth,Vợ bạn vừa sinh con?,BOOLEAN,true|false,MALE_MATERNITY,PR_CHILD_010,MEDIUM,False,
+PF_CHILD_004,HAS_CHILD,mandatory_bhxh_current,Bạn hiện đang tham gia BHXH bắt buộc?,ENUM,YES|NO|UNKNOWN,MALE_MATERNITY,PR_CHILD_011,MEDIUM,False,
+PF_CHILD_005,HAS_CHILD,compulsory_bhxh_months_last_12,"Trong 12 tháng trước sinh, đã đóng BHXH bắt buộc bao nhiêu tháng?",INTEGER,0..12,FEMALE_MATERNITY,PR_CHILD_003|PR_CHILD_006,MEDIUM,False,
+PF_CHILD_006,HAS_CHILD,total_compulsory_bhxh_months_before_birth,Tổng thời gian đóng BHXH bắt buộc trước sinh có từ đủ 12 tháng không?,BOOLEAN,true|false,DƯỠNG_THAI,PR_CHILD_004,MEDIUM,False,Có thể hỏi boolean thay số tháng
+PF_CHILD_007,HAS_CHILD,medical_rest_during_pregnancy,Có chỉ định y tế phải nghỉ việc để dưỡng thai không?,BOOLEAN,true|false,DƯỠNG_THAI,PR_CHILD_005,HIGH,False,Không hỏi chẩn đoán bệnh
+PF_CHILD_008,HAS_CHILD,infertility_treatment_before_birth,Trường hợp sinh con có sau điều trị vô sinh không?,BOOLEAN,true|false,SPECIAL_MATERNITY,PR_CHILD_007,HIGH,False,Không thu chi tiết y tế
+PF_CHILD_009,HAS_CHILD,compulsory_bhxh_months_last_24,"Trong 24 tháng trước sinh, đã đóng BHXH bắt buộc bao nhiêu tháng?",INTEGER,0..24,INFERTILITY_BRANCH,PR_CHILD_008,MEDIUM,False,
+PF_CHILD_010,HAS_CHILD,child_age_years,Con hiện bao nhiêu tuổi?,DECIMAL,0..18,NEWBORN/PRESCHOOL,PR_CHILD_012,LOW,False,
+PF_CHILD_011,HAS_CHILD,child_attends_nonpublic_preschool,Con có đang học cơ sở mầm non dân lập/tư thục không?,ENUM,YES|NO|UNKNOWN,PRESCHOOL_SUPPORT,PR_CHILD_013,LOW,False,
+PF_CHILD_012,HAS_CHILD,preschool_is_licensed,Cơ sở mầm non đã được cấp phép thành lập và hoạt động?,ENUM,YES|NO|UNKNOWN,PRESCHOOL_SUPPORT,PR_CHILD_014,LOW,False,Người dùng có thể chọn UNKNOWN
+PF_CHILD_013,HAS_CHILD,parent_or_caregiver_is_worker,Cha/mẹ/người chăm sóc có là công nhân/người lao động không?,BOOLEAN,true|false,PRESCHOOL_SUPPORT,PR_CHILD_015,LOW,False,
+PF_CHILD_014,HAS_CHILD,parent_has_labor_contract,Người lao động có hợp đồng lao động theo quy định không?,ENUM,YES|NO|UNKNOWN,PRESCHOOL_SUPPORT,PR_CHILD_016,MEDIUM,False,
+PF_CHILD_015,HAS_CHILD,parent_workplace_scope,Nơi làm việc thuộc khu công nghiệp hoặc địa bàn có nhiều lao động?,ENUM,INDUSTRIAL_PARK|HIGH_LABOR_DENSITY_AREA|OTHER|UNKNOWN,PRESCHOOL_SUPPORT,PR_CHILD_017,LOW,False,
