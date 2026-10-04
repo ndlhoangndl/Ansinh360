@@ -8,7 +8,7 @@ import { SourceDisclosure } from "./source-badge";
 
 type CardProps = { title: string; reasons: string[]; missing: string[]; explanation: string; sourceId: string; detail?: string; preparation?: string[]; actions?: string[]; positive?: boolean; primary?: boolean; onPlan: () => void };
 function GuidedCard({ title, reasons, missing, explanation, preparation, actions, positive, primary, onPlan }: CardProps) {
-  return <article className="recommendation guided-card"><span className={`badge ${positive ? "badge-good" : "badge-review"}`}>{positive ? "Có dấu hiệu phù hợp" : "Chưa xác nhận quyền hưởng"}</span><h2>{title}</h2>
+  return <article className="recommendation guided-card"><span className={`badge ${positive ? "badge-good" : "badge-review"}`}>{positive ? "Có dấu hiệu phù hợp" : "Chưa xác nhận quyền hưởng"}</span><h2>{primary ? "1. Hỏi nơi tiếp nhận về hỗ trợ cho gia đình" : `Tìm hiểu: ${title}`}</h2>{primary && <p>{title}</p>}
     <p>Hãy hỏi nơi tiếp nhận về trường hợp của gia đình bạn. Sau đó, xem giấy tờ của đúng thủ tục.</p>
     <button className={primary ? "primary-button" : "outline-button"} onClick={onPlan}>Xem việc cần làm<ArrowRight size={17} /></button>
     <RecommendationGuidance reasons={reasons} missing={missing} explanation={explanation} />
@@ -75,7 +75,7 @@ export function childPreparation(serviceId: string) {
   items.push("Kiểm tra giấy tờ bổ sung theo trường hợp cụ thể");
   return items;
 }
-export const childActions = ["Xác định đúng chính sách và trường hợp gia đình", "Chuẩn bị giấy tờ theo đúng thủ tục", "Xác nhận hồ sơ với nơi tiếp nhận"];
+export const childActions = ["Ghi lại câu hỏi về bảo hiểm hoặc cơ sở mầm non của con", "Hỏi nơi tiếp nhận trước khi tải hoặc xin giấy tờ", "Sau khi được hướng dẫn, xem hồ sơ và cách nộp của đúng thủ tục"];
 
 export function ChildResults({ answers, onPlan }: { answers: Answers; onPlan: (serviceId?: string) => void }) {
   const preschool = answers.childContext === "PRESCHOOL";
