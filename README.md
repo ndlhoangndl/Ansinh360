@@ -189,7 +189,7 @@ Trên máy hiện tại, nếu `dotnet` chưa có trong PATH, thay bằng `& "$e
 
 ## Final frontend polish (04/10/2026)
 
-The current demo has four single-question JOB_LOSS screens, a deterministic 1.9-second connection visualization, explicit reasons and official sources, service and job/training continuations, and four action cards with one CTA each. Use **Chạy thử demo: Tôi vừa mất việc** on home or `/?demo=jobloss&recording=1` for recording with editable preselected answers.
+AN SINH 360 hiện có ba hành trình JOB_LOSS, HOUSING_DIFFICULTY và HAS_CHILD, cùng bốn bước Tình huống → Một vài câu hỏi → Dành cho bạn → Việc cần làm. Entry công khai là `/`; `/?demo=jobloss` vẫn dùng được nội bộ nhưng không xuất hiện dưới dạng CTA trên Home. Các báo cáo cũ bên dưới ghi lại từng bước trước đây; xem báo cáo STEP 7 để biết trạng thái cuối hiện tại.
 
 Dev/build consume committed `apps/web/lib/demo-data.json`; they do not read CSV files. Manual answers never infer contribution months from insurance participation. The original dataset remains unchanged.
 
@@ -214,3 +214,25 @@ Trang chủ chọn tình huống rồi **Bắt đầu**; luồng vẫn có đún
 ## Điểm vào demo và kế hoạch theo câu trả lời
 
 Link công khai dùng đường dẫn `/`, luôn bắt đầu ở **Tình huống**. **Bắt đầu lại** xóa câu trả lời và tiến độ, trả về URL sạch. Kế hoạch mất việc ưu tiên thông tin còn thiếu (nghỉ việc → BHTN → thời gian đóng), rồi mới đưa chuẩn bị giấy tờ lên đầu; phần sau được ghi là xem trước khi còn thiếu thông tin. Xem [báo cáo hành vi demo](docs/frontend/DEMO_STATE_REPORT.md). TypeScript, 18 test và npm build đạt.
+
+
+## STEP 7 — Final product audit và chuẩn bị triển khai (10/10/2026)
+
+Đã hoàn tất polish toàn frontend, giữ nguyên logic và dữ liệu của ba hành trình. Home đúng ba tình huống; một nút chính ở mỗi màn; nguồn và cơ chế được thu gọn. Cơ hội giữ nhãn cần xác nhận, không được mô tả là đang tuyển/còn chỗ/đang tuyển sinh đã xác minh. Refresh hoặc URL kết quả/kế hoạch không có ngữ cảnh trả về Home; không lưu câu trả lời lâu dài.
+
+Typecheck PASS, **76/76 tests PASS**, kiểm tra unused PASS, **production build PASS**. Đã chạy production riêng để kiểm tra UI, recovery và 404; mobile 390 × 844 và desktop 1280 × 900 không thấy tràn ngang hoặc control bị cắt. Không có lint script.
+
+Vercel: Root Directory **apps/web**, preset Next.js, Node **24.x**, `npm ci`, `npm run build`, không có environment variable bắt buộc. **Chưa deploy**. Phải đưa các file frontend mới còn untracked vào revision triển khai trước khi build từ Git.
+
+Xem [báo cáo STEP 7](docs/frontend/STEP_7_FINAL_PRODUCT_AUDIT.md), [hướng dẫn chạy và cấu hình Vercel](docs/frontend/DEPLOYMENT.md), [bằng chứng browser QA](docs/frontend/STEP_7_BROWSER_AUDIT.json).
+
+## STEP 7 — Actionability, data realism và child logic (10/10/2026)
+
+Trạng thái hiện tại: các mục nhà ở, công việc và chăm sóc chưa có nguồn cụ thể được trình bày thành **gợi ý loại hình/hướng tìm**, không giả tin còn phòng, đang tuyển hoặc cơ sở đang nhận trẻ. Nút dẫn tới nguồn/đầu mối xác minh đã có. Trợ cấp thất nghiệp có việc đầu tiên, địa chỉ/điện thoại Trung tâm và ba bước rõ ràng. HAS_CHILD chỉ đề nghị việc còn thiếu, theo nhu cầu thực tế; việc đã hoàn thành không xuất hiện lại trong kế hoạch. Preschool có một lựa chọn chính và tối đa hai phương án phụ thu gọn.
+
+**94/94 tests PASS**, typecheck/unused PASS, production build PASS; không có lint script. Đã kiểm tra các màn thay đổi trên mobile/desktop; chưa deploy. Không sửa CSV, snapshot nguồn hoặc quy tắc pháp lý. Ba nhóm cơ hội tư nhân hiện đều có **0 bản ghi đủ nguồn xác minh**; cần dữ liệu thực tế trước khi trình bày như tin/cơ sở cụ thể. Xem [báo cáo 11 mục và lệnh chạy lại](docs/frontend/STEP_7_ACTIONABILITY_REPORT.md).
+
+
+### Final worker-impact fixes (10/10/2026)
+
+Frontend đã sửa thứ tự nhà ở theo sức chứa và trần ngân sách, câu hỏi nghỉ việc theo sự việc, tóm tắt nhu cầu trẻ hiện tại, và đích tra cứu/1022 khi chưa có dữ liệu cụ thể. CSV, snapshot và quy tắc pháp lý được giữ nguyên. Typecheck, 105 tests, unused-locals và production build PASS. Báo cáo: [docs/frontend/FINAL_USER_IMPACT_FIXES.md](docs/frontend/FINAL_USER_IMPACT_FIXES.md). Chưa deploy.

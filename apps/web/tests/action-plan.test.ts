@@ -6,7 +6,7 @@ import { sampleAnswers } from "../lib/demo";
 test("an empty or unresolved employment answer comes before preparation", () => {
   assert.equal(jobNextAction({}), "employment");
   assert.equal(jobNextAction({ ...sampleAnswers, employmentEnded: "UNKNOWN" }), "employment");
-  assert.equal(jobNextAction({ ...sampleAnswers, terminationDate: "UNKNOWN" }), "date");
+  assert.equal(jobNextAction({ ...sampleAnswers, terminationDate: "UNKNOWN" }), "termination");
 });
 test("unknown termination declaration remains unresolved", () => {
   assert.equal(jobNextAction(sampleAnswers), "termination");

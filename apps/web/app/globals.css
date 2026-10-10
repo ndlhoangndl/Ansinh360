@@ -244,3 +244,366 @@ body { font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); }
 .service-execution ol { list-style:decimal; }.channel-list li { background:#edf3f9; }
 
 .reset-link { color:#526b89; font-size:13px; padding:8px; margin-left:auto; border:0; background:transparent; cursor:pointer; }.screen-topline { flex-wrap:wrap; gap:10px; }.followup-options select,.followup-options input[type=date] { display:block; width:100%; border:1px solid #cddbea; border-radius:10px; padding:14px; margin:12px 0; background:#fff; color:#263f60; }.preparation-details summary.primary-button { background:#245ed0; color:#fff; }
+
+/* JOB_LOSS flagship: these styles do not alter housing or child results. */
+.job-question-explanation { margin:12px 0 22px; color:#425670; font-size:15px; }
+.job-question-explanation summary,.job-verified-guidance summary { cursor:pointer; color:#225fac; font-weight:650; min-height:44px; padding:12px 0; }
+.job-question-explanation p { line-height:1.65; }
+.job-results-screen .situation-summary { padding:18px 22px; margin-bottom:20px; }
+.job-results-screen .situation-summary>p { display:none; }
+.job-story-heading { font-size:25px; line-height:1.35; margin:18px 0; }
+.job-two-tracks { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); gap:18px; align-items:start; }
+.job-benefit-track,.job-income-track { padding:24px; border-radius:18px; min-width:0; }
+.job-benefit-track { background:#fff; border:1px solid #d9e4f2; border-top:4px solid #2463cc; }
+.job-income-track { background:#eaf3ef; border:1px solid #d5e6dc; }
+.job-benefit-track h2,.job-income-track h2 { font-size:25px; line-height:1.3; margin:10px 0 14px; }
+.job-benefit-track h3,.job-income-track h3 { font-size:17px; margin:20px 0 10px; }
+.job-benefit-track p,.job-income-track p,.job-plan p,.job-training p { font-size:15px; line-height:1.7; margin:12px 0; }
+.job-benefit-track>.primary-button,.job-benefit-track>.outline-button,.job-income-track>button { width:100%; min-height:48px; }
+.job-reasons { list-style:none; padding:0; margin:10px 0; }
+.job-reasons li { display:flex; align-items:flex-start; gap:8px; font-size:14px; line-height:1.6; margin:8px 0; }
+.job-reasons svg { color:#28725c; flex-shrink:0; margin-top:3px; }
+.job-priority-fact { background:#f3f6fb; border-radius:12px; padding:15px; margin-top:18px; }
+.job-priority-fact h3 { margin:0 0 9px; }.job-priority-fact h4 { font-size:14px; margin:12px 0 5px; }
+.job-priority-fact p { font-size:14px; margin:5px 0; }
+.job-caution { font-size:14px!important; color:#526782; }
+.job-opportunities-section,.job-training,#job-contact-preparation { scroll-margin-top:20px; }
+.job-opportunities-section:empty { display:none; }
+.job-preference-form { padding:24px; border:1px solid #d8e4f2; border-radius:18px; background:#fff; margin:24px 0; }
+.job-preference-form h2,.job-opportunity-results>h2 { font-size:25px; line-height:1.35; margin:12px 0; }
+.job-preference-form p,.job-opportunity-results>p { font-size:15px; line-height:1.7; }
+.job-filter-controls { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:20px; }
+.job-demo-disclosure { color:#526782; padding:14px 16px; background:#edf2f8; border-radius:12px; font-size:14px!important; }
+.job-opportunity-list { display:grid; gap:16px; margin:20px 0; }
+.job-opportunity-item { background:#fff; border:1px solid #dce5ef; border-radius:16px; padding:22px; }
+.job-opportunity-item h3 { font-size:23px; margin:12px 0 5px; }.job-opportunity-item h4 { font-size:16px; margin:18px 0 8px; }
+.job-opportunity-item p,.job-opportunity-item li,.job-opportunity-item dd,.job-opportunity-item dt { font-size:14px; line-height:1.65; }
+.job-opportunity-item dt { font-weight:650; margin-top:12px; }.job-opportunity-item dd { margin:4px 0 0; }.job-opportunity-item ul { list-style:disc; padding-left:20px; }
+.job-verified-guidance { border-top:1px solid #e0e7f1; margin:14px 0; }
+.job-service-handoff { background:#edf3fa; border-radius:14px; padding:20px; margin:20px 0; }
+.job-service-handoff h3 { font-size:20px; margin:0 0 12px; }.job-service-handoff>strong { font-size:17px; }.job-service-handoff p { font-size:14px; line-height:1.65; display:flex; gap:8px; }
+.job-service-handoff p svg { flex-shrink:0; margin-top:4px; }.job-service-handoff small,.job-training small { display:block; font-size:13px; line-height:1.6; margin:12px 0; color:#526782; }
+.job-purpose-tags { display:flex; flex-wrap:wrap; gap:7px; margin:13px 0; }.job-purpose-tags span { font-size:13px; background:#fff; padding:6px 9px; border-radius:7px; }
+.job-training { border-top:1px solid #dce5ef; padding:22px 0; margin-top:22px; }.job-training h2 { font-size:23px; margin:10px 0; }
+.job-support-button { margin:10px 0 16px; }
+.job-plan>section { margin:0 0 22px; padding:22px 24px; border-bottom:1px solid #dce5ef; }
+.job-plan-priority { background:#fff; border:1px solid #d8e4f2; border-top:4px solid #2463cc; border-radius:18px; }
+.job-plan h2 { font-size:24px; line-height:1.35; margin:10px 0; }.job-plan h3 { font-size:17px; margin:16px 0 8px; }
+.job-plan .job-service-handoff { margin:12px 0 0; }
+.job-contact-checklist { display:grid; gap:7px; margin:16px 0; }.job-contact-checklist label { display:flex; gap:11px; align-items:flex-start; padding:12px; font-size:15px; line-height:1.6; background:#fff; border-radius:9px; }
+.job-contact-checklist input { width:20px; height:20px; margin-top:3px; flex-shrink:0; accent-color:#2463cc; }
+.job-plan-income button { margin:8px 12px 8px 0; }.job-recorded-fact { color:#28725c; }
+.job-support-summary { padding:16px; border-radius:12px; background:#edf3fa; margin:18px 0; }.job-support-summary h3 { font-size:20px; }.job-support-summary dt { font-weight:650; margin-top:13px; }.job-support-summary dd { margin:5px 0; }.job-support-summary p,.job-support-summary li,.job-support-summary dd { font-size:14px; line-height:1.7; }.job-support-summary ul { list-style:disc; padding-left:20px; }
+@media(max-width:700px) {
+  .job-two-tracks { grid-template-columns:1fr; }
+  .job-benefit-track,.job-income-track,.job-preference-form,.job-opportunity-item { padding:20px 18px; }
+  .job-story-heading { font-size:22px; }.job-benefit-track h2,.job-income-track h2,.job-plan h2,.job-preference-form h2 { font-size:23px; }
+  .job-filter-controls { flex-direction:column; align-items:stretch; }.job-filter-controls .primary-button { width:100%; min-height:48px; }
+  .job-plan>section { padding:20px 18px; }.job-plan-screen .page-heading h1 { font-size:28px; }
+  .job-opportunity-item .text-action,.job-service-handoff .text-action { min-height:44px; white-space:normal; }
+  .job-support-button { width:100%; min-height:48px; }.job-termination-confirmation .primary-button,.job-plan-priority> .primary-button { width:100%; }
+}
+@media(max-width:600px) {
+  .job-shell .site-header { flex-wrap:nowrap; padding:12px 18px; gap:8px; }
+  .job-shell .site-header .brand small { display:none; }
+  .job-shell .main-layout { padding-top:16px; }
+  .job-shell .user-progress-caption { display:none; }
+  .job-shell .user-progress { margin-bottom:12px; }
+  .job-shell .user-progress-steps { padding:10px 2px; }
+  .job-shell .screen-topline { margin:0 0 16px; }
+  .job-results-screen .page-heading { margin:16px 0; }
+  .job-results-screen .situation-summary { padding:16px; margin-bottom:16px; }
+  .job-results-screen .situation-summary h2 { font-size:16px; line-height:1.35; margin-bottom:12px; }
+  .job-results-screen .situation-summary .plain-reasons { display:grid; gap:5px; }
+  .job-results-screen .situation-summary .plain-reasons li { background:transparent; padding:0; font-size:14px; }
+  .job-results-screen .job-story-heading { margin:16px 0; }
+  .job-benefit-track>p:first-of-type { font-size:14px; line-height:1.6; }
+}
+
+/* Competition Home and navigation shell; deeper result layouts retain their styles. */
+.main-layout.screen-home { max-width:960px; }
+.screen-home .home-intro { margin-bottom:26px; }
+.screen-home .home-intro h1 { font-size:48px; margin:14px 0 12px; }
+.screen-home .hero-subtitle { font-size:20px; max-width:720px; }
+.screen-home .hero-support { font-size:16px; }
+.screen-home .journey-selection { display:grid; grid-template-columns:1fr; gap:12px; }
+.screen-home .section-kicker { grid-column:1/-1; margin:0 0 4px; }
+.screen-home .section-kicker h2 { font-size:24px; line-height:1.35; }
+.screen-home .journey-selection .journey-card { margin:0; padding:20px; min-height:112px; min-width:0; gap:14px; background:#fff!important; box-shadow:0 3px 12px #243e6508!important; border:2px solid #dce5f0; }
+.screen-home .journey-selection .journey-selected { background:#edf4ff!important; border-color:#3273d4; box-shadow:0 0 0 1px #3273d4!important; }
+.screen-home .journey-copy { min-width:0; }
+.screen-home .journey-copy strong { font-size:19px; line-height:1.35; }
+.screen-home .journey-copy small { font-size:14px; line-height:1.6; margin-top:8px; }
+.screen-home .journey-chevron { flex-shrink:0; }
+.screen-home .home-start { min-height:50px; margin:20px 0 0; }
+.screen-home .demo-entry .quick-demo { min-height:44px; font-size:14px; white-space:normal; text-align:left; }
+.screen-home .demo-entry .quick-demo svg { flex-shrink:0; }
+.screen-home .demo-entry p { font-size:14px; }
+.user-progress-steps li { min-width:0; overflow-wrap:normal; }
+.user-progress-steps li>span:last-of-type { max-width:100%; }
+@media(min-width:850px) {
+  .screen-home .journey-selection { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .screen-home .journey-card { flex-direction:column; align-items:flex-start; position:relative; }
+  .screen-home .journey-card .journey-chevron { position:absolute; top:25px; right:20px; }
+}
+@media(max-width:600px) {
+  .main-layout { padding-left:18px; padding-right:18px; }
+  .screen-home .home-intro { margin-bottom:22px; }
+  .screen-home .home-intro h1 { font-size:36px; letter-spacing:-1.5px; margin:10px 0; }
+  .screen-home .hero-subtitle { font-size:17px; line-height:1.5; margin-bottom:12px; }
+  .screen-home .hero-tagline { font-size:18px; }
+  .screen-home .hero-support { font-size:15px; line-height:1.6; }
+  .screen-home .section-kicker h2 { font-size:22px; }
+  .screen-home .journey-selection .journey-card { padding:16px 14px; gap:12px; }
+  .screen-home .journey-copy strong { font-size:17px; }
+  .screen-home .journey-copy small { font-size:14px; margin-top:5px; }
+  .screen-home .demo-entry .quick-demo { width:100%; }
+  .user-progress-steps { padding:12px 2px; }
+  .user-progress-steps li { font-size:12px; line-height:1.4; padding:0 3px; }
+  .user-step-arrow { width:10px; right:-5px; }
+  .site-header .demo-mode-label { font-size:12px; padding:6px 8px; }
+  .site-header .brand small { font-size:12px; }
+  .reset-link { min-height:44px; font-size:14px; }
+}
+
+/* Housing competition journey: all styles remain scoped to this journey. */
+.housing-shell h2 { font-size:24px; line-height:1.35; letter-spacing:-.4px; }
+.housing-shell h3 { font-size:19px; line-height:1.4; margin:0 0 10px; }
+.housing-shell h4 { font-size:15px; margin:12px 0 6px; }
+.housing-shell p,.housing-shell li,.housing-shell dd { font-size:15px; line-height:1.65; }
+.housing-shell .primary-button,.housing-shell .outline-button { min-height:46px; font-size:15px; }
+.housing-shell .badge { font-size:13px; white-space:normal; }
+.housing-story-heading { margin:24px 0 16px; }
+.housing-tracks { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.housing-track { display:flex; flex-direction:column; padding:22px; background:white; border:1px solid #dce5ee; border-top:4px solid #c18932; border-radius:18px; }
+.housing-track:last-child { border-top-color:#3b8270; }
+.housing-track h2 { margin:12px 0; }
+.housing-track p { margin:0 0 20px; }
+.housing-track button { margin-top:auto; }
+.housing-section { margin:30px 0; scroll-margin-top:24px; }
+.housing-section>h2 { margin:0 0 10px; }
+.housing-info-note { display:flex; align-items:flex-start; gap:8px; color:#526782; font-size:14px!important; margin:12px 0 18px; }
+.housing-info-note svg { flex-shrink:0; margin-top:3px; }
+.housing-option-list { display:flex; flex-direction:column; gap:14px; }
+.housing-option { padding:20px; background:white; border:1px solid #dce5ee; border-radius:16px; }
+.housing-option-heading { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap; }
+.housing-option-heading h3 { flex:1 1 260px; }
+.housing-option p { margin:6px 0; }
+.housing-price { display:block; font-size:18px; color:#1f4568; margin:12px 0 6px; }
+.housing-distance { color:#526782; font-size:14px!important; }
+.housing-option ul { padding-left:20px; margin:4px 0 12px; }
+.housing-option summary,.housing-support-directions summary { cursor:pointer; min-height:44px; padding:10px 0; color:#315c7b; font-size:15px; }
+.housing-option dl { margin:8px 0; }
+.housing-option dt { font-size:14px; font-weight:700; margin-top:12px; }
+.housing-option dd { margin:2px 0; }
+.housing-support-path { padding-top:24px; border-top:1px solid #dce5ee; }
+.housing-support-directions { display:flex; flex-direction:column; gap:18px; margin:22px 0; }
+.housing-support-directions article { padding-left:16px; border-left:3px solid #dce9e3; }
+.housing-support-directions p { margin:8px 0; }
+.housing-support-directions .housing-primary-support { padding:18px; border-left:3px solid #528571; background:#edf4ef; border-radius:12px; }
+.housing-other-directions>summary { font-weight:600; }
+.housing-other-directions .housing-secondary-support { margin-top:12px; padding:8px 0 8px 14px; }
+.housing-match-labels { display:flex; flex-wrap:wrap; gap:6px 12px; font-size:13px; color:#526782; margin-bottom:10px; }
+.housing-budget-warning,.housing-reason-warning { color:#8b4d14; }
+.housing-budget-warning { font-weight:700; }
+.housing-budget-message { padding:14px 16px; border-left:3px solid #c18932; background:#fff7e9; margin:14px 0; border-radius:10px; }
+.housing-budget-message h3 { margin:8px 0 0; font-size:16px; }
+.housing-shell .housing-price-note { font-size:13px; color:#526782; }
+.housing-missing { padding:18px; background:#edf4ef; border-radius:12px; margin:18px 0; }
+.housing-missing p { margin:6px 0; }
+.housing-round { border-bottom:1px solid #dce5ee; padding:18px 0; }
+.housing-round>div { display:flex; gap:12px; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; }
+.housing-round h3 { flex:1 1 280px; }
+.housing-round p { margin:6px 0; }
+.housing-history { margin-top:16px; }
+.housing-history>summary { cursor:pointer; min-height:44px; padding:12px 0; font-size:15px; color:#526782; }
+.housing-shell .text-action { min-height:44px; font-size:15px; display:inline-flex; gap:7px; align-items:center; }
+.housing-next { border-top:1px solid #dce5ee; padding:22px 0; }
+.housing-next h2 { margin:0; }
+.housing-child-note { padding:18px 0; margin:8px 0 18px; border-top:1px solid #dce5ee; }
+.housing-child-note p { margin:8px 0; }
+.housing-plan-steps { display:flex; flex-direction:column; gap:18px; margin:24px 0; }
+.housing-plan-steps article { padding:20px; background:white; border:1px solid #dce5ee; border-radius:16px; }
+.housing-plan-steps h2 { margin:10px 0; }
+@media(max-width:700px) {
+  .housing-tracks { grid-template-columns:minmax(0,1fr); }
+  .housing-track,.housing-option,.housing-plan-steps article { padding:18px; }
+  .housing-shell h2 { font-size:22px; }
+  .housing-shell .question-screen h1 { font-size:27px; }
+  .housing-shell .question-intro p,.housing-shell .answer-option strong { font-size:15px; }
+  .housing-shell .site-header .brand small { display:none; }
+  .housing-shell .user-progress-caption { display:none; }
+  .housing-shell .user-progress { margin-bottom:12px; }
+  .housing-option-heading h3 { flex-basis:100%; }
+  .housing-shell .question-hint,.housing-shell .privacy-note { font-size:13px; }
+  .housing-shell .situation-summary .plain-reasons li { font-size:14px; }
+}
+
+/* Step 4.1: visual hierarchy only, scoped to JOB_LOSS results. */
+.job-results-screen .job-two-tracks { grid-template-columns:repeat(2,minmax(0,1fr)); align-items:stretch; gap:16px; }
+.job-results-screen .job-benefit-track,.job-results-screen .job-income-track { display:flex; flex-direction:column; padding:22px; }
+.job-results-screen .job-income-track { border-top:4px solid #398267; }
+.job-results-screen .job-two-tracks h2 { font-size:24px; margin:10px 0 12px; }
+.job-results-screen .job-two-tracks .badge { align-self:flex-start; }
+.job-results-screen .job-two-tracks>article>button { margin-top:auto; }
+.job-results-screen .job-two-tracks>article>p { margin:10px 0 16px; }
+.job-recommendation-detail { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 24px; margin:20px 0 24px; padding:18px 0; border-bottom:1px solid #dce5ef; }
+.job-recommendation-detail h3 { font-size:17px; margin:0 0 10px; }
+.job-recommendation-detail p { font-size:14px; line-height:1.65; }
+.job-recommendation-detail .job-priority-fact { margin:0; padding:0 0 0 18px; background:transparent; border-radius:0; border-left:2px solid #d5dfec; }
+.job-recommendation-detail>.job-caution { grid-column:1/-1; margin:0; }
+.job-results-screen .job-opportunity-list { gap:12px; margin:16px 0; }
+.job-results-screen .job-opportunity-item { padding:18px 20px; border-radius:14px; }
+.job-opportunity-heading { display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:8px 14px; }
+.job-opportunity-heading h3 { font-size:21px; line-height:1.35; margin:0; }
+.job-opportunity-heading .badge { white-space:normal; font-size:13px; }
+.job-results-screen .job-opportunity-item .job-area { margin:6px 0 12px; color:#526782; }
+.job-results-screen .job-opportunity-item dl { display:grid; grid-template-columns:100px minmax(0,1fr); gap:6px 12px; margin:0; }
+.job-results-screen .job-opportunity-item dt,.job-results-screen .job-opportunity-item dd { margin:0; line-height:1.55; }
+.job-results-screen .job-opportunity-item h4 { margin:14px 0 6px; font-size:15px; }
+.job-short-reasons { margin:0 0 10px; }
+.job-extra-details { font-size:14px; color:#526782; }
+.job-extra-details summary { cursor:pointer; min-height:44px; padding:12px 0; font-weight:600; }
+.job-results-screen .job-verified-guidance { margin:6px 0 0; border-top:0; }
+.job-results-screen .job-verified-guidance summary { padding:11px 14px; min-height:44px; border:1px solid #c8d8ec; border-radius:10px; background:transparent; font-size:14px; }
+.job-results-screen .job-demo-disclosure { display:flex; align-items:flex-start; gap:9px; padding:4px 0; margin:12px 0 16px; background:transparent; border-radius:0; font-size:14px!important; line-height:1.6; color:#526782; }
+.job-demo-disclosure svg { flex-shrink:0; margin-top:3px; }
+@media(max-width:700px) {
+  .job-results-screen .job-two-tracks,.job-recommendation-detail { grid-template-columns:1fr; }
+  .job-results-screen .job-benefit-track,.job-results-screen .job-income-track { padding:18px; }
+  .job-results-screen .job-two-tracks h2 { font-size:22px; }
+  .job-recommendation-detail { gap:16px; margin:16px 0 20px; padding:12px 0 18px; }
+  .job-recommendation-detail .job-priority-fact { padding:0; border-left:0; }
+  .job-results-screen .job-opportunity-item { padding:16px; }
+  .job-results-screen .job-opportunity-item dl { grid-template-columns:1fr; gap:3px; }
+  .job-results-screen .job-opportunity-item dt:not(:first-child) { margin-top:8px; }
+  .job-opportunity-heading { flex-direction:column; gap:7px; }
+}
+/* HAS_CHILD presentation is scoped to preserve the other journeys. */
+.child-shell .main-layout { max-width:1000px; }
+.child-shell h2 { font-size:24px; line-height:1.35; letter-spacing:-.4px; }
+.child-shell h3 { font-size:18px; line-height:1.4; margin:12px 0 8px; }
+.child-shell h4 { font-size:15px; margin:12px 0 6px; }
+.child-shell p,.child-shell li,.child-shell dd { font-size:15px; line-height:1.65; }
+.child-shell .primary-button,.child-shell .outline-button { min-height:46px; font-size:15px; }
+.child-shell .badge { font-size:13px; white-space:normal; }
+.child-story-heading { margin:24px 0 16px; }
+.child-tracks { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; align-items:stretch; }
+.child-results-screen { min-width:0; }
+.child-track { display:flex; flex-direction:column; padding:22px; background:white; border:1px solid #dce5ee; border-top:4px solid #368b7c; border-radius:18px; min-width:0; }
+.child-track h2 { margin:12px 0; }
+.child-track p { margin:6px 0 16px; }
+.child-track .primary-button,.child-track .outline-button { margin-top:auto; }
+.child-admin-list { padding:0; list-style:none; margin:0 0 20px; }
+.child-admin-list li { display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 12px; padding:8px 0; border-bottom:1px solid #edf0f4; }
+.child-admin-list small { color:#53677e; font-size:12px; }
+.child-section { margin-top:26px; }
+.child-info-note { display:flex; gap:8px; color:#53677e; font-size:13px!important; }
+.child-info-note svg { flex-shrink:0; margin-top:4px; }
+.child-match-note,.child-missing { padding:14px 16px; background:#f2f6f9; border-radius:12px; margin:14px 0; }
+.child-match-note p { margin:0 0 6px; }
+.child-shell .child-match-note { background:transparent; padding:0; margin:12px 0 18px; color:#53677e; }
+.child-shell .child-match-note h3 { color:var(--ink); margin:8px 0 0; }
+.child-mismatch-summary { color:#53677e; font-size:13px!important; }
+.child-detail-groups { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 20px; }
+.child-shell .child-detail-groups h4 { color:var(--ink); margin:12px 0 6px; }
+.child-shell .child-detail-groups p,.child-shell .child-detail-groups dd { font-size:14px; line-height:1.55; }
+.child-shell .child-detail-groups dt { margin-top:6px; font-size:13px; }
+.child-detail-reason { color:#53677e; }
+.child-detail-note { display:flex; gap:7px; font-size:13px!important; line-height:1.5!important; border-top:1px solid var(--line); padding-top:12px; margin-top:14px!important; color:#53677e; }
+.child-detail-note svg { margin-top:3px; }
+.child-shell .child-provider { font-size:13px; color:#53677e; line-height:1.55; }
+.child-option-list,.child-plan-list { display:grid; gap:14px; }
+.child-option,.child-plan-step { padding:20px; border:1px solid #dce5ee; border-radius:16px; background:white; min-width:0; }
+.child-option h3 { margin:8px 0; }
+.child-option p { margin:7px 0; }
+.child-match-label { font-size:12px; font-weight:600; color:#42655f; }
+.child-price { display:block; font-size:18px; margin-top:12px; }
+.child-price-note { display:block; font-size:13px; color:#53677e; line-height:1.5; margin-top:4px; }
+.child-reasons { padding:0; list-style:none; margin:6px 0 12px; }
+.child-reasons li { font-size:14px; margin:4px 0; }
+.child-warning { color:#825319; }
+.child-shell summary { cursor:pointer; min-height:44px; padding:10px 0; font-size:15px; color:#315c7b; }
+.child-shell dt { font-size:14px; font-weight:700; margin-top:12px; }
+.child-shell dd { margin:2px 0; }
+.child-support-direction { border-left:3px solid #368b7c; padding-left:20px; }
+.child-result-actions { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+.child-shell .text-action { display:inline-flex; align-items:center; gap:7px; min-height:44px; font-size:15px; }
+.child-shell .source-disclosure { margin-top:24px; }
+.child-plan-list { margin-bottom:22px; }
+.child-plan-step h2 { margin:10px 0 16px; }
+.child-plan-step p { margin:4px 0 12px; }
+.child-support-summary dd,.child-support-summary li { overflow-wrap:anywhere; }
+@media(max-width:600px) {
+  .child-tracks { grid-template-columns:minmax(0,1fr); }
+  .child-detail-groups { grid-template-columns:minmax(0,1fr); gap:4px; }
+  .child-track,.child-option,.child-plan-step { padding:18px; }
+  .child-shell h2 { font-size:22px; }
+  .child-shell .site-header .brand small { display:none; }
+  .child-shell .user-progress-caption { display:none; }
+  .child-shell .user-progress { margin-bottom:12px; }
+  .child-shell .answer-option { min-height:62px; }
+  .child-shell .answer-option small { display:block; line-height:1.5; margin-top:6px; }
+  .child-result-actions { flex-direction:column; }
+  .child-shell .situation-summary .plain-reasons li { font-size:14px; }
+}
+
+/* Final public-product consistency and basic accessibility. */
+.main-layout,.main-layout.screen-home,.child-shell .main-layout { max-width:960px; }
+.page-footer { color:#526782; font-size:12px; letter-spacing:0; gap:12px; flex-wrap:wrap; }
+.disclaimer { color:#526782; font-size:13px; line-height:1.65; }
+.source-block,.source-block .verified { font-size:12px; color:#526782; }
+.source-block .source-label { font-size:12px; color:#526782; }
+.source-block>a,.source-block .source-name { font-size:13px; color:#315c7b; overflow-wrap:anywhere; }
+.badge { font-size:13px; white-space:normal; }
+.help-button,.back-link,.reset-link,.text-action,.restart-button,summary { min-height:44px; }
+summary { display:list-item; padding:10px 0; cursor:pointer; }
+summary:focus-visible,select:focus-visible { outline:3px solid #85b8ff; outline-offset:4px; }
+.journey-mini,.eyebrow,.action-label,.card-kicker { color:#526782; font-size:12px; }
+.support-modal .modal-close { min-height:44px; min-width:44px; }
+.support-modal dt { font-weight:700; margin-top:12px; }
+.support-modal dd { margin:4px 0; font-size:14px; line-height:1.65; }
+.support-modal .child-support-summary { padding:16px; background:#edf3fa; border-radius:12px; margin:18px 0; }
+.judge-explainer summary { min-height:44px; }
+.not-found-screen { max-width:640px; margin:14vh auto; padding:24px; }
+.not-found-screen h1 { font-size:30px; line-height:1.3; margin:12px 0; }
+.not-found-screen p { color:#526782; margin-bottom:24px; }
+@media(max-width:600px) {
+  .main-layout { padding-top:18px; }
+  .page-footer { font-size:12px; letter-spacing:0; }
+  .disclaimer { font-size:13px; }
+  .badge { font-size:12px; }
+  .source-block>a { font-size:13px; }
+  .user-progress-steps li { font-size:12px; }
+  .site-header .brand small { display:none; }
+  .help-button { min-width:44px; }
+  .job-shell .primary-button,.job-shell .outline-button,.primary-button,.outline-button { min-height:46px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .journey-card { transition:none; }
+}
+
+.job-two-tracks:has(~ .job-opportunities-section .job-preference-form) .job-benefit-track .primary-button { background:transparent; color:var(--blue); border-color:#b6ccec; box-shadow:none; }
+
+/* Source-grounded directions and contextual child results. */
+.direction-note,.source-meta { color:#526782; font-size:13px; line-height:1.65; }
+.direction-destination { margin-top:18px; padding:16px; border-left:3px solid #9ab5d7; background:#f3f6fa; border-radius:8px; }
+.direction-destination h3,.direction-destination h4 { font-size:16px; margin:0 0 8px; }
+.direction-destination p { font-size:14px; line-height:1.65; margin:8px 0; }
+.job-benefit-track h3 { font-size:14px; margin:14px 0 6px; }
+.compact-contact { font-size:13px; line-height:1.65; }
+.compact-contact a { color:#215fad; text-decoration:underline; display:inline-flex; align-items:center; min-height:44px; }
+.completion-note,.child-completed { padding:18px; background:#f0f6f2; border-radius:12px; color:#294d3b; }
+.child-completed h2 { font-size:23px; line-height:1.4; }
+.child-option[data-primary="true"] { border-color:#9ab5d7; }
+.child-alternative { padding:12px 16px; background:#f3f6fa; border-radius:12px; }
+.child-alternative>summary { font-size:14px; color:#315c7b; line-height:1.6; overflow-wrap:anywhere; }
+.child-alternative .child-option { margin-top:12px; }
+.job-search-context { font-size:14px; margin:16px 0; }
+.job-plan-priority h2 { font-size:20px; }
+.child-price-note { line-height:1.6; }
+@media(max-width:600px) {
+  .direction-destination { padding:14px; }
+  .job-two-tracks .compact-contact { font-size:13px; }
+  .child-alternative { padding:10px 14px; }
+}

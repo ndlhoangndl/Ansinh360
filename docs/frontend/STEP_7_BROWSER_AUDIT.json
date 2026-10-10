@@ -1,0 +1,272 @@
+{
+  "date": "2026-10-10",
+  "mobileViewport": "390 × 844",
+  "desktopViewport": "1280 × 900",
+  "productionPort": 3001,
+  "notes": [
+    "Temporary production server; no public deployment.",
+    "One stale pre-transition measurement excluded.",
+    "Source anchors validated; no phone calls or applications submitted."
+  ],
+  "screens": [
+    {
+      "label": "Home",
+      "activeStep": "1Tình huống",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "JOB_LOSS Questions",
+      "activeStep": "2Một vài câu hỏi",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "JOB_LOSS Results A",
+      "activeStep": "3Dành cho bạn",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "JOB_LOSS Plan A",
+      "activeStep": "4Việc cần làm",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "HOUSING Questions",
+      "activeStep": "2Một vài câu hỏi",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "HOUSING Results A",
+      "activeStep": "3Dành cho bạn",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "HOUSING Plan A",
+      "activeStep": "4Việc cần làm",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "HAS_CHILD Questions",
+      "activeStep": "2Một vài câu hỏi",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "HAS_CHILD Results C",
+      "activeStep": "3Dành cho bạn",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "HAS_CHILD Plan C",
+      "activeStep": "4Việc cần làm",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production Home",
+      "activeStep": "1Tình huống",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production JOB_LOSS Results",
+      "activeStep": "3Dành cho bạn",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production JOB_LOSS Plan",
+      "activeStep": "4Việc cần làm",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production HOUSING Questions",
+      "activeStep": "2Một vài câu hỏi",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production HOUSING Results",
+      "activeStep": "3Dành cho bạn",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production HAS_CHILD Questions",
+      "activeStep": "2Một vài câu hỏi",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production HAS_CHILD Results",
+      "activeStep": "3Dành cho bạn",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production HAS_CHILD Plan",
+      "activeStep": "4Việc cần làm",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production HAS_CHILD expanded sources",
+      "activeStep": "3Dành cho bạn",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production Home desktop",
+      "activeStep": "1Tình huống",
+      "clipped": [],
+      "height": 900,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "label": "Production HOUSING B desktop",
+      "activeStep": "3Dành cho bạn",
+      "clipped": [],
+      "height": 900,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "label": "Production HOUSING Plan B final",
+      "activeStep": "4Việc cần làm",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production JOB_LOSS internal entry Questions",
+      "activeStep": "2Một vài câu hỏi",
+      "clipped": [],
+      "height": 844,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "label": "Production JOB_LOSS desktop",
+      "activeStep": "3Dành cho bạn",
+      "clipped": [],
+      "height": 900,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "label": "Production HAS_CHILD desktop",
+      "activeStep": "3Dành cho bạn",
+      "clipped": [],
+      "height": 900,
+      "overflow": false,
+      "primaryCount": 1,
+      "scrollWidth": 1265,
+      "width": 1280
+    }
+  ],
+  "recovery": {
+    "refreshPlan": "clean Home",
+    "invalidResults": "clean Home",
+    "invalidPlan": "clean Home",
+    "invalidJourney": "clean Home",
+    "custom404": "works",
+    "internalDemoEntry": "works"
+  },
+  "productionConsoleErrors": []
+}

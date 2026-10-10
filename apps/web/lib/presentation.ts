@@ -1,4 +1,5 @@
-import { Answers, formatDate, Journey } from "./demo";
+import { Answers, Journey } from "./demo";
+import { jobConfirmedFacts } from "./job-journey";
 
 // Presentation only: do not infer residency, eligibility, goals or missing answers.
 export function situationFacts(journey: Journey, answers: Answers): string[] {
@@ -7,11 +8,7 @@ export function situationFacts(journey: Journey, answers: Answers): string[] {
     if (value && labels[value]) facts.push(labels[value]);
   };
   if (journey === "JOB_LOSS") {
-    add(answers.employmentEnded, { true: "Vừa chấm dứt việc làm", false: "Vẫn đang làm việc", UNKNOWN: "Chưa rõ tình trạng chấm dứt việc làm" });
-    add(answers.insurance, { YES: "Có tham gia BHTN", NO: "Không tham gia BHTN", UNKNOWN: "Chưa rõ thông tin BHTN" });
-    add(answers.terminationLegal, { LEGAL: "Bạn tự khai nghỉ theo quyết định / thỏa thuận hợp pháp", UNLAWFUL: "Bạn tự khai tự ý nghỉ trái quy định", UNKNOWN: "Bạn chưa rõ hình thức chấm dứt việc làm" });
-    if (answers.terminationDate && answers.terminationDate !== "UNKNOWN") facts.push(`Ngày chấm dứt: ${formatDate(answers.terminationDate)}`);
-    add(answers.goal, { JOB: "Muốn tìm việc mới", TRAINING: "Muốn học nghề / nâng kỹ năng", BOTH: "Muốn tìm việc mới và học nghề", UNKNOWN: "Muốn được tư vấn hướng đi" });
+    return jobConfirmedFacts(answers);
   } else if (journey === "HOUSING_DIFFICULTY") {
     add(answers.housingIntent, { BUY: "Đang tìm mua nhà ở xã hội", RENT: "Đang tìm thuê nhà ở xã hội", WORKER_LODGING: "Đang tìm nhà lưu trú công nhân", UNKNOWN: "Chưa rõ loại hình nhà ở cần tìm" });
     add(answers.ownsHouse, { YES: "Bạn / vợ hoặc chồng đã có nhà tại Đà Nẵng", NO: "Bạn / vợ hoặc chồng chưa có nhà tại Đà Nẵng", UNKNOWN: "Chưa rõ tình trạng nhà ở" });

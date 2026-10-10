@@ -6,9 +6,14 @@ export type Screen = "home" | "questions" | "analysis" | "results" | "plan";
 export type Status = "POSSIBLE_MATCH" | "NEED_MORE_INFO";
 export type Opportunity = (typeof data.opportunities)[number];
 export type Answers = {
-  employmentEnded?: string; terminationDate?: string; insurance?: string; contributionMonths?: string; goal?: string; terminationLegal?: string;
+  employmentEnded?: string; terminationDate?: string; employmentRecency?: string; insurance?: string; contributionMonths?: string; goal?: string; terminationLegal?: string; terminationCircumstance?: string;
   housingIntent?: string; ownsHouse?: string; incomeRange?: string; applicantGroup?: string;
+  housingBudget?: string; householdSize?: string; housingHasChild?: string; housingArea?: string;
   childContext?: string; childAge?: string;
+  childStage?: string; childParent?: string; childBorn?: string; childInsuranceKnown?: string;
+  childNeed?: string; childAdminStatus?: string; childcareNeed?: string;
+  childAdminMissing?: string; childNextNeed?: string;
+  childcareAge?: string; childcareArea?: string; childcareBudget?: string; childcarePickup?: string;
 };
 export const snapshotDate = data.provenance.snapshotDate;
 export const disclaimer = "Dựa trên thông tin bạn cung cấp, bạn có thể thuộc nhóm cần kiểm tra chính sách này. Quyết định cuối cùng do cơ quan có thẩm quyền xác nhận.";

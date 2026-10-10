@@ -15,12 +15,12 @@ test("group selection preserves existing domain and is explicitly self reported"
   for (const value of field.allowed_values.split("|")) {
     const facts = situationFacts("HOUSING_DIFFICULTY", { applicantGroup: value });
     assert.equal(facts.length, 1);
-    assert.doesNotMatch(facts[0], /đủ điều kiện|được hưởng/);
+    assert.doesNotMatch(facts.join(" "), /đủ điều kiện|được hưởng/);
   }
 });
 test("rental and negative answers do not imply purchase, income or insurance participation", () => {
   assert.deepEqual(situationFacts("HOUSING_DIFFICULTY", { housingIntent: "RENT" }), ["Đang tìm thuê nhà ở xã hội"]);
-  assert.deepEqual(situationFacts("JOB_LOSS", { insurance: "NO" }), ["Không tham gia BHTN"]);
+  assert.deepEqual(situationFacts("JOB_LOSS", { insurance: "NO" }), ["Không tham gia bảo hiểm thất nghiệp"]);
 });
 
 
@@ -29,7 +29,7 @@ test("termination follow-up keeps the approved enum and does not claim eligibili
   assert.equal(field.allowed_values, "LEGAL|UNLAWFUL|UNKNOWN");
   for (const value of field.allowed_values.split("|")) {
     const facts = situationFacts("JOB_LOSS", { terminationLegal: value });
-    assert.equal(facts.length, 1);
-    assert.doesNotMatch(facts[0], /đủ điều kiện|được hưởng/);
+    assert.equal(facts.length, 0); // Legacy legal self-classification is no longer presented as a worker fact.
+    assert.doesNotMatch(facts.join(" "), /đủ điều kiện|được hưởng/);
   }
 });

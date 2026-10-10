@@ -1,44 +1,41 @@
-import { ArrowRight, BriefcaseBusiness, Check, CircleHelp, ExternalLink, FileCheck2, GraduationCap, MapPin, Phone, ShieldCheck } from "lucide-react";
-import { Answers, jobDemoResult, policy, service, source } from "@/lib/demo";
-import { JobTerminationQuestion } from "./job-termination-question";
+"use client";
+import { useEffect, useState } from "react";
+import { ArrowRight, Check, ExternalLink } from "lucide-react";
+import { type Answers, policy, service } from "@/lib/demo";
+import { jobBenefitDirection } from "@/lib/job-journey";
+import { jobNextAction, jobFirstAction } from "@/lib/action-plan";
+import { competitionActions, jobRecommendations, competitionServices } from "@/lib/competition-demo";
 import { SourceDisclosure } from "./source-badge";
-import { NextActions, PlainExplanation, PracticalChecklist, RecommendationGuidance } from "./result-guidance";
-import { jobPreparation } from "@/lib/presentation";
+import { JobOpportunities } from "./job-opportunities";
 
-export function JobResults({ answers, onPlan, checked, onToggle, onSupport, onAnswer }: { answers: Answers; onPlan: () => void; checked: string[]; onToggle: (id: string) => void; onSupport: () => void; onAnswer: (value: string) => void }) {
-  const result = jobDemoResult(answers);
-  // Follow-up declarations are not evaluated by the demo; require confirmation for all values.
-  const positive = result.status === "POSSIBLE_MATCH" && !answers.terminationLegal;
-  const provider = service("JOB_SV_006");
-  const reasons = [
-    { met: answers.employmentEnded === "true", text: answers.employmentEnded === "true" ? "Bạn đã chấm dứt việc làm" : answers.employmentEnded === "false" ? "Bạn vẫn đang làm việc" : "Tình trạng việc làm cần xác minh" },
-    { met: answers.insurance === "YES", text: answers.insurance === "YES" ? "Bạn có tham gia BHTN" : answers.insurance === "NO" ? "Bạn không tham gia BHTN" : "Thông tin BHTN cần xác minh" },
-    { met: ["JOB", "TRAINING", "BOTH", "UNKNOWN"].includes(answers.goal ?? ""), text: answers.goal === "JOB" ? "Bạn muốn tìm việc mới" : answers.goal === "TRAINING" ? "Bạn muốn học nghề / nâng kỹ năng" : answers.goal === "BOTH" ? "Bạn muốn tìm việc mới và học nghề" : answers.goal === "UNKNOWN" ? "Bạn muốn được tư vấn hướng đi" : "Nhu cầu hỗ trợ cần được làm rõ" },
-  ];
+export function JobResults({ answers, onPlan, onSupport, requestedSection }: { answers: Answers; onPlan: () => void; onSupport: () => void; requestedSection?: "jobs" | "training" }) {
+  const [jobsOpen, setJobsOpen] = useState(requestedSection === "jobs");
+  const [trainingOpen, setTrainingOpen] = useState(requestedSection === "training");
+  const direction = jobBenefitDirection(answers);
+  const next = jobNextAction(answers);
+  const center = competitionServices.find((item) => item.id === "JOB_SV_006")!;
+  const training = competitionServices.find((item) => item.id === "JOB_SV_010")!;
+  const reasonAction = competitionActions.find((item) => item.id === "ACTION_JOB_REASON")!;
+  const missing = { employment: "Tình trạng chấm dứt việc làm", insurance: "Thông tin tham gia bảo hiểm thất nghiệp", termination: "Lý do chấm dứt việc làm", duration: "Thông tin quá trình tham gia bảo hiểm thất nghiệp", support: "Hướng hỗ trợ cần trao đổi với Trung tâm", preparation: "Đối chiếu hồ sơ với nơi tiếp nhận" }[next];
+  useEffect(() => { if (requestedSection === "jobs") setJobsOpen(true); if (requestedSection === "training") setTrainingOpen(true); }, [requestedSection]);
+  useEffect(() => {
+    if (!jobsOpen) return;
+    const frame = requestAnimationFrame(() => { const target = document.getElementById("job-opportunities"); target?.focus(); target?.scrollIntoView({ block: "start", behavior: "instant" }); });
+    return () => cancelAnimationFrame(frame);
+  }, [jobsOpen]);
   return <>
-    <article className="match-card">
-      <div className="match-top"><span className="match-icon"><FileCheck2 size={25} /></span><span className={`badge ${positive ? "badge-good" : "badge-review"}`}><span className="badge-dot" />{positive ? "Có dấu hiệu phù hợp" : "Cần kiểm tra thêm"}</span></div>
-      <span className="card-kicker"><Check size={13} />Đã đối chiếu · thông tin bạn cung cấp</span>
-      <h2>Trợ cấp thất nghiệp</h2><p>Ghi lại lý do nghỉ việc và thông tin đóng BHTN. Hỏi Trung tâm xem còn điều kiện nào cần xác nhận; sau đó mới chuẩn bị hồ sơ đúng trường hợp.</p><button className="primary-button" onClick={onPlan}>Xem tôi cần làm gì<ArrowRight size={18} /></button>
-      <p className="match-support">Dựa trên thông tin bạn cung cấp, đây là hướng nên kiểm tra trước.</p><div className="match-reasons"><h3>Vì sao có gợi ý này?</h3>{reasons.map((reason) => <p key={reason.text} className={reason.met ? "met" : "unresolved"}>{reason.met ? <Check size={17} /> : <CircleHelp size={17} />}{reason.text}</p>)}</div>
-      <JobTerminationQuestion answers={answers} onAnswer={onAnswer} />
-      <PlainExplanation>Trợ cấp thất nghiệp không chỉ phụ thuộc vào việc bạn đã nghỉ việc hay chưa. Cách chấm dứt việc làm, thời gian đóng BHTN và thời hạn nộp hồ sơ vẫn cần được kiểm tra.</PlainExplanation>
-
-    </article>
-    <article className="service-card">
-      <div className="section-label"><MapPin size={18} />Nơi bạn có thể liên hệ<span className="badge badge-review">Cần kiểm tra thêm</span></div>
-      <h2>{provider.service_name}</h2>
-      <div className="service-contact"><p><MapPin size={17} />{provider.address}</p><a href={`tel:${provider.phone.replace(/\s/g, "")}`}><Phone size={17} />{provider.phone}</a></div>
-      <div className="service-tags"><span>BHTN</span><span>Việc làm</span><span>Tư vấn nghề nghiệp</span></div>
-      <div className="service-guidance"><h3>Vì sao có gợi ý này?</h3><p>Đây là đầu mối để hỏi về BHTN, việc làm và tư vấn nghề nghiệp. Bạn có thể mang theo các thông tin đã chuẩn bị để làm rõ điều kiện và cách nộp hồ sơ.</p><h3>Hỏi gì khi liên hệ?</h3><p>“Với lý do nghỉ việc và quá trình đóng BHTN của tôi, cần xác nhận điều kiện nào và nộp qua kênh nào?”</p></div>
-      <button className="outline-button" onClick={onPlan}>Xem cách thực hiện<ArrowRight size={17} /></button>
-    </article>
-    <section className="next-opportunities" id="next-paths"><div className="section-label"><BriefcaseBusiness size={18} />Sau bước này, bạn có thể…</div>
-      <article className="next-opportunity"><span className="icon-box blue"><BriefcaseBusiness size={22} /></span><h2>Tìm việc mới</h2><p>{service("JOB_SV_007").service_name}</p><span className="badge badge-review">Cần kiểm tra thêm</span><RecommendationGuidance reasons={[answers.goal === "JOB" || answers.goal === "BOTH" ? "Bạn muốn tìm việc mới" : "Bạn có thể tìm hiểu kênh việc làm song song với việc kiểm tra hỗ trợ"]} missing={["Mở tin tuyển dụng, đọc yêu cầu công việc rồi liên hệ nếu phù hợp."]} explanation="Bạn có thể xem công việc theo nhu cầu của mình trên sàn quốc gia. Kiểm tra yêu cầu của từng tin trước khi liên hệ." /><a className="text-action" href={service("JOB_SV_007").online_url} target="_blank" rel="noopener noreferrer">Xem cơ hội việc làm<ExternalLink size={15} /></a></article>
-      <article className="next-opportunity"><span className="icon-box amber"><GraduationCap size={22} /></span><h2>Học nghề / nâng kỹ năng</h2><p>Kiểm tra hỗ trợ đào tạo · Thủ tục {service("JOB_SV_010").procedure_code}</p><span className="badge badge-review">Cần kiểm tra thêm</span><RecommendationGuidance reasons={[answers.goal === "TRAINING" || answers.goal === "BOTH" ? "Bạn muốn học nghề / nâng kỹ năng" : "Bạn có thể tìm hiểu hướng học nghề nếu cần đổi công việc"]} missing={["Hỏi Trung tâm DVVL về khóa học bạn muốn học và điều kiện hỗ trợ của khóa đó."]} explanation="Hỗ trợ học nghề có điều kiện cần kiểm tra riêng. Hỏi Trung tâm DVVL về nhu cầu học, khóa học và thủ tục trước khi thực hiện." /><a className="text-action" href={service("JOB_SV_010").online_url} target="_blank" rel="noopener noreferrer">Xem thủ tục học nghề<ExternalLink size={15} /></a></article>
-      <button className="outline-button" onClick={onSupport}>Liên hệ người hỗ trợ nếu chưa rõ<CircleHelp size={17} /></button>
+    <h2 className="job-story-heading">Bạn có 2 việc nên làm song song</h2>
+    <div className="job-two-tracks">
+      <article className="job-benefit-track"><span className="action-label">ỔN ĐỊNH TRƯỚC MẮT</span><h2>{jobRecommendations[0].title}</h2><span className={`badge ${direction.badge === "Có dấu hiệu phù hợp" ? "badge-good" : "badge-review"}`}>{direction.badge}</span><h3>Việc bạn nên làm trước</h3><p>{jobFirstAction(answers)}</p><h3>Nơi có thể hỏi</h3><p className="compact-contact"><strong>{center.title}</strong><br/>{center.address}<br/><a href={`tel:${center.phone!.replace(/\s/g, "")}`}>{center.phone}</a></p><button className="primary-button" onClick={onPlan}>Xem 3 bước kiểm tra trợ cấp<ArrowRight size={17} /></button></article>
+      <article className="job-income-track"><span className="action-label">QUAY LẠI THU NHẬP</span><h2>{jobRecommendations[1].title}</h2><p>Bạn có thể bắt đầu tìm cơ hội mới song song với việc kiểm tra quyền lợi.</p><p className="job-caution">Ba lựa chọn ngắn giúp tìm hướng việc làm phù hợp hơn; cần xác nhận lại tin tuyển dụng.</p><button className="outline-button" onClick={() => { setJobsOpen(true); if (jobsOpen) { const target = document.getElementById("job-opportunities"); target?.focus(); target?.scrollIntoView({ block: "start", behavior: "instant" }); } }}>Xem việc phù hợp<ArrowRight size={17} /></button></article>
+    </div>
+    <section className="job-recommendation-detail" aria-label="Lý do gợi ý và việc cần kiểm tra">
+      <div className="job-why"><h3>Vì sao có gợi ý này?</h3>{direction.reasons.length ? <ul className="job-reasons">{direction.reasons.map((reason) => <li key={reason}><Check size={16} />{reason}</li>)}</ul> : <p>Thông tin bạn cung cấp chưa đủ để chọn hướng quyền lợi cụ thể. Hãy hỏi Trung tâm về trường hợp của bạn.</p>}</div>
+      <div className="job-priority-fact"><h3>Việc bạn nên kiểm tra tiếp:</h3><strong>{missing}</strong><h4>Tìm ở đâu?</h4><p>{next === "termination" || next === "employment" ? reasonAction.whereToFindInfo : next === "insurance" || next === "duration" ? "Thông tin quá trình tham gia bảo hiểm đang có, đơn vị sử dụng lao động hoặc Trung tâm Dịch vụ việc làm." : "Hướng dẫn của đúng thủ tục và trao đổi với Trung tâm Dịch vụ việc làm."}</p></div>
+      <p className="job-caution">{direction.explanation}</p>
     </section>
-
-    <SourceDisclosure entries={[{ id: policy("POL_JOB_001").legal_source_id, detail: "Điều 38" }, { id: provider.source_id }, { id: service("JOB_SV_007").source_id }, { id: policy("POL_JOB_004").legal_source_id, detail: "Điều 37" }]} />
+    <section id="job-opportunities" tabIndex={-1} className="job-opportunities-section">{jobsOpen && <JobOpportunities />}</section>
+    <section id="job-training" tabIndex={-1} className="job-training"><span className="action-label">NẾU CHƯA TÌM ĐƯỢC VIỆC PHÙ HỢP</span><h2>{jobRecommendations[2].title}</h2><p>Bạn có thể kiểm tra hướng tư vấn hoặc hỗ trợ đào tạo khi muốn đổi công việc hoặc bổ sung kỹ năng.</p><button className="outline-button" onClick={() => setTrainingOpen((open) => !open)} aria-expanded={trainingOpen}>{trainingOpen ? "Ẩn hướng học nghề" : "Xem hướng học nghề"}</button>{trainingOpen && <div><p>Ghi kỹ năng muốn học, lịch có thể tham gia và nhu cầu công việc. Hỏi Trung tâm về khóa học thực tế và điều kiện hỗ trợ riêng trước khi đăng ký.</p><a className="text-action" href={`tel:${center.phone!.replace(/\s/g, "")}`}>Hỏi Trung tâm về hướng học nghề</a><a className="text-action" href={training.url!} target="_blank" rel="noopener noreferrer">Tra cứu hướng dẫn hỗ trợ đào tạo<ExternalLink size={15} /></a><small>Mã thủ tục {training.procedureCode}. Link hiện có mở cổng tra cứu; dùng mã để tìm đúng thủ tục.</small></div>}</section>
+    <button className="outline-button job-support-button" onClick={onSupport}>Tôi cần người hỗ trợ</button><SourceDisclosure entries={[{ id: policy("POL_JOB_001").legal_source_id, detail: "Điều 38" }, { id: service("JOB_SV_001").source_id, detail: "Mã thủ tục 1.014748" }, { id: center.sourceId }, { id: service("JOB_SV_007").source_id }, { id: training.sourceId, detail: "Mã thủ tục 1.014747" }]} />
   </>;
 }
